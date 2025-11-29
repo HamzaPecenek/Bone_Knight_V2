@@ -1,7 +1,7 @@
 extends Area2D
 class_name Trap
 
-@export var damage: int = 15
+@export var damage: int = 50
 
 func _ready() -> void:
 	# İstersen buradan Layer/Mask veya başka ayarlar da yapabilirsin

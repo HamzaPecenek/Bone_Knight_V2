@@ -3,7 +3,7 @@ class_name Player
 
 # --- MOVEMENT SETTINGS ---
 @export var move_speed: float = 250.0
-@export var jump_force: float = -250.0
+@export var jump_force: float = -300.0
 var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var max_jumps: int = 2
 var jumps_left: int = 0
