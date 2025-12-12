@@ -34,9 +34,11 @@ func kill() -> void:
 		return
 
 	is_dead = true
-	death_area.monitoring = false          # tekrar tetiklenmesin
-	main_collision.disabled = true         # player içinden geçsin
-	anim.play("death")                     # death animasyonu (loop OFF olmalı)
+	# "Defer" these changes until the end of the physics frame
+	death_area.set_deferred("monitoring", false)
+	main_collision.set_deferred("disabled", true)
+	
+	anim.play("death")
 
 
 # ------------------------------------------------

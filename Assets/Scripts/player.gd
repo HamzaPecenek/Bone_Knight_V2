@@ -246,17 +246,16 @@ func _on_attack_area_p_body_exited(_body: Node2D) -> void:
 	pass
 
 
-func _on_interact_area_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+# NEW (Clean - No Warnings)
+# We added '_' to the start of every parameter name
+func _on_interact_area_area_entered(_area):
+	pass 
 
+func _on_interact_area_area_exited(_area):
+	pass 
 
-func _on_interact_area_area_exited(area: Area2D) -> void:
-	pass # Replace with function body.
+func _on_interact_area_area_shape_entered(_area_rid, _area, _area_shape_index, _local_shape_index):
+	pass 
 
-
-func _on_interact_area_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	pass # Replace with function body.
-
-
-func _on_interact_area_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	pass # Replace with function body.
+func _on_interact_area_area_shape_exited(_area_rid, _area, _area_shape_index, _local_shape_index):
+	pass
