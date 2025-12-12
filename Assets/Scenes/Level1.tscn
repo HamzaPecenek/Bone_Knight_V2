@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://lslltlj55xhq"]
+[gd_scene load_steps=17 format=4 uid="uid://lslltlj55xhq"]
 
 [ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Background1.png" id="1_dwyiq"]
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_rpjkb"]
@@ -1455,6 +1455,9 @@ sources/0 = SubResource("TileSetAtlasSource_7bilv")
 sources/1 = SubResource("TileSetAtlasSource_5gvfm")
 sources/2 = SubResource("TileSetAtlasSource_rpjkb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qm2ms"]
+size = Vector2(120, 676)
+
 [node name="Level 1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_rpjkb")]
@@ -1478,9 +1481,21 @@ position = Vector2(1728, 325.00003)
 scale = Vector2(3.6, 3.6)
 texture = ExtResource("1_dwyiq")
 
+[node name="Background6" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(2880.0002, 325)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("1_dwyiq")
+
 [node name="Background4" type="Sprite2D" parent="."]
 z_index = -5
 position = Vector2(1728, 324)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("2_dn5ey")
+
+[node name="Background5" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(2880, 324)
 scale = Vector2(3.6, 3.6)
 texture = ExtResource("2_dn5ey")
 
@@ -1507,3 +1522,17 @@ position = Vector2(1749, 490)
 
 [node name="DeathBoundary" parent="." instance=ExtResource("11_qm2ms")]
 position = Vector2(-871, 688)
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(-239, 251)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(172, 88)
+shape = SubResource("RectangleShape2D_qm2ms")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(2366, 251)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(70, 89)
+shape = SubResource("RectangleShape2D_qm2ms")
