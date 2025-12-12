@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dglra7e1w00v6" path="res://Assets/Scripts/death_zone.gd" id="1_1jxkb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl456"]
-size = Vector2(4105, 368)
+size = Vector2(5814, 368)
 
 [node name="DeathBoundary" type="Node2D"]
 
@@ -11,7 +11,11 @@ size = Vector2(4105, 368)
 script = ExtResource("1_1jxkb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
-position = Vector2(2042.5, 174)
+position = Vector2(2897, 174)
+shape = SubResource("RectangleShape2D_fl456")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(2897, 174)
 shape = SubResource("RectangleShape2D_fl456")
 
 [connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
