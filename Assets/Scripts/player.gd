@@ -14,6 +14,10 @@ var health: int
 var is_attacking: bool = false
 var is_dead: bool = false
 
+# --- BOREDOM SETTINGS (NEW) ---
+@export var boredom_threshold: float = 20.0 # Time in seconds
+var idle_timer: float = 0.0
+
 # --- NODE REFERENCES ---
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var body_shape: CollisionShape2D = $CollisionShape2D
@@ -23,6 +27,10 @@ var is_dead: bool = false
 @onready var attack_timer: Timer = $AttackTimer
 
 @onready var health_bar: HealthBarPlayer = $HealthBarPlayer
+
+# Reference to the text label we created (NEW)
+# Make sure your node path matches exactly: CanvasLayer -> BoredomLabel
+@onready var boredom_label: Label = $CanvasLayer/BoredomLabel 
 
 
 func _ready() -> void:
@@ -38,6 +46,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
+
+	# --- BOREDOM LOGIC (NEW) ---
+	_handle_boredom(delta)
 
 	# --- GRAVITY ---
 	if not is_on_floor():
@@ -70,6 +81,39 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	_update_animation()
 
+# --- BOREDOM FUNCTION (NEW) ---
+func _handle_boredom(delta: float) -> void:
+	# Check if ANY input is being pressed
+	var is_active = false
+	
+	if Input.get_axis("walk_left", "walk_right") != 0:
+		is_active = true
+	if Input.is_action_pressed("jump"):
+		is_active = true
+	if Input.is_action_pressed("attack"):
+		is_active = true
+		
+	# Logic: Reset timer if active, otherwise count up
+	if is_active:
+		idle_timer = 0.0
+	else:
+		idle_timer += delta
+		
+	# Trigger death if limit reached
+	if idle_timer >= boredom_threshold:
+		die_of_boredom()
+
+func die_of_boredom() -> void:
+	if is_dead:
+		return
+	
+	# Show the text
+	if boredom_label:
+		boredom_label.visible = true
+	
+	print("Player died of boredom!")
+	_die()
+
 
 func _update_animation() -> void:
 	if is_dead:
@@ -95,6 +139,9 @@ func _update_animation() -> void:
 # ATTACK SYSTEM
 # -----------------
 func _start_attack() -> void:
+	# Activating an attack should also reset boredom
+	idle_timer = 0.0 
+	
 	is_attacking = true
 	_set_attack_enabled(true)
 	attack_timer.start()
@@ -128,6 +175,9 @@ func _on_attack_area_p_body_entered(body: Node) -> void:
 func take_damage(amount: int, from_dir: float = 0.0) -> void:
 	if is_dead:
 		return
+	
+	# Taking damage is an "event", so it wakes the player up
+	idle_timer = 0.0
 
 	health -= amount
 	if health < 0:
@@ -155,5 +205,5 @@ func _die() -> void:
 	anim.play("death")
 
 
-func _on_attack_area_p_body_exited(body: Node2D) -> void:
+func _on_attack_area_p_body_exited(_body: Node2D) -> void:
 	pass
