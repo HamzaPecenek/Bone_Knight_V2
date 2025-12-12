@@ -1,61 +1,3 @@
-Directory structure:
-└── hamzapecenek-bone_knight_v2/
-    ├── icon.svg.import
-    ├── project.godot
-    ├── .editorconfig
-    └── Assets/
-        ├── HealthBar/
-        │   ├── healthbarProgress.png.import
-        │   └── healthbarUnder.png.import
-        ├── Map/
-        │   ├── Background1.png.import
-        │   ├── Background2.png.import
-        │   ├── oak_woods_tileset.png.import
-        │   ├── spikes.png.import
-        │   ├── TileSet1.png.import
-        │   └── TileSet2.png.import
-        ├── Scenes/
-        │   ├── healthbar_player.tscn
-        │   ├── healthbar_skelaton.tscn
-        │   ├── Level1.tscn
-        │   ├── mushroom.tscn
-        │   ├── player.tscn
-        │   ├── skelaton.tscn
-        │   └── trap.tscn
-        ├── Scripts/
-        │   ├── healthbar_player.gd
-        │   ├── healthbar_player.gd.uid
-        │   ├── healthbar_skelaton.gd
-        │   ├── healthbar_skelaton.gd.uid
-        │   ├── mushroom.gd
-        │   ├── mushroom.gd.uid
-        │   ├── player.gd
-        │   ├── player.gd.uid
-        │   ├── skelaton.gd
-        │   ├── skelaton.gd.uid
-        │   ├── trap.gd
-        │   └── trap.gd.uid
-        └── Sprites/
-            ├── Knight/
-            │   ├── _Attack.png.import
-            │   ├── _Death.png.import
-            │   ├── _Fall.png.import
-            │   ├── _Idle.png.import
-            │   ├── _Jump.png.import
-            │   └── _Run.png.import
-            ├── Mushroom/
-            │   ├── Death.png.import
-            │   └── Idle.png.import
-            └── Skelaton/
-                ├── Attack.png.import
-                ├── Death.png.import
-                ├── Idle.png.import
-                ├── Take Hit.png.import
-                └── Walk.png.import
-
-
-Files Content:
-
 ================================================
 FILE: icon.svg.import
 ================================================
@@ -120,7 +62,7 @@ config_version=5
 
 [application]
 
-config/name="Enemy Creation"
+config/name="BoneKnight V2"
 run/main_scene="uid://lslltlj55xhq"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -168,6 +110,610 @@ root = true
 
 [*]
 charset = utf-8
+
+
+
+================================================
+FILE: Assets/Flag/Flag 01.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ddb0jxjaruox"
+path="res://.godot/imported/Flag 01.png-06586fc3b9891266fc920e694209eded.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Flag 01.png"
+dest_files=["res://.godot/imported/Flag 01.png-06586fc3b9891266fc920e694209eded.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Flag/Flag 02.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://mqj3q5eoybph"
+path="res://.godot/imported/Flag 02.png-471ed857628cbc21691ac00c80e09b93.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Flag 02.png"
+dest_files=["res://.godot/imported/Flag 02.png-471ed857628cbc21691ac00c80e09b93.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Flag/Flag 03.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cfm455v5blnfa"
+path="res://.godot/imported/Flag 03.png-b1c4f9a59699f8fe7fc256041bcd5650.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Flag 03.png"
+dest_files=["res://.godot/imported/Flag 03.png-b1c4f9a59699f8fe7fc256041bcd5650.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Flag/Flag 04.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bgy6yah18vho"
+path="res://.godot/imported/Flag 04.png-c904298c0378dfec9c34ab39ce9f0899.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Flag 04.png"
+dest_files=["res://.godot/imported/Flag 04.png-c904298c0378dfec9c34ab39ce9f0899.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Flag/Flag 05.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cj535ee84yd1c"
+path="res://.godot/imported/Flag 05.png-1cf859be6b4337be9b16b9175027b316.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Flag 05.png"
+dest_files=["res://.godot/imported/Flag 05.png-1cf859be6b4337be9b16b9175027b316.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Flag/Flag 06.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://boftsx3dqv07n"
+path="res://.godot/imported/Flag 06.png-15165b91e0dd33f82ddad59b6e32a8ff.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Flag 06.png"
+dest_files=["res://.godot/imported/Flag 06.png-15165b91e0dd33f82ddad59b6e32a8ff.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Flag/Flag 07.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d3qvhgijvfwn6"
+path="res://.godot/imported/Flag 07.png-1a48832f9f56f5b90f0b518d4ab6bc98.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Flag 07.png"
+dest_files=["res://.godot/imported/Flag 07.png-1a48832f9f56f5b90f0b518d4ab6bc98.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Flag/Flag 08.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cm3hnd48hwhha"
+path="res://.godot/imported/Flag 08.png-953819f4add24de2206012ebb801ceb4.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Flag 08.png"
+dest_files=["res://.godot/imported/Flag 08.png-953819f4add24de2206012ebb801ceb4.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Flag/Flag 09.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bduwihs648x8l"
+path="res://.godot/imported/Flag 09.png-70d3dfa2fad475b5b7c2a700a87e67cb.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Flag 09.png"
+dest_files=["res://.godot/imported/Flag 09.png-70d3dfa2fad475b5b7c2a700a87e67cb.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Flag/Platform.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cbcvg6pfugjw"
+path="res://.godot/imported/Platform.png-da9bc9b35e7e8d0ac7eb51a3ea26052b.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Flag/Platform.png"
+dest_files=["res://.godot/imported/Platform.png-da9bc9b35e7e8d0ac7eb51a3ea26052b.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Fonts/m3x6 Daniel Linssen.ttf
+================================================
+[Binary file]
+
+
+================================================
+FILE: Assets/Fonts/m3x6 Daniel Linssen.ttf.import
+================================================
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://k1fyice5wflc"
+path="res://.godot/imported/m3x6 Daniel Linssen.ttf-a4de6848b66ced2043a6543ec7e78f8d.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/m3x6 Daniel Linssen.ttf"
+dest_files=["res://.godot/imported/m3x6 Daniel Linssen.ttf-a4de6848b66ced2043a6543ec7e78f8d.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
+
+
+
+================================================
+FILE: Assets/Fonts/m5x7 Daniel Linssen.ttf
+================================================
+[Binary file]
+
+
+================================================
+FILE: Assets/Fonts/m5x7 Daniel Linssen.ttf.import
+================================================
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://cly50jlrl7q1h"
+path="res://.godot/imported/m5x7 Daniel Linssen.ttf-42abb0ffd56fab8ea10288c63de4cc4e.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/m5x7 Daniel Linssen.ttf"
+dest_files=["res://.godot/imported/m5x7 Daniel Linssen.ttf-42abb0ffd56fab8ea10288c63de4cc4e.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
+
+
+
+================================================
+FILE: Assets/Fonts/m6x11 Daniel LInssen.ttf
+================================================
+[Binary file]
+
+
+================================================
+FILE: Assets/Fonts/m6x11 Daniel LInssen.ttf.import
+================================================
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://7vn3qxh2pe6n"
+path="res://.godot/imported/m6x11 Daniel LInssen.ttf-5a3900d4111cdfe5a3d251885c210ecb.fontdata"
+
+[deps]
+
+source_file="res://Assets/Fonts/m6x11 Daniel LInssen.ttf"
+dest_files=["res://.godot/imported/m6x11 Daniel LInssen.ttf-5a3900d4111cdfe5a3d251885c210ecb.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
 
 
 
@@ -234,6 +780,1340 @@ metadata={
 
 source_file="res://Assets/HealthBar/healthbarUnder.png"
 dest_files=["res://.godot/imported/healthbarUnder.png-f64ee77084900eff92e3d04cd217077e.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/background_layer_3.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://djv8kwt1x4cwk"
+path="res://.godot/imported/background_layer_3.png-78afbf9649be2d173fc9dac6f251edaf.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/background_layer_3.png"
+dest_files=["res://.godot/imported/background_layer_3.png-78afbf9649be2d173fc9dac6f251edaf.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/castle_tileset.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://yeo7sjs3k1pc"
+path="res://.godot/imported/castle_tileset.png-1c4474b86d6d422a69b29fbadeae9c97.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/castle_tileset.png"
+dest_files=["res://.godot/imported/castle_tileset.png-1c4474b86d6d422a69b29fbadeae9c97.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/Dungeon-Platformer-Pixel-Art-Tileset3.webp.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://k7cxusmf2gmb"
+path="res://.godot/imported/Dungeon-Platformer-Pixel-Art-Tileset3.webp-002351da7fd638d13c2d7059800f5eea.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/Dungeon-Platformer-Pixel-Art-Tileset3.webp"
+dest_files=["res://.godot/imported/Dungeon-Platformer-Pixel-Art-Tileset3.webp-002351da7fd638d13c2d7059800f5eea.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/grass.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://7j3oqc18qxf7"
+path="res://.godot/imported/grass.png-54e5a9e5edf0ae9a9788487582f6e5b5.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/grass.png"
+dest_files=["res://.godot/imported/grass.png-54e5a9e5edf0ae9a9788487582f6e5b5.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/grassland_tileset.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c6rhkhlf1jm8p"
+path="res://.godot/imported/grassland_tileset.png-c8de0b3cd4cab737554ce4ed9cf83bd5.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/grassland_tileset.png"
+dest_files=["res://.godot/imported/grassland_tileset.png-c8de0b3cd4cab737554ce4ed9cf83bd5.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/gskull1.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dmip543bpo5j2"
+path="res://.godot/imported/gskull1.png-536ef06c853c9eadd58dff9c6bd9a07d.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/gskull1.png"
+dest_files=["res://.godot/imported/gskull1.png-536ef06c853c9eadd58dff9c6bd9a07d.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/gskull2.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c873cc245fnq4"
+path="res://.godot/imported/gskull2.png-0d6f2d05c49c08b6ed913cf574e62797.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/gskull2.png"
+dest_files=["res://.godot/imported/gskull2.png-0d6f2d05c49c08b6ed913cf574e62797.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/gskull3.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ckglt1sobcpt8"
+path="res://.godot/imported/gskull3.png-ab244aa14ad1e86d3e5b0011b0608f4d.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/gskull3.png"
+dest_files=["res://.godot/imported/gskull3.png-ab244aa14ad1e86d3e5b0011b0608f4d.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/gskull4.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dqi7pokkfk8tf"
+path="res://.godot/imported/gskull4.png-0b9d002c8701533a3078cfb492bbf52d.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/gskull4.png"
+dest_files=["res://.godot/imported/gskull4.png-0b9d002c8701533a3078cfb492bbf52d.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/gskull5.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://c1f3b58qnrjdr"
+path="res://.godot/imported/gskull5.png-b737a14b0793c92262abf23dc2112e61.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/gskull5.png"
+dest_files=["res://.godot/imported/gskull5.png-b737a14b0793c92262abf23dc2112e61.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/gskull6.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://68pkp3555pkw"
+path="res://.godot/imported/gskull6.png-c968d716ace41b004cbbda4c54f46cd6.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/gskull6.png"
+dest_files=["res://.godot/imported/gskull6.png-c968d716ace41b004cbbda4c54f46cd6.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/gskull7.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://csf5c4wxgi2a2"
+path="res://.godot/imported/gskull7.png-7080735df0789b6ccec1da23695fa146.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/gskull7.png"
+dest_files=["res://.godot/imported/gskull7.png-7080735df0789b6ccec1da23695fa146.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/gskull8.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dvd7jv05kd5xl"
+path="res://.godot/imported/gskull8.png-84e000f0dfb763b1423c808c1ab177a8.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/gskull8.png"
+dest_files=["res://.godot/imported/gskull8.png-84e000f0dfb763b1423c808c1ab177a8.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/lava.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bqpddhm0a2nyr"
+path="res://.godot/imported/lava.png-b4a469d627b2f7ae86655b126ad2daa6.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/lava.png"
+dest_files=["res://.godot/imported/lava.png-b4a469d627b2f7ae86655b126ad2daa6.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/Layer_0001_8.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dml542i01mns6"
+path="res://.godot/imported/Layer_0001_8.png-8f9b16ec653110b674ad83b4287c4fcd.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/Layer_0001_8.png"
+dest_files=["res://.godot/imported/Layer_0001_8.png-8f9b16ec653110b674ad83b4287c4fcd.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/Layer_0003_6.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://drqljgh31l4wd"
+path="res://.godot/imported/Layer_0003_6.png-372a0f3c742518921028e6b0b7f3a78f.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/Layer_0003_6.png"
+dest_files=["res://.godot/imported/Layer_0003_6.png-372a0f3c742518921028e6b0b7f3a78f.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/Layer_0005_5.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://btotmi6syrepk"
+path="res://.godot/imported/Layer_0005_5.png-47ba812f8d7e33f1ac00fa6a9f1b7075.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/Layer_0005_5.png"
+dest_files=["res://.godot/imported/Layer_0005_5.png-47ba812f8d7e33f1ac00fa6a9f1b7075.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/Layer_0006_4.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://duapb0qgqx8hg"
+path="res://.godot/imported/Layer_0006_4.png-54dbb4b60ea9230d5f8ef9791319af51.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/Layer_0006_4.png"
+dest_files=["res://.godot/imported/Layer_0006_4.png-54dbb4b60ea9230d5f8ef9791319af51.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/props2.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bad0xr7m0u65i"
+path="res://.godot/imported/props2.png-551b3a8dc2214177ff1a1386bf01afe4.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/props2.png"
+dest_files=["res://.godot/imported/props2.png-551b3a8dc2214177ff1a1386bf01afe4.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/SET1_background_obj.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://biq57y7ayyryq"
+path="res://.godot/imported/SET1_background_obj.png-0330c0b49fdb26b2f530d32a555d9d04.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/SET1_background_obj.png"
+dest_files=["res://.godot/imported/SET1_background_obj.png-0330c0b49fdb26b2f530d32a555d9d04.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/SET1_decorative_obj.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://1o3xgxfutjjl"
+path="res://.godot/imported/SET1_decorative_obj.png-ec721c3f2dbb6d59fc04106390aeebff.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/SET1_decorative_obj.png"
+dest_files=["res://.godot/imported/SET1_decorative_obj.png-ec721c3f2dbb6d59fc04106390aeebff.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/SET1_Mainlev_build.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://815b2ofqneth"
+path="res://.godot/imported/SET1_Mainlev_build.png-cba44f41929adfadc381fcf02331b8b2.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/SET1_Mainlev_build.png"
+dest_files=["res://.godot/imported/SET1_Mainlev_build.png-cba44f41929adfadc381fcf02331b8b2.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/skull1.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bxvk0drl0p50j"
+path="res://.godot/imported/skull1.png-ffcea58d6afcc3ca0feef0bfced91ee6.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/skull1.png"
+dest_files=["res://.godot/imported/skull1.png-ffcea58d6afcc3ca0feef0bfced91ee6.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/skull2.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cf6uqoww1w8b7"
+path="res://.godot/imported/skull2.png-d45be645a0e81b46c66eaa2895970a74.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/skull2.png"
+dest_files=["res://.godot/imported/skull2.png-d45be645a0e81b46c66eaa2895970a74.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/skull3.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bmfy2rrbx4dq5"
+path="res://.godot/imported/skull3.png-1cbe9296b34b12b956d446ca1f2a2f02.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/skull3.png"
+dest_files=["res://.godot/imported/skull3.png-1cbe9296b34b12b956d446ca1f2a2f02.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/skull4.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://0c8mg4pq64bo"
+path="res://.godot/imported/skull4.png-6927dd75f9b0b8cd0656e595e0f0643b.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/skull4.png"
+dest_files=["res://.godot/imported/skull4.png-6927dd75f9b0b8cd0656e595e0f0643b.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/skull5.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://ds4lcix5gyc04"
+path="res://.godot/imported/skull5.png-8e7cbe209216a810f1e1a19c2c9a1a67.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/skull5.png"
+dest_files=["res://.godot/imported/skull5.png-8e7cbe209216a810f1e1a19c2c9a1a67.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/tombstone.png.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://clr3fsk25sqwk"
+path="res://.godot/imported/tombstone.png-a3ede794c87f96fffd3c91d81a31744c.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/tombstone.png"
+dest_files=["res://.godot/imported/tombstone.png-a3ede794c87f96fffd3c91d81a31744c.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
+
+
+
+================================================
+FILE: Assets/Level_3/Vector_horizontal_seamless_illustration_of_forest_with_mystical.jpg.import
+================================================
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://cnv4gdouia0pl"
+path="res://.godot/imported/Vector_horizontal_seamless_illustration_of_forest_with_mystical.jpg-01980f02e7934d786d1aac0cb3f92b87.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Level_3/Vector_horizontal_seamless_illustration_of_forest_with_mystical.jpg"
+dest_files=["res://.godot/imported/Vector_horizontal_seamless_illustration_of_forest_with_mystical.jpg-01980f02e7934d786d1aac0cb3f92b87.ctex"]
 
 [params]
 
@@ -540,6 +2420,113 @@ detect_3d/compress_to=1
 
 
 ================================================
+FILE: Assets/Scenes/checkpoint.tscn
+================================================
+[gd_scene load_steps=15 format=3 uid="uid://d262uno635wih"]
+
+[ext_resource type="Texture2D" uid="uid://ddb0jxjaruox" path="res://Assets/Flag/Flag 01.png" id="1_vk8fg"]
+[ext_resource type="Script" uid="uid://b6kvtuwasoiej" path="res://Assets/Scripts/checkpoint.gd" id="1_y370r"]
+[ext_resource type="Texture2D" uid="uid://mqj3q5eoybph" path="res://Assets/Flag/Flag 02.png" id="2_y370r"]
+[ext_resource type="Texture2D" uid="uid://cfm455v5blnfa" path="res://Assets/Flag/Flag 03.png" id="3_6py3w"]
+[ext_resource type="Texture2D" uid="uid://bgy6yah18vho" path="res://Assets/Flag/Flag 04.png" id="4_upxdf"]
+[ext_resource type="Texture2D" uid="uid://cj535ee84yd1c" path="res://Assets/Flag/Flag 05.png" id="5_1dnr0"]
+[ext_resource type="Texture2D" uid="uid://boftsx3dqv07n" path="res://Assets/Flag/Flag 06.png" id="6_jh78l"]
+[ext_resource type="Texture2D" uid="uid://d3qvhgijvfwn6" path="res://Assets/Flag/Flag 07.png" id="7_brv4v"]
+[ext_resource type="Texture2D" uid="uid://cm3hnd48hwhha" path="res://Assets/Flag/Flag 08.png" id="8_bsms8"]
+[ext_resource type="Texture2D" uid="uid://bduwihs648x8l" path="res://Assets/Flag/Flag 09.png" id="9_puq1f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_juj0j"]
+size = Vector2(36, 96)
+
+[sub_resource type="Animation" id="Animation_wfy80"]
+resource_name = "activation"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666666, 0.16666667, 0.26666668, 0.36666667, 0.46666667, 0.56666666, 0.6666667, 0.76666665),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_vk8fg"), ExtResource("2_y370r"), ExtResource("3_6py3w"), ExtResource("4_upxdf"), ExtResource("5_1dnr0"), ExtResource("6_jh78l"), ExtResource("7_brv4v"), ExtResource("8_bsms8"), ExtResource("9_puq1f")]
+}
+
+[sub_resource type="Animation" id="Animation_62ldc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_vk8fg")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1fvrv"]
+_data = {
+&"RESET": SubResource("Animation_62ldc"),
+&"activation": SubResource("Animation_wfy80")
+}
+
+[node name="Checkpoint" type="Node2D"]
+script = ExtResource("1_y370r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vk8fg")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" groups=["Player"]]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_juj0j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1fvrv")
+}
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_shape_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_shape_entered"]
+
+
+
+================================================
+FILE: Assets/Scenes/death_boundary.tscn
+================================================
+[gd_scene load_steps=3 format=3 uid="uid://2v6pxgl70oom"]
+
+[ext_resource type="Script" uid="uid://dglra7e1w00v6" path="res://Assets/Scripts/death_zone.gd" id="1_1jxkb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl456"]
+size = Vector2(5814, 368)
+
+[node name="DeathBoundary" type="Node2D"]
+
+[node name="DeathZone" type="Area2D" parent="."]
+script = ExtResource("1_1jxkb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(2897, 174)
+shape = SubResource("RectangleShape2D_fl456")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(2897, 174)
+shape = SubResource("RectangleShape2D_fl456")
+
+[connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_body_entered"]
+
+
+
+================================================
 FILE: Assets/Scenes/healthbar_player.tscn
 ================================================
 [gd_scene load_steps=4 format=3 uid="uid://bd5kcw0eq6ooj"]
@@ -584,1510 +2571,6 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_xm7bs")
 value = 100.0
 show_percentage = false
 script = ExtResource("1_xm7bs")
-
-
-
-================================================
-FILE: Assets/Scenes/Level1.tscn
-================================================
-[gd_scene load_steps=14 format=4 uid="uid://lslltlj55xhq"]
-
-[ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Background1.png" id="1_dwyiq"]
-[ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_rpjkb"]
-[ext_resource type="Texture2D" uid="uid://df31i2fcolcg3" path="res://Assets/Map/Background2.png" id="2_dn5ey"]
-[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/TileSet1.png" id="3_lmyl5"]
-[ext_resource type="Texture2D" uid="uid://cynjg3vkree65" path="res://Assets/Map/TileSet2.png" id="4_mlbie"]
-[ext_resource type="PackedScene" uid="uid://bvfncc10i2tkw" path="res://Assets/Scenes/mushroom.tscn" id="5_mngwl"]
-[ext_resource type="Texture2D" uid="uid://ecqv06lvgu45" path="res://Assets/Map/oak_woods_tileset.png" id="5_rhuow"]
-[ext_resource type="PackedScene" uid="uid://dcroo07f78lxy" path="res://Assets/Scenes/skelaton.tscn" id="6_rhuow"]
-[ext_resource type="PackedScene" uid="uid://cuaydp5e5ainu" path="res://Assets/Scenes/trap.tscn" id="9_c410o"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bilv"]
-texture = ExtResource("3_lmyl5")
-2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:0/0 = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:0/0 = 0
-4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:0/0 = 0
-12:0/0 = 0
-12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.5395756, 1.978447, 8, -0.5395756, 8, 8, -8, 8)
-13:0/0 = 0
-13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.4388695, -5.3957615, 8, -8, 8, 8, -8, 8, -8, 0.17985916)
-14:0/0 = 0
-14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-15:0/0 = 0
-15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 3.2374573, -4.13675, 8, -0.35971642, 8, 8, -8, 8)
-16:0/0 = 0
-16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.35971642, 0.8992939, 2.6978817, 8, 6.4749146, 8, 8, -8, 8)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:1/0 = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:1/0 = 0
-5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:1/0 = 0
-7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-8:1/0 = 0
-8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:1/0 = 0
-9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-11:1/0 = 0
-11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.3381634, -1.4388695, 8, -8, 8, 8, -8, 8)
-12:1/0 = 0
-12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-13:1/0 = 0
-13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-14:1/0 = 0
-14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-15:1/0 = 0
-15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-16:1/0 = 0
-16:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-17:1/0 = 0
-17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 2.5180225, -1.978445, 8, 8, -8, 8)
-20:1/0 = 0
-20:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-21:1/0 = 0
-21:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-22:1/0 = 0
-22:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:2/0 = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:2/0 = 0
-4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:2/0 = 0
-5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:2/0 = 0
-6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:2/0 = 0
-7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-8:2/0 = 0
-8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:2/0 = 0
-9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-10:2/0 = 0
-10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-11:2/0 = 0
-11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-12:2/0 = 0
-12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-13:2/0 = 0
-13:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-14:2/0 = 0
-14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-15:2/0 = 0
-15:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-16:2/0 = 0
-16:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-17:2/0 = 0
-17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-20:2/0 = 0
-20:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-21:2/0 = 0
-21:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-22:2/0 = 0
-22:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:3/0 = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:3/0 = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:3/0 = 0
-4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:3/0 = 0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:3/0 = 0
-6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:3/0 = 0
-7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-8:3/0 = 0
-8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:3/0 = 0
-9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-10:3/0 = 0
-10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-11:3/0 = 0
-11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-12:3/0 = 0
-12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-13:3/0 = 0
-13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-17:3/0 = 0
-17:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-18:3/0 = 0
-18:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-19:3/0 = 0
-19:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-20:3/0 = 0
-20:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-21:3/0 = 0
-21:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-22:3/0 = 0
-22:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:4/0 = 0
-0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:4/0 = 0
-2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:4/0 = 0
-3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:4/0 = 0
-4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:4/0 = 0
-6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:4/0 = 0
-7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-8:4/0 = 0
-8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:4/0 = 0
-9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-10:4/0 = 0
-10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-11:4/0 = 0
-11:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-12:4/0 = 0
-12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-13:4/0 = 0
-14:4/0 = 0
-14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-15:4/0 = 0
-15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-16:4/0 = 0
-16:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-17:4/0 = 0
-17:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-18:4/0 = 0
-18:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-19:4/0 = 0
-19:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:5/0 = 0
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:5/0 = 0
-7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-8:5/0 = 0
-8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:5/0 = 0
-9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-11:5/0 = 0
-11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-12:5/0 = 0
-12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-13:5/0 = 0
-17:5/0 = 0
-17:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-18:5/0 = 0
-18:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-19:5/0 = 0
-19:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-20:5/0 = 0
-20:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-21:5/0 = 0
-21:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-22:5/0 = 0
-22:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:6/0 = 0
-2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:6/0 = 0
-3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:6/0 = 0
-4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-11:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-15:6/0 = 0
-15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-16:6/0 = 0
-16:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-17:6/0 = 0
-17:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-18:6/0 = 0
-18:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-19:6/0 = 0
-19:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:7/0 = 0
-0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:7/0 = 0
-2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:7/0 = 0
-3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:7/0 = 0
-4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:7/0 = 0
-5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-13:7/0 = 0
-15:7/0 = 0
-16:7/0 = 0
-17:7/0 = 0
-17:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-18:7/0 = 0
-18:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-19:7/0 = 0
-19:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-20:7/0 = 0
-20:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-21:7/0 = 0
-21:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-22:7/0 = 0
-22:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:8/0 = 0
-1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:8/0 = 0
-2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:8/0 = 0
-3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:8/0 = 0
-4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:8/0 = 0
-5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-15:8/0 = 0
-16:8/0 = 0
-1:9/0 = 0
-1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:9/0 = 0
-2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:9/0 = 0
-3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:9/0 = 0
-4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:9/0 = 0
-5:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:9/0 = 0
-7:9/0 = 0
-8:9/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-15:9/0 = 0
-16:9/0 = 0
-17:9/0 = 0
-20:9/0 = 0
-21:9/0 = 0
-22:9/0 = 0
-2:10/0 = 0
-2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:10/0 = 0
-3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:10/0 = 0
-4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:10/0 = 0
-8:10/0 = 0
-9:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-16:10/0 = 0
-17:10/0 = 0
-18:10/0 = 0
-19:10/0 = 0
-20:10/0 = 0
-21:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-16:11/0 = 0
-17:11/0 = 0
-18:11/0 = 0
-19:11/0 = 0
-20:11/0 = 0
-21:11/0 = 0
-22:11/0 = 0
-23:11/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-16:12/0 = 0
-17:12/0 = 0
-18:12/0 = 0
-19:12/0 = 0
-20:12/0 = 0
-21:12/0 = 0
-22:12/0 = 0
-23:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-5:13/0 = 0
-12:13/0 = 0
-15:13/0 = 0
-16:13/0 = 0
-17:13/0 = 0
-20:13/0 = 0
-21:13/0 = 0
-22:13/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-18:14/0 = 0
-19:14/0 = 0
-20:14/0 = 0
-21:14/0 = 0
-22:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-5:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-16:15/0 = 0
-17:15/0 = 0
-18:15/0 = 0
-20:15/0 = 0
-21:15/0 = 0
-22:15/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-3:16/0 = 0
-4:16/0 = 0
-5:16/0 = 0
-6:16/0 = 0
-7:16/0 = 0
-8:16/0 = 0
-15:16/0 = 0
-16:16/0 = 0
-17:16/0 = 0
-18:16/0 = 0
-21:16/0 = 0
-22:16/0 = 0
-1:17/0 = 0
-2:17/0 = 0
-3:17/0 = 0
-4:17/0 = 0
-5:17/0 = 0
-8:17/0 = 0
-9:17/0 = 0
-10:17/0 = 0
-13:17/0 = 0
-14:17/0 = 0
-15:17/0 = 0
-18:17/0 = 0
-19:17/0 = 0
-20:17/0 = 0
-2:18/0 = 0
-3:18/0 = 0
-4:18/0 = 0
-5:18/0 = 0
-6:18/0 = 0
-7:18/0 = 0
-8:18/0 = 0
-9:18/0 = 0
-10:18/0 = 0
-11:18/0 = 0
-12:18/0 = 0
-16:18/0 = 0
-17:18/0 = 0
-21:18/0 = 0
-2:19/0 = 0
-3:19/0 = 0
-4:19/0 = 0
-5:19/0 = 0
-6:19/0 = 0
-7:19/0 = 0
-8:19/0 = 0
-9:19/0 = 0
-10:19/0 = 0
-11:19/0 = 0
-12:19/0 = 0
-16:19/0 = 0
-17:19/0 = 0
-21:19/0 = 0
-2:20/0 = 0
-3:20/0 = 0
-4:20/0 = 0
-5:20/0 = 0
-6:20/0 = 0
-7:20/0 = 0
-8:20/0 = 0
-9:20/0 = 0
-10:20/0 = 0
-11:20/0 = 0
-12:20/0 = 0
-16:20/0 = 0
-17:20/0 = 0
-21:20/0 = 0
-3:21/0 = 0
-4:21/0 = 0
-5:21/0 = 0
-8:21/0 = 0
-9:21/0 = 0
-10:21/0 = 0
-13:21/0 = 0
-14:21/0 = 0
-15:21/0 = 0
-18:21/0 = 0
-19:21/0 = 0
-20:21/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5gvfm"]
-texture = ExtResource("4_mlbie")
-1:0/0 = 0
-2:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-13:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-16:0/0 = 0
-18:0/0 = 0
-19:0/0 = 0
-20:0/0 = 0
-21:0/0 = 0
-22:0/0 = 0
-23:0/0 = 0
-24:0/0 = 0
-25:0/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-16:1/0 = 0
-17:1/0 = 0
-18:1/0 = 0
-19:1/0 = 0
-20:1/0 = 0
-21:1/0 = 0
-22:1/0 = 0
-23:1/0 = 0
-24:1/0 = 0
-25:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-16:2/0 = 0
-17:2/0 = 0
-18:2/0 = 0
-19:2/0 = 0
-20:2/0 = 0
-21:2/0 = 0
-22:2/0 = 0
-23:2/0 = 0
-24:2/0 = 0
-25:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-12:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-16:3/0 = 0
-17:3/0 = 0
-18:3/0 = 0
-19:3/0 = 0
-20:3/0 = 0
-21:3/0 = 0
-22:3/0 = 0
-23:3/0 = 0
-24:3/0 = 0
-25:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-13:4/0 = 0
-14:4/0 = 0
-15:4/0 = 0
-16:4/0 = 0
-17:4/0 = 0
-23:4/0 = 0
-24:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-16:5/0 = 0
-18:5/0 = 0
-19:5/0 = 0
-20:5/0 = 0
-21:5/0 = 0
-23:5/0 = 0
-24:5/0 = 0
-25:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-16:6/0 = 0
-18:6/0 = 0
-19:6/0 = 0
-20:6/0 = 0
-21:6/0 = 0
-22:6/0 = 0
-23:6/0 = 0
-24:6/0 = 0
-25:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-16:7/0 = 0
-18:7/0 = 0
-19:7/0 = 0
-20:7/0 = 0
-21:7/0 = 0
-23:7/0 = 0
-24:7/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-18:8/0 = 0
-19:8/0 = 0
-20:8/0 = 0
-21:8/0 = 0
-22:8/0 = 0
-23:8/0 = 0
-24:8/0 = 0
-25:8/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-7:9/0 = 0
-8:9/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-16:9/0 = 0
-17:9/0 = 0
-18:9/0 = 0
-19:9/0 = 0
-20:9/0 = 0
-21:9/0 = 0
-22:9/0 = 0
-23:9/0 = 0
-24:9/0 = 0
-25:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-8:10/0 = 0
-9:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-16:10/0 = 0
-17:10/0 = 0
-18:10/0 = 0
-19:10/0 = 0
-20:10/0 = 0
-21:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
-24:10/0 = 0
-25:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-9:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-16:11/0 = 0
-17:11/0 = 0
-18:11/0 = 0
-19:11/0 = 0
-20:11/0 = 0
-21:11/0 = 0
-22:11/0 = 0
-23:11/0 = 0
-24:11/0 = 0
-25:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-9:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-16:12/0 = 0
-17:12/0 = 0
-18:12/0 = 0
-19:12/0 = 0
-20:12/0 = 0
-21:12/0 = 0
-23:12/0 = 0
-24:12/0 = 0
-25:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-5:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-9:13/0 = 0
-10:13/0 = 0
-11:13/0 = 0
-12:13/0 = 0
-13:13/0 = 0
-14:13/0 = 0
-15:13/0 = 0
-16:13/0 = 0
-17:13/0 = 0
-18:13/0 = 0
-19:13/0 = 0
-20:13/0 = 0
-21:13/0 = 0
-22:13/0 = 0
-23:13/0 = 0
-24:13/0 = 0
-25:13/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-18:14/0 = 0
-19:14/0 = 0
-20:14/0 = 0
-21:14/0 = 0
-22:14/0 = 0
-23:14/0 = 0
-24:14/0 = 0
-25:14/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-16:15/0 = 0
-18:15/0 = 0
-19:15/0 = 0
-20:15/0 = 0
-21:15/0 = 0
-22:15/0 = 0
-23:15/0 = 0
-24:15/0 = 0
-25:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-3:16/0 = 0
-4:16/0 = 0
-7:16/0 = 0
-8:16/0 = 0
-9:16/0 = 0
-10:16/0 = 0
-13:16/0 = 0
-14:16/0 = 0
-15:16/0 = 0
-16:16/0 = 0
-19:16/0 = 0
-20:16/0 = 0
-23:16/0 = 0
-24:16/0 = 0
-0:17/0 = 0
-1:17/0 = 0
-2:17/0 = 0
-3:17/0 = 0
-4:17/0 = 0
-7:17/0 = 0
-8:17/0 = 0
-9:17/0 = 0
-10:17/0 = 0
-13:17/0 = 0
-14:17/0 = 0
-15:17/0 = 0
-16:17/0 = 0
-19:17/0 = 0
-20:17/0 = 0
-23:17/0 = 0
-24:17/0 = 0
-1:18/0 = 0
-2:18/0 = 0
-3:18/0 = 0
-4:18/0 = 0
-5:18/0 = 0
-6:18/0 = 0
-9:18/0 = 0
-10:18/0 = 0
-11:18/0 = 0
-12:18/0 = 0
-15:18/0 = 0
-16:18/0 = 0
-17:18/0 = 0
-18:18/0 = 0
-20:18/0 = 0
-21:18/0 = 0
-22:18/0 = 0
-23:18/0 = 0
-24:18/0 = 0
-25:18/0 = 0
-0:19/0 = 0
-1:19/0 = 0
-2:19/0 = 0
-3:19/0 = 0
-4:19/0 = 0
-5:19/0 = 0
-6:19/0 = 0
-7:19/0 = 0
-8:19/0 = 0
-9:19/0 = 0
-10:19/0 = 0
-11:19/0 = 0
-12:19/0 = 0
-13:19/0 = 0
-14:19/0 = 0
-15:19/0 = 0
-16:19/0 = 0
-17:19/0 = 0
-18:19/0 = 0
-19:19/0 = 0
-20:19/0 = 0
-21:19/0 = 0
-22:19/0 = 0
-23:19/0 = 0
-24:19/0 = 0
-25:19/0 = 0
-0:20/0 = 0
-1:20/0 = 0
-2:20/0 = 0
-3:20/0 = 0
-4:20/0 = 0
-5:20/0 = 0
-6:20/0 = 0
-7:20/0 = 0
-8:20/0 = 0
-9:20/0 = 0
-10:20/0 = 0
-11:20/0 = 0
-12:20/0 = 0
-13:20/0 = 0
-14:20/0 = 0
-15:20/0 = 0
-16:20/0 = 0
-17:20/0 = 0
-18:20/0 = 0
-19:20/0 = 0
-20:20/0 = 0
-21:20/0 = 0
-22:20/0 = 0
-23:20/0 = 0
-24:20/0 = 0
-25:20/0 = 0
-0:21/0 = 0
-1:21/0 = 0
-2:21/0 = 0
-3:21/0 = 0
-4:21/0 = 0
-5:21/0 = 0
-6:21/0 = 0
-7:21/0 = 0
-8:21/0 = 0
-9:21/0 = 0
-10:21/0 = 0
-11:21/0 = 0
-12:21/0 = 0
-13:21/0 = 0
-14:21/0 = 0
-15:21/0 = 0
-16:21/0 = 0
-17:21/0 = 0
-18:21/0 = 0
-19:21/0 = 0
-20:21/0 = 0
-21:21/0 = 0
-22:21/0 = 0
-23:21/0 = 0
-24:21/0 = 0
-25:21/0 = 0
-0:22/0 = 0
-1:22/0 = 0
-2:22/0 = 0
-3:22/0 = 0
-4:22/0 = 0
-5:22/0 = 0
-6:22/0 = 0
-7:22/0 = 0
-8:22/0 = 0
-9:22/0 = 0
-10:22/0 = 0
-11:22/0 = 0
-12:22/0 = 0
-13:22/0 = 0
-14:22/0 = 0
-15:22/0 = 0
-16:22/0 = 0
-17:22/0 = 0
-18:22/0 = 0
-19:22/0 = 0
-20:22/0 = 0
-21:22/0 = 0
-22:22/0 = 0
-23:22/0 = 0
-24:22/0 = 0
-25:22/0 = 0
-0:23/0 = 0
-1:23/0 = 0
-2:23/0 = 0
-3:23/0 = 0
-4:23/0 = 0
-5:23/0 = 0
-6:23/0 = 0
-8:23/0 = 0
-9:23/0 = 0
-10:23/0 = 0
-11:23/0 = 0
-12:23/0 = 0
-13:23/0 = 0
-14:23/0 = 0
-15:23/0 = 0
-16:23/0 = 0
-17:23/0 = 0
-18:23/0 = 0
-19:23/0 = 0
-22:23/0 = 0
-23:23/0 = 0
-24:23/0 = 0
-25:23/0 = 0
-2:24/0 = 0
-3:24/0 = 0
-4:24/0 = 0
-9:24/0 = 0
-10:24/0 = 0
-11:24/0 = 0
-12:24/0 = 0
-15:24/0 = 0
-16:24/0 = 0
-17:24/0 = 0
-18:24/0 = 0
-22:24/0 = 0
-23:24/0 = 0
-3:25/0 = 0
-4:25/0 = 0
-9:25/0 = 0
-10:25/0 = 0
-11:25/0 = 0
-12:25/0 = 0
-15:25/0 = 0
-16:25/0 = 0
-17:25/0 = 0
-18:25/0 = 0
-22:25/0 = 0
-23:25/0 = 0
-6:9/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rpjkb"]
-texture = ExtResource("5_rhuow")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-12:0/0 = 0
-13:0/0 = 0
-15:0/0 = 0
-16:0/0 = 0
-18:0/0 = 0
-19:0/0 = 0
-21:0/0 = 0
-22:0/0 = 0
-23:0/0 = 0
-24:0/0 = 0
-25:0/0 = 0
-26:0/0 = 0
-28:0/0 = 0
-29:0/0 = 0
-30:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-15:1/0 = 0
-16:1/0 = 0
-18:1/0 = 0
-19:1/0 = 0
-21:1/0 = 0
-22:1/0 = 0
-23:1/0 = 0
-24:1/0 = 0
-25:1/0 = 0
-26:1/0 = 0
-28:1/0 = 0
-29:1/0 = 0
-30:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-21:2/0 = 0
-22:2/0 = 0
-23:2/0 = 0
-25:2/0 = 0
-26:2/0 = 0
-28:2/0 = 0
-29:2/0 = 0
-30:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-15:3/0 = 0
-16:3/0 = 0
-21:3/0 = 0
-22:3/0 = 0
-25:3/0 = 0
-26:3/0 = 0
-28:3/0 = 0
-29:3/0 = 0
-30:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-11:4/0 = 0
-13:4/0 = 0
-14:4/0 = 0
-15:4/0 = 0
-16:4/0 = 0
-17:4/0 = 0
-21:4/0 = 0
-22:4/0 = 0
-23:4/0 = 0
-24:4/0 = 0
-25:4/0 = 0
-26:4/0 = 0
-28:4/0 = 0
-29:4/0 = 0
-30:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-16:5/0 = 0
-17:5/0 = 0
-21:5/0 = 0
-22:5/0 = 0
-23:5/0 = 0
-24:5/0 = 0
-25:5/0 = 0
-26:5/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-15:6/0 = 0
-16:6/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-15:7/0 = 0
-16:7/0 = 0
-22:7/0 = 0
-23:7/0 = 0
-27:7/0 = 0
-28:7/0 = 0
-29:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-22:8/0 = 0
-23:8/0 = 0
-27:8/0 = 0
-28:8/0 = 0
-29:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-16:9/0 = 0
-18:9/0 = 0
-18:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-19:9/0 = 0
-19:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-20:9/0 = 0
-20:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-22:9/0 = 0
-23:9/0 = 0
-27:9/0 = 0
-28:9/0 = 0
-29:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-7:10/0 = 0
-8:10/0 = 0
-9:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-16:10/0 = 0
-18:10/0 = 0
-19:10/0 = 0
-20:10/0 = 0
-22:10/0 = 0
-23:10/0 = 0
-27:10/0 = 0
-28:10/0 = 0
-29:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-9:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-16:11/0 = 0
-27:11/0 = 0
-28:11/0 = 0
-29:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-16:12/0 = 0
-18:12/0 = 0
-18:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-19:12/0 = 0
-19:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-20:12/0 = 0
-20:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-22:12/0 = 0
-23:12/0 = 0
-24:12/0 = 0
-25:12/0 = 0
-27:12/0 = 0
-28:12/0 = 0
-29:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-4:13/0 = 0
-5:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-9:13/0 = 0
-10:13/0 = 0
-11:13/0 = 0
-13:13/0 = 0
-14:13/0 = 0
-15:13/0 = 0
-16:13/0 = 0
-18:13/0 = 0
-19:13/0 = 0
-20:13/0 = 0
-22:13/0 = 0
-23:13/0 = 0
-24:13/0 = 0
-25:13/0 = 0
-27:13/0 = 0
-28:13/0 = 0
-29:13/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-16:14/0 = 0
-27:14/0 = 0
-28:14/0 = 0
-29:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-5:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-16:15/0 = 0
-18:15/0 = 0
-19:15/0 = 0
-20:15/0 = 0
-22:15/0 = 0
-23:15/0 = 0
-27:15/0 = 0
-28:15/0 = 0
-29:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-3:16/0 = 0
-4:16/0 = 0
-5:16/0 = 0
-7:16/0 = 0
-8:16/0 = 0
-9:16/0 = 0
-10:16/0 = 0
-11:16/0 = 0
-13:16/0 = 0
-14:16/0 = 0
-15:16/0 = 0
-16:16/0 = 0
-18:16/0 = 0
-19:16/0 = 0
-20:16/0 = 0
-22:16/0 = 0
-23:16/0 = 0
-27:16/0 = 0
-28:16/0 = 0
-29:16/0 = 0
-0:17/0 = 0
-1:17/0 = 0
-7:17/0 = 0
-8:17/0 = 0
-9:17/0 = 0
-10:17/0 = 0
-11:17/0 = 0
-22:17/0 = 0
-23:17/0 = 0
-27:17/0 = 0
-28:17/0 = 0
-29:17/0 = 0
-0:18/0 = 0
-1:18/0 = 0
-2:18/0 = 0
-3:18/0 = 0
-4:18/0 = 0
-5:18/0 = 0
-27:18/0 = 0
-28:18/0 = 0
-0:19/0 = 0
-1:19/0 = 0
-2:19/0 = 0
-3:19/0 = 0
-4:19/0 = 0
-5:19/0 = 0
-7:19/0 = 0
-8:19/0 = 0
-9:19/0 = 0
-10:19/0 = 0
-11:19/0 = 0
-12:19/0 = 0
-13:19/0 = 0
-14:19/0 = 0
-15:19/0 = 0
-16:19/0 = 0
-17:19/0 = 0
-18:19/0 = 0
-19:19/0 = 0
-20:19/0 = 0
-21:19/0 = 0
-22:19/0 = 0
-24:19/0 = 0
-25:19/0 = 0
-26:19/0 = 0
-27:19/0 = 0
-28:19/0 = 0
-29:19/0 = 0
-30:19/0 = 0
-0:20/0 = 0
-1:20/0 = 0
-2:20/0 = 0
-3:20/0 = 0
-4:20/0 = 0
-5:20/0 = 0
-7:20/0 = 0
-8:20/0 = 0
-9:20/0 = 0
-10:20/0 = 0
-11:20/0 = 0
-12:20/0 = 0
-13:20/0 = 0
-14:20/0 = 0
-15:20/0 = 0
-16:20/0 = 0
-17:20/0 = 0
-18:20/0 = 0
-19:20/0 = 0
-20:20/0 = 0
-21:20/0 = 0
-22:20/0 = 0
-24:20/0 = 0
-25:20/0 = 0
-26:20/0 = 0
-27:20/0 = 0
-28:20/0 = 0
-29:20/0 = 0
-30:20/0 = 0
-0:21/0 = 0
-1:21/0 = 0
-2:21/0 = 0
-7:21/0 = 0
-8:21/0 = 0
-9:21/0 = 0
-10:21/0 = 0
-11:21/0 = 0
-12:21/0 = 0
-13:21/0 = 0
-14:21/0 = 0
-15:21/0 = 0
-16:21/0 = 0
-17:21/0 = 0
-18:21/0 = 0
-19:21/0 = 0
-27:21/0 = 0
-28:21/0 = 0
-29:21/0 = 0
-30:21/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_5gvfm"]
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 4
-sources/0 = SubResource("TileSetAtlasSource_7bilv")
-sources/1 = SubResource("TileSetAtlasSource_5gvfm")
-sources/2 = SubResource("TileSetAtlasSource_rpjkb")
-
-[node name="Level 1" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_rpjkb")]
-position = Vector2(11, 569)
-
-[node name="Background1" type="Sprite2D" parent="."]
-z_index = -10
-position = Vector2(576, 324.00003)
-scale = Vector2(3.6000001, 3.6000004)
-texture = ExtResource("1_dwyiq")
-
-[node name="Background2" type="Sprite2D" parent="."]
-z_index = -5
-position = Vector2(576, 324)
-scale = Vector2(3.6, 3.6000001)
-texture = ExtResource("2_dn5ey")
-
-[node name="Background3" type="Sprite2D" parent="."]
-z_index = -10
-position = Vector2(1728, 325.00003)
-scale = Vector2(3.6, 3.6)
-texture = ExtResource("1_dwyiq")
-
-[node name="Background4" type="Sprite2D" parent="."]
-z_index = -5
-position = Vector2(1728, 324)
-scale = Vector2(3.6, 3.6)
-texture = ExtResource("2_dn5ey")
-
-[node name="TileMapGround" type="TileMapLayer" parent="."]
-z_index = -2
-position = Vector2(1, -7)
-tile_map_data = PackedByteArray("AAANACQAAAALAAIAAAAOACQAAAAIAAIAAAAPACQAAAAIAAIAAAAQACQAAAAIAAIAAAARACQAAAAIAAIAAAASACQAAAAIAAIAAAATACQAAAAIAAIAAAAwACUAAAAEAA4AAFAxACUAAAAEAA4AAFAyACUAAAAEAA4AAFAzACUAAAAEAA4AAFAwACYAAAAEABIAAAAxACYAAAAEABIAAAAyACYAAAAEABIAAAAzACYAAAAEABIAAABEAB8AAAASAA4AAABEACAAAAASAA8AAABEACEAAAASABAAAABFAB8AAAATAA4AAABGAB8AAAAUAA4AAABGACAAAAAUAA8AAABHAB8AAAAVAA4AAABHACAAAAAVAA8AAABHACEAAAAVABAAAAA9ABoAAQAGAAkAAAAAACUAAAAGAAIAAAAAACYAAAAGAAMAAAAAACcAAAAGAAMAAAABACUAAAAIAAMAAAABACYAAAAIAAMAAAABACcAAAAIAAMAAAACACUAAAAJAAEAAAACACYAAAAIAAMAAAACACcAAAAIAAMAAAADACUAAAAHAAEAAAADACYAAAAIAAMAAAADACcAAAAIAAMAAAAEACUAAAAIAAEAAAAEACYAAAAIAAMAAAAEACcAAAAIAAMAAAAFACUAAAAJAAEAAAAFACYAAAAIAAMAAAAFACcAAAAIAAMAAAAGACUAAAAHAAEAAAAGACYAAAAIAAMAAAAGACcAAAAIAAMAAAAHACUAAAAKAAIAAAAHACYAAAAKAAMAAAAHACcAAAAKAAQAAAAJACUAAAAGAAIAAAAJACYAAAAGAAIAAAAJACcAAAAGAAMAAAAKACUAAAAIAAEAAAAKACYAAAAIAAMAAAAKACcAAAAIAAMAAAALACUAAAAJAAEAAAALACYAAAAIAAMAAAALACcAAAAIAAMAAAAMACUAAAAIAAMAAAAMACYAAAAIAAMAAAAMACcAAAAIAAMAAAANACUAAAAIAAMAAAANACYAAAAIAAMAAAANACcAAAAIAAMAAAAOACUAAAAIAAMAAAAOACYAAAAIAAMAAAAOACcAAAAIAAMAAAAPACUAAAAIAAMAAAAPACYAAAAIAAMAAAAPACcAAAAIAAMAAAAQACUAAAAIAAMAAAAQACYAAAAIAAMAAAAQACcAAAAIAAMAAAARACUAAAAIAAMAAAARACYAAAAIAAMAAAARACcAAAAIAAMAAAASACUAAAAIAAMAAAASACYAAAAIAAMAAAASACcAAAAIAAMAAAATACUAAAAIAAMAAAATACYAAAAIAAMAAAATACcAAAAIAAMAAAAUACUAAAAIAAMAAAAUACYAAAAIAAMAAAAUACcAAAAIAAMAAAAVACUAAAAIAAEAAAAVACYAAAAIAAMAAAAVACcAAAAIAAMAAAAWACUAAAAJAAEAAAAWACYAAAAIAAMAAAAWACcAAAAIAAMAAAAXACYAAAAIAAMAAAAXACcAAAAIAAMAAAAYACYAAAAIAAMAAAAYACcAAAAIAAMAAAAZACYAAAAIAAMAAAAZACcAAAAIAAMAAAAaACYAAAAIAAMAAAAaACcAAAAIAAMAAAAbACYAAAAIAAMAAAAbACcAAAAIAAMAAAAcACYAAAAKAAMAAAAcACcAAAAKAAMAAAAeACYAAAAGAAQAAAAeACcAAAAGAAMAAAAfACYAAAAIAAMAAAAfACcAAAAIAAMAAAAgACYAAAAIAAMAAAAgACcAAAAIAAMAAAAhACYAAAAKAAQAAAAhACcAAAAKAAMAAAAbACUAAAAJAAEAAAAcACUAAAAKAAIAAAAeACUAAAAGAAMAAAAfACUAAAAIAAMAAAAgACUAAAAIAAMAAAAhACUAAAAKAAMAAAAjACUAAAAGAAMAAAAjACYAAAAGAAMAAAAjACcAAAAGAAMAAAAkACUAAAAIAAMAAAAkACYAAAAIAAMAAAAkACcAAAAIAAMAAAAlACUAAAAKAAMAAAAlACYAAAAKAAMAAAAlACcAAAAKAAMAAAAnACUAAAAGAAMAAAAnACYAAAAGAAMAAAAnACcAAAAGAAMAAAAoACUAAAAIAAMAAAAoACYAAAAIAAMAAAAoACcAAAAIAAMAAAApACUAAAAKAAMAAAApACYAAAAKAAMAAAApACcAAAAIAAMAAAAqACUAAAAHAAEAAAAqACYAAAAGAAMAAAAqACcAAAAIAAMAAAArACUAAAAIAAEAAAArACYAAAAIAAMAAAArACcAAAAIAAMAAAAsACUAAAAIAAEAAAAsACYAAAAIAAMAAAAsACcAAAAIAAMAAAAtACUAAAAIAAEAAAAtACYAAAAIAAMAAAAtACcAAAAIAAMAAAAuACUAAAAIAAEAAAAuACYAAAAIAAMAAAAuACcAAAAIAAMAAAAvACUAAAAKAAIAAAAvACYAAAAKAAMAAAAvACcAAAAKAAQAAAAeACQAAAAHAAEAAAAfACQAAAAIAAEAAAAgACQAAAAJAAEAAAAhACQAAAAKAAIAAAAjACQAAAAGAAMAAAAkACQAAAAIAAMAAAAlACQAAAAKAAMAAAAnACQAAAAGAAMAAAAoACQAAAAIAAMAAAApACQAAAAKAAMAAAAjACIAAAAHAAEAAAAjACMAAAAGAAMAAAAkACIAAAAIAAEAAAAkACMAAAAIAAMAAAAlACIAAAAJAAEAAAAlACMAAAAKAAMAAAAnACIAAAAGAAMAAAAnACMAAAAGAAMAAAAoACIAAAAIAAMAAAAoACMAAAAIAAMAAAAnACAAAAAHAAEAAAAnACEAAAAGAAMAAAAoACAAAAAIAAEAAAAoACEAAAAIAAMAAAAwACcAAAAEABIAAAAxACcAAAAEABIAAAAyACcAAAAEABIAAAAzACcAAAAEABIAAAA0ACcAAAAGAAMAAAA1ACcAAAAIAAMAAAA2ACcAAAAIAAMAAAA3ACcAAAAIAAMAAAA4ACcAAAAIAAMAAAA0ACUAAAAHAAEAAAA0ACYAAAAGAAMAAAA1ACUAAAAIAAEAAAA1ACYAAAAIAAMAAAA2ACYAAAAIAAMAAAA3ACYAAAAIAAMAAAA4ACYAAAAIAAMAAAA5ACYAAAAIAAMAAAA5ACcAAAAIAAMAAAA6ACUAAAAGAAIAAAA6ACYAAAAIAAMAAAA6ACcAAAAIAAMAAAA7ACUAAAAIAAMAAAA7ACYAAAAIAAMAAAA7ACcAAAAIAAMAAAA8ACUAAAAIAAMAAAA8ACYAAAAIAAMAAAA8ACcAAAAIAAMAAAA9ACUAAAAIAAMAAAA9ACYAAAAIAAMAAAA9ACcAAAAIAAMAAAA+ACUAAAAIAAMAAAA+ACYAAAAIAAMAAAA+ACcAAAAIAAMAAAA/ACUAAAAIAAMAAAA/ACYAAAAIAAMAAAA/ACcAAAAIAAMAAABAACUAAAAIAAMAAABAACYAAAAIAAMAAABAACcAAAAIAAMAAABBACUAAAAIAAMAAABBACYAAAAIAAMAAABBACcAAAAIAAMAAABCACUAAAAIAAMAAABCACYAAAAIAAMAAABCACcAAAAIAAMAAABDACUAAAAIAAMAAABDACYAAAAIAAMAAABDACcAAAAIAAMAAABEACUAAAAIAAMAAABEACYAAAAIAAMAAABEACcAAAAIAAMAAABFACUAAAAIAAMAAABFACYAAAAIAAMAAABFACcAAAAIAAMAAABGACUAAAAIAAMAAABGACYAAAAIAAMAAABGACcAAAAIAAMAAABHACUAAAAKAAMAAABHACYAAAAKAAMAAABHACcAAAAJAAUAAAA6ACMAAAAHAAEAAAA6ACQAAAAGAAMAAAA7ACMAAAAIAAEAAAA7ACQAAAAIAAMAAAA8ACMAAAAIAAEAAAA8ACQAAAAIAAMAAAA9ACMAAAAIAAEAAAA9ACQAAAAIAAMAAAA+ACMAAAAIAAEAAAA+ACQAAAAIAAMAAAA/ACMAAAAIAAEAAAA/ACQAAAAIAAMAAABAACMAAAAIAAEAAABAACQAAAAIAAMAAABBACMAAAAIAAEAAABBACQAAAAIAAMAAABCACMAAAAIAAEAAABCACQAAAAIAAMAAABDACMAAAAIAAEAAABDACQAAAAIAAMAAABEACMAAAAIAAEAAABEACQAAAAIAAMAAABFACMAAAAIAAEAAABFACQAAAAIAAMAAABGACMAAAAIAAEAAABGACQAAAAIAAMAAABHACMAAAAJAAEAAABHACQAAAAKAAMAAAAAACgAAAAGAAQAAAABACgAAAAIAAUAAAACACgAAAAIAAUAAAADACgAAAAIAAUAAAAEACgAAAAIAAUAAAAFACgAAAAIAAUAAAAGACgAAAAIAAUAAAAHACgAAAAJAAUAAAAJACgAAAAGAAQAAAAcACgAAAAKAAQAAAAKACgAAAAIAAUAAAALACgAAAAIAAUAAAAMACgAAAAIAAUAAAANACgAAAAIAAUAAAAOACgAAAAIAAUAAAAPACgAAAAIAAUAAAAQACgAAAAIAAUAAAARACgAAAAIAAUAAAASACgAAAAIAAUAAAATACgAAAAIAAUAAAAUACgAAAAIAAUAAAAVACgAAAAIAAUAAAAWACgAAAAIAAUAAAAXACgAAAAIAAUAAAAYACgAAAAIAAUAAAAZACgAAAAIAAUAAAAaACgAAAAIAAUAAAAbACgAAAAIAAUAAAAeACgAAAAGAAQAAAAhACgAAAAKAAQAAAAfACgAAAAIAAUAAAAgACgAAAAIAAUAAAAjACgAAAAGAAQAAAAkACgAAAAIAAUAAAAlACgAAAAJAAUAAAAnACgAAAAGAAQAAAAoACgAAAAIAAUAAAApACgAAAAIAAUAAAAqACgAAAAIAAUAAAArACgAAAAIAAUAAAAsACgAAAAIAAUAAAAtACgAAAAIAAUAAAAuACgAAAAIAAUAAAAvACgAAAAJAAUAAAA0ACgAAAAGAAQAAAA1ACgAAAAIAAUAAAA2ACgAAAAIAAUAAAA3ACgAAAAIAAUAAAA4ACgAAAAIAAUAAAA5ACgAAAAIAAUAAAA6ACgAAAAIAAUAAAA7ACgAAAAIAAUAAAA8ACgAAAAIAAUAAAA9ACgAAAAIAAUAAAA+ACgAAAAIAAUAAAA/ACgAAAAIAAUAAABAACgAAAAIAAUAAABBACgAAAAIAAUAAABCACgAAAAIAAUAAABDACgAAAAIAAUAAABEACgAAAAIAAUAAABFACgAAAAIAAUAAABGACgAAAAIAAUAAABHACgAAAAJAAUAAAA2ACUAAAAHAAMAAAA3ACUAAAAHAAMAAAA4ACUAAAAHAAMAAAA5ACUAAAAHAAMAAAAAACQAAAADAAAAAAABACQAAAADAAAAAAACACQAAAADAAAAAAADACQAAAADAAAAAAAEACQAAAADAAAAAAAFACQAAAADAAAAAAAGACQAAAADAAAAAAAHACQAAAADAAAAAAAJACQAAAADAAAAAAAKACQAAAADAAAAAAALACQAAAADAAAAAAAMACQAAAADAAAAAAAUACQAAAADAAAAAAAVACQAAAADAAAAAAAWACQAAAADAAAAAAAaACQAAAADAAAAAAAbACQAAAADAAAAAAAcACQAAAADAAAAAAAeACMAAAADAAAAAAAfACMAAAADAAAAAAAgACMAAAADAAAAAAAhACMAAAADAAAAAAAjACEAAAADAAAAAAAkACEAAAADAAAAAAAlACEAAAADAAAAAAAnAB8AAAADAAAAAAAoAB8AAAADAAAAAAApAB8AAAADAAAAAAAqACQAAAADAAAAAAArACQAAAADAAAAAAAsACQAAAADAAAAAAAtACQAAAADAAAAAAAuACQAAAADAAAAAAAvACQAAAADAAAAAAA0ACQAAAADAAAAAAA1ACQAAAADAAAAAAA2ACQAAAADAAAAAAA3ACQAAAADAAAAAAA4ACQAAAADAAAAAAA5ACQAAAADAAAAAAA6ACIAAAADAAAAAAA7ACIAAAADAAAAAAA8ACIAAAADAAAAAAA9ACIAAAADAAAAAAA+ACIAAAADAAAAAAA/ACIAAAADAAAAAABAACIAAAADAAAAAABBACIAAAADAAAAAABCACIAAAADAAAAAABDACIAAAADAAAAAABEACIAAAADAAAAAABFACIAAAADAAAAAABGACIAAAADAAAAAABHACIAAAADAAAAAAANACMAAAALAAEAAAAOACMAAAAMAAEAAAAPACMAAAANAAEAAAAQACMAAAAOAAEAAAARACMAAAAPAAEAAAASACMAAAAQAAEAAAATACMAAAARAAEAAAAOACIAAAAMAAAAAAAPACIAAAANAAAAAAAQACIAAAAOAAAAAAARACIAAAAPAAAAAAASACIAAAAQAAAAAABKACMAAAAGAAIAAABKACQAAAAGAAMAAABKACUAAAAGAAQAAABKACYAAAAGAAIAAABKACcAAAAGAAMAAABKACgAAAAGAAQAAABLACMAAAAHAAEAAABMACMAAAAIAAEAAABNACMAAAAJAAEAAABOACMAAAAHAAEAAABPACMAAAAIAAEAAABQACMAAAAJAAEAAABXACMAAAAHAAEAAABYACMAAAAIAAEAAABZACMAAAAJAAEAAABLACQAAAAHAAIAAABLACUAAAAHAAMAAABLACYAAAAHAAQAAABMACQAAAAIAAIAAABMACUAAAAIAAMAAABMACYAAAAIAAQAAABNACQAAAAJAAIAAABNACUAAAAJAAMAAABNACYAAAAJAAQAAABOACQAAAAHAAIAAABOACUAAAAHAAMAAABOACYAAAAHAAQAAABPACQAAAAIAAIAAABPACUAAAAIAAMAAABPACYAAAAIAAQAAABQACQAAAAJAAIAAABQACUAAAAJAAMAAABQACYAAAAJAAQAAABRACQAAAAHAAIAAABRACUAAAAHAAMAAABRACYAAAAHAAQAAABSACQAAAAIAAIAAABSACUAAAAIAAMAAABSACYAAAAIAAQAAABTACQAAAAJAAIAAABTACUAAAAJAAMAAABTACYAAAAJAAQAAABUACQAAAAHAAIAAABUACUAAAAHAAMAAABUACYAAAAHAAQAAABVACQAAAAIAAIAAABVACUAAAAIAAMAAABVACYAAAAIAAQAAABWACQAAAAJAAIAAABWACUAAAAJAAMAAABWACYAAAAJAAQAAABXACQAAAAHAAIAAABXACUAAAAHAAMAAABXACYAAAAHAAQAAABYACQAAAAIAAIAAABYACUAAAAIAAMAAABYACYAAAAIAAQAAABZACQAAAAJAAIAAABZACUAAAAJAAMAAABZACYAAAAJAAQAAABLACcAAAAHAAIAAABMACcAAAAIAAIAAABNACcAAAAJAAIAAABOACcAAAAHAAIAAABPACcAAAAIAAIAAABQACcAAAAJAAIAAABRACcAAAAHAAIAAABSACcAAAAIAAIAAABTACcAAAAJAAIAAABUACcAAAAHAAIAAABVACcAAAAIAAIAAABWACcAAAAJAAIAAABXACcAAAAHAAIAAABYACcAAAAIAAIAAABZACcAAAAJAAIAAABLACgAAAAHAAUAAABMACgAAAAIAAUAAABNACgAAAAJAAUAAABOACgAAAAHAAUAAABPACgAAAAIAAUAAABQACgAAAAJAAUAAABRACgAAAAHAAUAAABSACgAAAAIAAUAAABTACgAAAAJAAUAAABUACgAAAAHAAUAAABVACgAAAAIAAUAAABWACgAAAAJAAUAAABXACgAAAAHAAUAAABYACgAAAAIAAUAAABZACgAAAAJAAUAAABaACMAAAAHAAEAAABbACMAAAAIAAEAAABcACMAAAAJAAEAAABdACMAAAAHAAEAAABeACMAAAAIAAEAAABfACMAAAAJAAEAAABgACMAAAAHAAEAAABhACMAAAAIAAEAAABiACMAAAAJAAEAAABaACQAAAAGAAIAAABaACUAAAAGAAMAAABaACYAAAAGAAQAAABbACQAAAAHAAIAAABbACUAAAAHAAMAAABbACYAAAAHAAQAAABcACQAAAAIAAIAAABcACUAAAAIAAMAAABcACYAAAAIAAQAAABdACQAAAAJAAIAAABdACUAAAAJAAMAAABdACYAAAAJAAQAAABeACQAAAAKAAIAAABeACUAAAAKAAMAAABeACYAAAAKAAQAAABfACQAAAAGAAIAAABfACUAAAAGAAMAAABfACYAAAAGAAQAAABgACQAAAAHAAIAAABgACUAAAAHAAMAAABgACYAAAAHAAQAAABhACQAAAAIAAIAAABhACUAAAAIAAMAAABhACYAAAAIAAQAAABiACQAAAAJAAIAAABiACUAAAAJAAMAAABiACYAAAAJAAQAAABjACQAAAAKAAIAAABjACUAAAAKAAMAAABjACYAAAAKAAQAAABaACcAAAAGAAIAAABaACgAAAAGAAMAAABbACcAAAAHAAIAAABbACgAAAAHAAMAAABcACcAAAAIAAIAAABcACgAAAAIAAMAAABdACcAAAAJAAIAAABdACgAAAAJAAMAAABeACcAAAAKAAIAAABeACgAAAAKAAMAAABfACcAAAAGAAIAAABfACgAAAAGAAMAAABgACcAAAAHAAIAAABgACgAAAAHAAMAAABhACcAAAAIAAIAAABhACgAAAAIAAMAAABiACcAAAAJAAIAAABiACgAAAAJAAMAAABjACcAAAAKAAIAAABjACgAAAAKAAMAAABjACMAAAAJAAEAAABZACEAAAAOAAYAAABaACEAAAAPAAYAAABbAB8AAAAOAAQAAABbACEAAAAQAAYAAABcAB8AAAAPAAQAAABcACEAAAAQAAYAAABdAB8AAAAQAAQAAABdACEAAAAQAAYAAABeAB4AAAARAAMAAABeAB8AAAARAAQAAABeACAAAAARAAUAAABeACEAAAARAAYAAABfAB4AAAASAAMAAABfAB8AAAASAAQAAABfACAAAAASAAUAAABfACEAAAASAAYAAABgAB4AAAATAAMAAABgAB8AAAATAAQAAABgACAAAAATAAUAAABgACEAAAATAAYAAABhACAAAAAUAAUAAABiACAAAAAVAAUAAABjACAAAAAWAAUAAABVABUAAAAUAAkAAABVABYAAAAUAAoAAABVABcAAAAUAAsAAABVABgAAAAUAAwAAABVABkAAAAUAA0AAABWABUAAAAVAAkAAABWABYAAAAVAAoAAABWABcAAAAVAAsAAABWABgAAAAVAAwAAABWABkAAAAVAA0AAABXABUAAAAWAAkAAABXABYAAAAWAAoAAABXABcAAAAWAAsAAABXABgAAAAWAAwAAABXABkAAAAWAA0AAABYABYAAAAXAAoAAABYABcAAAAXAAsAAABYABgAAAAXAAwAAABUABYAAAATAAoAAABUABcAAAATAAsAAABUABgAAAATAAwAAABMABkAAAAOAAoAAABMABoAAAAOAAsAAABMABsAAAAOAAwAAABNABgAAAAPAAkAAABNABkAAAAPAAoAAABNABoAAAAPAAsAAABNABsAAAAPAAwAAABNABwAAAAPAA0AAABOABgAAAAQAAkAAABOABkAAAAQAAoAAABOABoAAAAQAAsAAABOABsAAAAQAAwAAABOABwAAAAQAA0AAABPABkAAAARAAoAAABPABoAAAARAAsAAABPABsAAAARAAwAAABPABgAAAARAAkAAABPABwAAAARAA0AAABQABkAAAASAAoAAABQABoAAAASAAsAAABQABsAAAASAAwAAABRACMAAAAHAAEAAABSACMAAAAIAAEAAABTACMAAAAJAAEAAABUACMAAAAHAAEAAABVACMAAAAIAAEAAABWACMAAAAJAAEAAABKACIAAAADAAAAAABLACIAAAADAAAAAABMACIAAAADAAAAAABNACIAAAADAAAAAABOACIAAAADAAAAAABPACIAAAADAAAAAABQACIAAAADAAAAAABRACIAAAADAAAAAABSACIAAAADAAAAAABTACIAAAADAAAAAABUACIAAAADAAAAAABVACIAAAADAAAAAABWACIAAAADAAAAAABXACIAAAADAAAAAABYACIAAAADAAAAAABZACIAAAADAAAAAABaACIAAAADAAAAAABbACIAAAADAAAAAABcACIAAAADAAAAAABdACIAAAADAAAAAABeACIAAAADAAAAAABfACIAAAADAAAAAABgACIAAAADAAAAAABhACIAAAADAAAAAABiACIAAAADAAAAAABjACIAAAADAAAAAABpACMAAAAEAAYAAABpACQAAAAEAAcAAABpACUAAAAEAAgAAABpACYAAAAEAAkAAABqACMAAAADAAAAAABqACQAAAAFAAcAAABqACUAAAAFAAgAAABqACYAAAAFAAkAAABmACMAAAADAAAAAABmACQAAAABAAcAAABmACUAAAABAAgAAABmACYAAAABAAkAAABnACIAAAADAAAAAABnACMAAAACAAYAAABnACQAAAACAAcAAABnACUAAAACAAgAAABnACYAAAACAAkAAABnACcAAAACAAoAAABoACIAAAADAAAAAABoACMAAAADAAYAAABoACQAAAADAAcAAABoACUAAAADAAgAAABoACYAAAADAAkAAABoACcAAAADAAoAAABpACIAAAADAAAAAABpACcAAAAEAAoAAAA9ABwAAQAEAAEAAAA9AB0AAQAEAAIAAAA9AB4AAQAEAAMAAAA+ABwAAQAFAAEAAAA+AB0AAQAFAAIAAAA+AB4AAQAFAAMAAAA+AB8AAQAFAAQAAAA/ABsAAQAGAAAAAAA/ABwAAQAGAAEAAAA/AB0AAQAGAAIAAAA/AB4AAQAGAAMAAAA/AB8AAQAGAAQAAAA/ACEAAQAGAAYAAABAABsAAQAHAAAAAABAABwAAQAHAAEAAABAAB0AAQAHAAIAAABAAB4AAQAHAAMAAABAAB8AAQAHAAQAAABAACAAAQAHAAUAAABAACEAAQAHAAYAAABBABsAAQAIAAAAAABBABwAAQAIAAEAAABBAB0AAQAIAAIAAABBAB4AAQAIAAMAAABBAB8AAQAIAAQAAABBACAAAQAIAAUAAABBACEAAQAIAAYAAABCABsAAQAJAAAAAABCABwAAQAJAAEAAABCAB0AAQAJAAIAAABCAB4AAQAJAAMAAABCAB8AAQAJAAQAAABCACAAAQAJAAUAAABCACEAAQAJAAYAAABDABwAAQAKAAEAAABDAB0AAQAKAAIAAABDAB4AAQAKAAMAAABDAB8AAQAKAAQAAABDACEAAQAKAAYAAABxACQAAAAKAAIAAABxACUAAAAKAAMAAABxACYAAAAKAAQAAAByACQAAAAIAAIAAAByACUAAAAIAAMAAAByACYAAAAIAAQAAABzACQAAAAHAAEAAABzACUAAAAGAAIAAABzACYAAAAGAAMAAAB0ACQAAAAIAAEAAAB0ACUAAAAHAAIAAAB0ACYAAAAHAAMAAAB1ACQAAAAJAAEAAAB1ACUAAAAIAAIAAAB1ACYAAAAIAAMAAAB2ACQAAAAHAAEAAAB2ACUAAAAJAAIAAAB2ACYAAAAJAAMAAAB3ACQAAAAIAAEAAAB3ACUAAAAKAAIAAAB3ACYAAAAKAAMAAAB3ACcAAAAKAAQAAAB4ACQAAAAJAAEAAAB4ACUAAAAGAAIAAAB4ACYAAAAGAAMAAAB4ACcAAAAGAAQAAAB5ACQAAAAHAAEAAAB5ACUAAAAHAAIAAAB5ACYAAAAHAAMAAAB5ACcAAAAHAAQAAAB6ACQAAAAIAAEAAAB6ACUAAAAIAAIAAAB6ACYAAAAIAAMAAAB6ACcAAAAIAAQAAAB7ACQAAAAJAAEAAAB7ACUAAAAJAAIAAAB7ACYAAAAJAAMAAAB7ACcAAAAJAAQAAAB8ACQAAAAHAAEAAAB8ACUAAAAKAAIAAAB8ACYAAAAKAAMAAAB8ACcAAAAKAAQAAAB9ACQAAAAIAAEAAAB9ACUAAAAGAAIAAAB9ACYAAAAGAAMAAAB9ACcAAAAGAAQAAAB+ACQAAAAJAAEAAAB+ACUAAAAHAAIAAAB+ACYAAAAHAAMAAAB+ACcAAAAHAAQAAAB/ACQAAAAHAAEAAAB/ACUAAAAIAAIAAAB/ACYAAAAIAAMAAAB/ACcAAAAIAAQAAACAACQAAAAIAAEAAACAACUAAAAJAAIAAACAACYAAAAJAAMAAACAACcAAAAJAAQAAACBACQAAAAJAAEAAACBACUAAAAKAAIAAACBACYAAAAKAAMAAACBACcAAAAKAAQAAACCACQAAAAGAAIAAACCACUAAAAGAAMAAACCACYAAAAGAAQAAACDACQAAAAHAAIAAACDACUAAAAHAAMAAACDACYAAAAHAAQAAACEACQAAAAIAAIAAACEACUAAAAIAAMAAACEACYAAAAIAAQAAACFACQAAAAJAAIAAACFACUAAAAJAAMAAACFACYAAAAJAAQAAACGACMAAAAIAAEAAACGACQAAAAKAAIAAACGACUAAAAKAAMAAACGACYAAAAKAAQAAACHACMAAAAJAAEAAACHACQAAAAGAAIAAACHACUAAAAGAAMAAACHACYAAAAGAAQAAACIACMAAAAHAAEAAACIACQAAAAHAAIAAACIACUAAAAHAAMAAACIACYAAAAHAAQAAACJACMAAAAIAAEAAACJACQAAAAIAAIAAACJACUAAAAIAAMAAACJACYAAAAIAAQAAACKACMAAAAJAAEAAACKACQAAAAJAAIAAACKACUAAAAJAAMAAACKACYAAAAJAAQAAACLACMAAAAJAAEAAACLACQAAAAKAAIAAACLACUAAAAKAAMAAACLACYAAAAKAAQAAABtACMAAAAHAAEAAABtACQAAAAGAAIAAABtACUAAAAGAAMAAABtACYAAAAGAAQAAABuACMAAAAIAAEAAABuACQAAAAHAAIAAABuACUAAAAHAAMAAABuACYAAAAHAAQAAABvACMAAAAJAAEAAABvACQAAAAIAAIAAABvACUAAAAIAAMAAABvACYAAAAIAAQAAABwACMAAAAHAAEAAABwACQAAAAJAAIAAABwACUAAAAJAAMAAABwACYAAAAJAAQAAABzACcAAAAGAAQAAAB0ACcAAAAHAAQAAAB1ACcAAAAIAAQAAAB2ACcAAAAJAAQAAACMACMAAAAHAAEAAACNACMAAAAIAAEAAACOACMAAAAJAAEAAACPACMAAAAIAAEAAACMACQAAAAGAAIAAACMACUAAAAGAAMAAACMACYAAAAGAAQAAACNACQAAAAHAAIAAACNACUAAAAHAAMAAACNACYAAAAHAAQAAACOACQAAAAIAAIAAACOACUAAAAIAAMAAACOACYAAAAIAAQAAACPACQAAAAJAAIAAACPACUAAAAJAAMAAACPACYAAAAJAAQAAABtACcAAAAGAAIAAABtACgAAAAGAAMAAABuACcAAAAHAAIAAABuACgAAAAHAAMAAABvACcAAAAIAAIAAABvACgAAAAIAAMAAABwACcAAAAJAAIAAABwACgAAAAJAAMAAABxACcAAAAKAAIAAABxACgAAAAKAAMAAACCACcAAAAGAAIAAACCACgAAAAGAAMAAACDACcAAAAHAAIAAACDACgAAAAHAAMAAACEACcAAAAIAAIAAACEACgAAAAIAAMAAACFACcAAAAJAAIAAACFACgAAAAJAAMAAACGACcAAAAKAAIAAACGACgAAAAKAAMAAACHACcAAAAGAAIAAACHACgAAAAGAAMAAACIACcAAAAHAAIAAACIACgAAAAHAAMAAACJACcAAAAIAAIAAACJACgAAAAIAAMAAACKACcAAAAJAAIAAACKACgAAAAJAAMAAACLACcAAAAKAAIAAACLACgAAAAKAAMAAACMACcAAAAGAAIAAACMACgAAAAGAAMAAACNACcAAAAHAAIAAACNACgAAAAHAAMAAACOACcAAAAIAAIAAACOACgAAAAIAAMAAACPACcAAAAJAAIAAACPACgAAAAJAAMAAAByACcAAAAGAAIAAAByACgAAAAGAAMAAABzACgAAAAGAAIAAAB0ACgAAAAHAAIAAAB1ACgAAAAIAAIAAAB2ACgAAAAJAAIAAAB3ACgAAAAKAAIAAAB4ACgAAAAGAAIAAAB5ACgAAAAHAAIAAAB6ACgAAAAIAAIAAAB7ACgAAAAJAAIAAAB8ACgAAAAKAAIAAAB9ACgAAAAGAAIAAAB+ACgAAAAHAAIAAAB/ACgAAAAIAAIAAACAACgAAAAJAAIAAACBACgAAAAKAAIAAABtACIAAAADAAAAAABuACIAAAADAAAAAABvACIAAAADAAAAAABwACIAAAADAAAAAABzACMAAAADAAAAAAB0ACMAAAADAAAAAAB1ACMAAAADAAAAAAB2ACMAAAADAAAAAAB3ACMAAAADAAAAAAB4ACMAAAADAAAAAAB5ACMAAAADAAAAAAB6ACMAAAADAAAAAAB7ACMAAAADAAAAAAB8ACMAAAADAAAAAAB9ACMAAAADAAAAAAB+ACMAAAADAAAAAAB/ACMAAAADAAAAAACAACMAAAADAAAAAACBACMAAAADAAAAAACGACIAAAADAAAAAACHACIAAAADAAAAAACIACIAAAADAAAAAACJACIAAAADAAAAAACKACIAAAADAAAAAACLACIAAAADAAAAAACMACIAAAADAAAAAACNACIAAAADAAAAAACOACIAAAADAAAAAACPACIAAAADAAAAAABxACMAAAADAAAAAAByACMAAAADAAAAAACCACMAAAADAAAAAACDACMAAAADAAAAAACEACMAAAADAAAAAACFACMAAAADAAAAAABvABgAAAANAAwAAABwABgAAAALAAwAAABxABgAAAAMAAwAAAByABgAAAANAAwAAABzABgAAAALAAwAAAB0ABgAAAAMAAwAAAB1ABgAAAANAAwAAAB2ABgAAAALAAwAAAB3ABgAAAAMAAwAAAB4ABgAAAANAAwAAAB5ABgAAAALAAwAAAB6ABgAAAAMAAwAAAB7ABgAAAANAAwAAAB8ABgAAAALAAwAAAB9ABgAAAAMAAwAAAB+ABgAAAANAAwAAAB/ABgAAAALAAwAAACAABgAAAAMAAwAAACBABgAAAANAAwAAACCABgAAAALAAwAAACDABgAAAAMAAwAAACEABgAAAANAAwAAACFABgAAAALAAwAAACGABgAAAAMAAwAAACHABgAAAANAAwAAABwABkAAAAMAA0AAAByABkAAAAMAA0AAAB0ABkAAAAMAA0AAAB2ABkAAAAMAA0AAAB4ABkAAAAMAA0AAAB6ABkAAAAMAA0AAAB8ABkAAAAMAA0AAAB+ABkAAAAMAA0AAACAABkAAAAMAA0AAACCABkAAAAMAA0AAACEABkAAAAMAA0AAACGABkAAAAMAA0AAAB6ABEAAAAHAAYAAAB6ABIAAAAHAAcAAAB6ABMAAAAHAAgAAAB6ABQAAAAHAAkAAAB6ABUAAAAHAAoAAAB7ABEAAAAIAAYAAAB7ABIAAAAIAAcAAAB7ABMAAAAIAAgAAAB7ABQAAAAIAAkAAAB7ABUAAAAIAAoAAAB8ABEAAAAJAAYAAAB8ABIAAAAJAAcAAAB8ABMAAAAJAAgAAAB8ABQAAAAJAAkAAAB8ABUAAAAJAAoAAAB5ABIAAAAGAAcAAAB5ABMAAAAGAAgAAAB5ABQAAAAGAAkAAAB9ABIAAAAKAAcAAAB9ABMAAAAKAAgAAAB9ABQAAAAKAAkAAAAUABYAAAABAAEAAAAUABcAAAABAAIAAAAUABgAAAABAAMAAAAVABUAAAACAAAAAAAVABYAAAACAAEAAAAVABcAAAACAAIAAAAVABgAAAACAAMAAAAVABkAAAACAAQAAAAWABUAAAADAAAAAAAWABYAAAADAAEAAAAWABcAAAADAAIAAAAWABgAAAADAAMAAAAWABkAAAADAAQAAAAXABUAAAAEAAAAAAAXABYAAAAEAAEAAAAXABcAAAAEAAIAAAAXABgAAAAEAAMAAAAXABkAAAAEAAQAAAAYABYAAAAFAAEAAAAYABcAAAAFAAIAAAAYABgAAAAFAAMAAAAcABIAAAABAAEAAAAcABMAAAABAAIAAAAcABQAAAABAAMAAAAdABEAAAACAAAAAAAdABIAAAACAAEAAAAdABMAAAACAAIAAAAdABQAAAACAAMAAAAdABUAAAACAAQAAAAeABEAAAADAAAAAAAeABIAAAADAAEAAAAeABMAAAADAAIAAAAeABQAAAADAAMAAAAeABUAAAADAAQAAAAfABEAAAAEAAAAAAAfABIAAAAEAAEAAAAfABMAAAAEAAIAAAAfABQAAAAEAAMAAAAfABUAAAAEAAQAAAAgABIAAAAFAAEAAAAgABMAAAAFAAIAAAAgABQAAAAFAAMAAAApACAAAAAKAAIAAAApACEAAAAKAAMAAAApACIAAAAKAAQAAAApACMAAAAKAAMAAAAXACUAAAAIAAIAAAAYACUAAAAIAAIAAAAZACQAAAADAAAAAAAZACUAAAAHAAIAAAAaACUAAAAHAAIAAAA=")
-tile_set = SubResource("TileSet_5gvfm")
-
-[node name="Mushroom" parent="." instance=ExtResource("5_mngwl")]
-position = Vector2(1317, 511)
-
-[node name="Skelaton" parent="." instance=ExtResource("6_rhuow")]
-position = Vector2(1853, 525)
-
-[node name="Trap" parent="." instance=ExtResource("9_c410o")]
-position = Vector2(386, 569)
 
 
 
@@ -2204,7 +2687,7 @@ shape = SubResource("RectangleShape2D_4eb1l")
 ================================================
 FILE: Assets/Scenes/player.tscn
 ================================================
-[gd_scene load_steps=52 format=3 uid="uid://e2xryulnha1c"]
+[gd_scene load_steps=53 format=3 uid="uid://e2xryulnha1c"]
 
 [ext_resource type="Script" uid="uid://dss3ovtlegw2e" path="res://Assets/Scripts/player.gd" id="1_c3tg1"]
 [ext_resource type="Texture2D" uid="uid://b018qdbtt0gjw" path="res://Assets/Sprites/Knight/_Attack.png" id="2_lerqx"]
@@ -2214,6 +2697,7 @@ FILE: Assets/Scenes/player.tscn
 [ext_resource type="Texture2D" uid="uid://ca8y8vgl0tfte" path="res://Assets/Sprites/Knight/_Jump.png" id="6_rsrmw"]
 [ext_resource type="Texture2D" uid="uid://dg7nv5e2a6uod" path="res://Assets/Sprites/Knight/_Run.png" id="7_o8kuu"]
 [ext_resource type="PackedScene" uid="uid://bd5kcw0eq6ooj" path="res://Assets/Scenes/healthbar_player.tscn" id="8_lerqx"]
+[ext_resource type="FontFile" uid="uid://cly50jlrl7q1h" path="res://Assets/Fonts/m5x7 Daniel Linssen.ttf" id="9_jp3cw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xv74q"]
 atlas = ExtResource("2_lerqx")
@@ -2565,7 +3049,7 @@ one_shot = true
 [node name="Camera2D" type="Camera2D" parent="." groups=["Player"]]
 limit_left = 0
 limit_top = 0
-limit_right = 100000
+limit_right = 10000
 limit_bottom = 648
 
 [node name="HealthBarPlayer" parent="." instance=ExtResource("8_lerqx")]
@@ -2573,6 +3057,29 @@ offset_left = -10.0
 offset_top = -56.0
 offset_right = 54.0
 offset_bottom = -46.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BoredomLabel" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -432.0
+offset_top = -51.0
+offset_right = 432.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.91402, 0.31434318, 0.15305951, 1)
+theme_override_fonts/font = ExtResource("9_jp3cw")
+theme_override_font_sizes/font_size = 128
+text = "You died of boredom"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="AttackAreaP" to="." method="_on_attack_area_p_body_entered"]
 [connection signal="body_exited" from="AttackAreaP" to="." method="_on_attack_area_p_body_exited"]
@@ -2875,6 +3382,57 @@ shape = SubResource("RectangleShape2D_glsb3")
 
 
 ================================================
+FILE: Assets/Scripts/checkpoint.gd
+================================================
+extends Node2D
+
+@export var spawnpoint = false
+var activated = false
+
+# This function MUST be connected to the "body_entered" signal of your Area2D
+func _on_area_2d_body_entered(body):
+	# Check if the object touching the flag is the Player
+	if body is Player and not activated:
+		activate()
+		# Tell the player to save this spot
+		body.update_respawn_point(global_position)
+
+func activate():
+	activated = true
+	$AnimationPlayer.play("activation")
+
+
+
+================================================
+FILE: Assets/Scripts/checkpoint.gd.uid
+================================================
+uid://b6kvtuwasoiej
+
+
+
+================================================
+FILE: Assets/Scripts/death_zone.gd
+================================================
+extends Area2D
+
+func _on_body_entered(body: Node2D) -> void:
+	# Check if the falling object is the player
+	if body is Player:
+		# Deal massive damage to ensure instant death
+		# We pass '0' as direction because falling into the void 
+		# shouldn't really have "knockback"
+		body.take_damage(9999, 0)
+
+
+
+================================================
+FILE: Assets/Scripts/death_zone.gd.uid
+================================================
+uid://dglra7e1w00v6
+
+
+
+================================================
 FILE: Assets/Scripts/healthbar_player.gd
 ================================================
 extends ProgressBar
@@ -3023,6 +3581,13 @@ var health: int
 var is_attacking: bool = false
 var is_dead: bool = false
 
+# --- BOREDOM SETTINGS ---
+@export var boredom_threshold: float = 20.0 # Time in seconds
+var idle_timer: float = 0.0
+
+# --- RESPAWN SETTINGS (NEW) ---
+@onready var respawn_position: Vector2 = global_position
+
 # --- NODE REFERENCES ---
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var body_shape: CollisionShape2D = $CollisionShape2D
@@ -3033,6 +3598,9 @@ var is_dead: bool = false
 
 @onready var health_bar: HealthBarPlayer = $HealthBarPlayer
 
+# Make sure you have created the CanvasLayer and BoredomLabel in your Player scene!
+@onready var boredom_label: Label = $CanvasLayer/BoredomLabel 
+
 
 func _ready() -> void:
 	add_to_group("Player")
@@ -3040,6 +3608,9 @@ func _ready() -> void:
 	health = max_health
 	health_bar.max_health = max_health
 	health_bar.set_health(health)
+	
+	# Save the starting position as the first respawn point
+	respawn_position = global_position
 
 	_set_attack_enabled(false)
 
@@ -3047,6 +3618,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
+
+	# --- BOREDOM LOGIC ---
+	_handle_boredom(delta)
 
 	# --- GRAVITY ---
 	if not is_on_floor():
@@ -3079,6 +3653,36 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	_update_animation()
 
+# --- BOREDOM FUNCTION ---
+func _handle_boredom(delta: float) -> void:
+	var is_active = false
+	
+	if Input.get_axis("walk_left", "walk_right") != 0:
+		is_active = true
+	if Input.is_action_pressed("jump"):
+		is_active = true
+	if Input.is_action_pressed("attack"):
+		is_active = true
+		
+	if is_active:
+		idle_timer = 0.0
+	else:
+		idle_timer += delta
+		
+	if idle_timer >= boredom_threshold:
+		die_of_boredom()
+
+func die_of_boredom() -> void:
+	if is_dead:
+		return
+	
+	if boredom_label:
+		boredom_label.visible = true
+	
+	print("Player died of boredom!")
+	# Pass 'true' because this IS a boredom death (Game Over)
+	_die(true)
+
 
 func _update_animation() -> void:
 	if is_dead:
@@ -3104,14 +3708,17 @@ func _update_animation() -> void:
 # ATTACK SYSTEM
 # -----------------
 func _start_attack() -> void:
+	idle_timer = 0.0 
+	
 	is_attacking = true
 	_set_attack_enabled(true)
 	attack_timer.start()
 
 
 func _set_attack_enabled(enabled: bool) -> void:
-	attack_area.monitoring = enabled
-	attack_shape.disabled = not enabled
+	# Use set_deferred to safely change physics properties during a collision
+	attack_area.set_deferred("monitoring", enabled)
+	attack_shape.set_deferred("disabled", not enabled)
 
 
 func _on_attack_timer_timeout() -> void:
@@ -3137,6 +3744,8 @@ func _on_attack_area_p_body_entered(body: Node) -> void:
 func take_damage(amount: int, from_dir: float = 0.0) -> void:
 	if is_dead:
 		return
+	
+	idle_timer = 0.0
 
 	health -= amount
 	if health < 0:
@@ -3144,27 +3753,63 @@ func take_damage(amount: int, from_dir: float = 0.0) -> void:
 
 	health_bar.set_health(health)
 
-	# Knockback
 	if from_dir != 0.0:
 		velocity.x = 250.0 * from_dir
 
 	if health <= 0:
-		_die()
+		# Pass 'false' because this is NOT boredom (Respawn allowed)
+		_die(false)
 	else:
-		anim.play("fall")  # small hit reaction
+		anim.play("fall") 
 
 
-func _die() -> void:
+# --- DEATH & RESPAWN SYSTEM ---
+func _die(is_boredom_death: bool) -> void:
 	is_dead = true
 	velocity = Vector2.ZERO
 	_set_attack_enabled(false)
-	body_shape.disabled = true
+	
+	# Use set_deferred to safely disable physics during a collision
+	body_shape.set_deferred("disabled", true)
 
 	health_bar.set_health(0)
 	anim.play("death")
+	
+	# IF DIED OF BOREDOM: Game Over (Stop here)
+	if is_boredom_death:
+		return
+
+	# IF DIED OF DAMAGE: Wait for animation, then respawn
+	await anim.animation_finished
+	_respawn()
+
+func _respawn() -> void:
+	# 1. Teleport first
+	global_position = respawn_position
+	
+	# 2. Reset Health and State
+	health = max_health
+	health_bar.set_health(health)
+	
+	# --- THE FIX: WAIT FOR PHYSICS TO CATCH UP ---
+	# We wait 1 or 2 physics frames to ensure the engine knows we moved.
+	await get_tree().physics_frame
+	await get_tree().physics_frame
+	
+	# 3. NOW we become alive and enable collisions
+	is_dead = false
+	body_shape.set_deferred("disabled", false)
+	
+	# 4. Reset Animation
+	anim.play("idle")
 
 
-func _on_attack_area_p_body_exited(body: Node2D) -> void:
+# New function called by the Checkpoint flag
+func update_respawn_point(new_position: Vector2) -> void:
+	respawn_position = new_position
+	print("Checkpoint updated!")
+
+func _on_attack_area_p_body_exited(_body: Node2D) -> void:
 	pass
 
 
