@@ -1,13 +1,13 @@
 [gd_scene load_steps=25 format=4 uid="uid://lslltlj55xhq"]
 
-[ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Background1.png" id="1_dwyiq"]
+[ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Level1Map/Background1.png" id="1_dwyiq"]
 [ext_resource type="Script" uid="uid://xhhmd8o41nbi" path="res://Assets/Scenes/level_1.gd" id="1_fu3i4"]
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_rpjkb"]
-[ext_resource type="Texture2D" uid="uid://df31i2fcolcg3" path="res://Assets/Map/Background2.png" id="2_dn5ey"]
-[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/TileSet1.png" id="3_lmyl5"]
-[ext_resource type="Texture2D" uid="uid://cynjg3vkree65" path="res://Assets/Map/TileSet2.png" id="4_mlbie"]
+[ext_resource type="Texture2D" uid="uid://df31i2fcolcg3" path="res://Assets/Map/Level1Map/Background2.png" id="2_dn5ey"]
+[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/Level1Map/TileSet1.png" id="3_lmyl5"]
+[ext_resource type="Texture2D" uid="uid://cynjg3vkree65" path="res://Assets/Map/Level1Map/TileSet2.png" id="4_mlbie"]
 [ext_resource type="PackedScene" uid="uid://bvfncc10i2tkw" path="res://Assets/Scenes/mushroom.tscn" id="5_mngwl"]
-[ext_resource type="Texture2D" uid="uid://ecqv06lvgu45" path="res://Assets/Map/oak_woods_tileset.png" id="5_rhuow"]
+[ext_resource type="Texture2D" uid="uid://ecqv06lvgu45" path="res://Assets/Map/Level1Map/oak_woods_tileset.png" id="5_rhuow"]
 [ext_resource type="PackedScene" uid="uid://dcroo07f78lxy" path="res://Assets/Scenes/skelaton.tscn" id="6_rhuow"]
 [ext_resource type="Script" uid="uid://ck41vs2fv4wpj" path="res://Assets/Scenes/lake.gd" id="7_x50wt"]
 [ext_resource type="PackedScene" uid="uid://cuaydp5e5ainu" path="res://Assets/Scenes/trap.tscn" id="9_c410o"]
@@ -1600,7 +1600,7 @@ position = Vector2(1152, 91)
 shape = SubResource("RectangleShape2D_qm2ms")
 
 [node name="Skelaton2" parent="." instance=ExtResource("6_rhuow")]
-position = Vector2(3061, 529)
+position = Vector2(3045, 528)
 
 [node name="Mushroom2" parent="." instance=ExtResource("5_mngwl")]
 position = Vector2(2617, 527)

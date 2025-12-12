@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ecqv06lvgu45"
-path="res://.godot/imported/oak_woods_tileset.png-7ba85e62716798db044830a4208b5c4b.ctex"
+uid="uid://cgnefdokkldqj"
+path="res://.godot/imported/Death.png-c9104f68897e47fabf2277267a6f1acc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map/oak_woods_tileset.png"
-dest_files=["res://.godot/imported/oak_woods_tileset.png-7ba85e62716798db044830a4208b5c4b.ctex"]
+source_file="res://Assets/Sprites/FlyingEye/Death.png"
+dest_files=["res://.godot/imported/Death.png-c9104f68897e47fabf2277267a6f1acc.ctex"]
 
 [params]
 

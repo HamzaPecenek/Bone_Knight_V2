@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhflj25kvcu60"
-path="res://.godot/imported/healthbarProgress.png-ac80e3ddba9172397bca8342d21fe7f2.ctex"
+uid="uid://ovxhioy5jfax"
+path="res://.godot/imported/spikes.png-dc0025005f4fede37b05989c91b27c6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/HealthBar/healthbarProgress.png"
-dest_files=["res://.godot/imported/healthbarProgress.png-ac80e3ddba9172397bca8342d21fe7f2.ctex"]
+source_file="res://Assets/Map/Traps/spikes.png"
+dest_files=["res://.godot/imported/spikes.png-dc0025005f4fede37b05989c91b27c6b.ctex"]
 
 [params]
 
