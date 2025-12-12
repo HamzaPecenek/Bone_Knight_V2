@@ -1534,7 +1534,7 @@ shape = SubResource("RectangleShape2D_qm2ms")
 position = Vector2(2366, 251)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
-position = Vector2(1159, 91)
+position = Vector2(1152, 91)
 shape = SubResource("RectangleShape2D_qm2ms")
 
 [node name="Skelaton2" parent="." instance=ExtResource("6_rhuow")]
