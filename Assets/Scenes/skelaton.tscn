@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b63o4of60s2fc" path="res://Assets/Sprites/Skelaton/Idle.png" id="4_3qe4i"]
 [ext_resource type="Texture2D" uid="uid://dp57me2cr8hmw" path="res://Assets/Sprites/Skelaton/Take Hit.png" id="5_q4ovh"]
 [ext_resource type="Texture2D" uid="uid://bwilnxo87k2fp" path="res://Assets/Sprites/Skelaton/Walk.png" id="6_32hoj"]
-[ext_resource type="PackedScene" uid="uid://ce2yp2wx5gcpt" path="res://Assets/Scenes/healthbar_skelaton.tscn" id="7_hu37l"]
+[ext_resource type="PackedScene" uid="uid://ce2yp2wx5gcpt" path="res://Assets/Scenes/healthbar_enemy.tscn" id="7_hu37l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqwkd"]
 size = Vector2(32, 50)
@@ -248,7 +248,7 @@ collision_mask = 2
 position = Vector2(36, 1)
 shape = SubResource("RectangleShape2D_3qe4i")
 
-[node name="HealthBarSkelaton" parent="." instance=ExtResource("7_hu37l")]
+[node name="HealthBarEnemy" parent="." instance=ExtResource("7_hu37l")]
 offset_left = -25.0
 offset_top = -39.0
 offset_right = 39.0

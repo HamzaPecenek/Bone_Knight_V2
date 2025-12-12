@@ -332,7 +332,7 @@ size = Vector2(33, 44)
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(-19, 0)
 collision_layer = 3
-collision_mask = 93
+collision_mask = 2013
 script = ExtResource("1_c3tg1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -347,7 +347,7 @@ shape = SubResource("CapsuleShape2D_mkm62")
 
 [node name="AttackAreaP" type="Area2D" parent="."]
 collision_layer = 128
-collision_mask = 4
+collision_mask = 1796
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackAreaP"]
 position = Vector2(35.775, -23)

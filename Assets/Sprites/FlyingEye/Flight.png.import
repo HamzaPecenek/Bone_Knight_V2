@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cynjg3vkree65"
-path="res://.godot/imported/TileSet2.png-471676ded9967ee9fcd6caa23bc0de64.ctex"
+uid="uid://e4yjp7g0jkx"
+path="res://.godot/imported/Flight.png-801a373c4de0516d868fe393ba487726.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map/TileSet2.png"
-dest_files=["res://.godot/imported/TileSet2.png-471676ded9967ee9fcd6caa23bc0de64.ctex"]
+source_file="res://Assets/Sprites/FlyingEye/Flight.png"
+dest_files=["res://.godot/imported/Flight.png-801a373c4de0516d868fe393ba487726.ctex"]
 
 [params]
 

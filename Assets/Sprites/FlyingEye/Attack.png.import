@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmp1sw077yqa2"
-path="res://.godot/imported/healthbarUnder.png-f64ee77084900eff92e3d04cd217077e.ctex"
+uid="uid://cw1vku1xwcxba"
+path="res://.godot/imported/Attack.png-096e8498a62b737e0b04187adf25dee1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/HealthBar/healthbarUnder.png"
-dest_files=["res://.godot/imported/healthbarUnder.png-f64ee77084900eff92e3d04cd217077e.ctex"]
+source_file="res://Assets/Sprites/FlyingEye/Attack.png"
+dest_files=["res://.godot/imported/Attack.png-096e8498a62b737e0b04187adf25dee1.ctex"]
 
 [params]
 
