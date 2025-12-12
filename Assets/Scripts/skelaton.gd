@@ -84,6 +84,15 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+	# NEW CODE: If we hit a wall, turn around immediately
+	if is_on_wall():
+		# Determine which way we were going and flip to the opposite
+		if direction == 1: 
+			direction = -1
+		else: 
+			direction = 1
+		_update_flip()
+
 
 func _update_flip() -> void:
 	anim.flip_h = (direction == -1)
