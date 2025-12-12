@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://lslltlj55xhq"]
+[gd_scene load_steps=26 format=4 uid="uid://lslltlj55xhq"]
 
 [ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Level1Map/Background1.png" id="1_dwyiq"]
 [ext_resource type="Script" uid="uid://xhhmd8o41nbi" path="res://Assets/Scenes/level_1.gd" id="1_fu3i4"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://2v6pxgl70oom" path="res://Assets/Scenes/death_boundary.tscn" id="11_qm2ms"]
 [ext_resource type="Script" uid="uid://7uqoyhbby4ga" path="res://Assets/Scenes/ui.gd" id="13_apo3s"]
 [ext_resource type="FontFile" uid="uid://7vn3qxh2pe6n" path="res://Assets/Fonts/m6x11 Daniel LInssen.ttf" id="14_dqdc5"]
+[ext_resource type="PackedScene" uid="uid://chm7lx5gmkoj8" path="res://Assets/Scenes/flying_eye.tscn" id="16_j0jbc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bilv"]
 texture = ExtResource("3_lmyl5")
@@ -1638,6 +1639,12 @@ grow_horizontal = 2
 grow_vertical = 2
 label_settings = SubResource("LabelSettings_j0jbc")
 horizontal_alignment = 1
+
+[node name="FlyingEye" parent="." instance=ExtResource("16_j0jbc")]
+position = Vector2(1017, 488)
+
+[node name="FlyingEye2" parent="." instance=ExtResource("16_j0jbc")]
+position = Vector2(2409, 507)
 
 [connection signal="body_entered" from="TileMapGround/Lake/InteractArea" to="TileMapGround/Lake" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="TileMapGround/Lake/InteractArea" to="TileMapGround/Lake" method="_on_interact_area_body_exited"]
