@@ -14,9 +14,12 @@ var health: int
 var is_attacking: bool = false
 var is_dead: bool = false
 
-# --- BOREDOM SETTINGS (NEW) ---
+# --- BOREDOM SETTINGS ---
 @export var boredom_threshold: float = 20.0 # Time in seconds
 var idle_timer: float = 0.0
+
+# --- RESPAWN SETTINGS (NEW) ---
+@onready var respawn_position: Vector2 = global_position
 
 # --- NODE REFERENCES ---
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
@@ -28,8 +31,7 @@ var idle_timer: float = 0.0
 
 @onready var health_bar: HealthBarPlayer = $HealthBarPlayer
 
-# Reference to the text label we created (NEW)
-# Make sure your node path matches exactly: CanvasLayer -> BoredomLabel
+# Make sure you have created the CanvasLayer and BoredomLabel in your Player scene!
 @onready var boredom_label: Label = $CanvasLayer/BoredomLabel 
 
 
@@ -39,6 +41,9 @@ func _ready() -> void:
 	health = max_health
 	health_bar.max_health = max_health
 	health_bar.set_health(health)
+	
+	# Save the starting position as the first respawn point
+	respawn_position = global_position
 
 	_set_attack_enabled(false)
 
@@ -47,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
 
-	# --- BOREDOM LOGIC (NEW) ---
+	# --- BOREDOM LOGIC ---
 	_handle_boredom(delta)
 
 	# --- GRAVITY ---
@@ -81,9 +86,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	_update_animation()
 
-# --- BOREDOM FUNCTION (NEW) ---
+# --- BOREDOM FUNCTION ---
 func _handle_boredom(delta: float) -> void:
-	# Check if ANY input is being pressed
 	var is_active = false
 	
 	if Input.get_axis("walk_left", "walk_right") != 0:
@@ -93,13 +97,11 @@ func _handle_boredom(delta: float) -> void:
 	if Input.is_action_pressed("attack"):
 		is_active = true
 		
-	# Logic: Reset timer if active, otherwise count up
 	if is_active:
 		idle_timer = 0.0
 	else:
 		idle_timer += delta
 		
-	# Trigger death if limit reached
 	if idle_timer >= boredom_threshold:
 		die_of_boredom()
 
@@ -107,12 +109,12 @@ func die_of_boredom() -> void:
 	if is_dead:
 		return
 	
-	# Show the text
 	if boredom_label:
 		boredom_label.visible = true
 	
 	print("Player died of boredom!")
-	_die()
+	# Pass 'true' because this IS a boredom death (Game Over)
+	_die(true)
 
 
 func _update_animation() -> void:
@@ -139,7 +141,6 @@ func _update_animation() -> void:
 # ATTACK SYSTEM
 # -----------------
 func _start_attack() -> void:
-	# Activating an attack should also reset boredom
 	idle_timer = 0.0 
 	
 	is_attacking = true
@@ -148,8 +149,9 @@ func _start_attack() -> void:
 
 
 func _set_attack_enabled(enabled: bool) -> void:
-	attack_area.monitoring = enabled
-	attack_shape.disabled = not enabled
+	# Use set_deferred to safely change physics properties during a collision
+	attack_area.set_deferred("monitoring", enabled)
+	attack_shape.set_deferred("disabled", not enabled)
 
 
 func _on_attack_timer_timeout() -> void:
@@ -176,7 +178,6 @@ func take_damage(amount: int, from_dir: float = 0.0) -> void:
 	if is_dead:
 		return
 	
-	# Taking damage is an "event", so it wakes the player up
 	idle_timer = 0.0
 
 	health -= amount
@@ -185,25 +186,61 @@ func take_damage(amount: int, from_dir: float = 0.0) -> void:
 
 	health_bar.set_health(health)
 
-	# Knockback
 	if from_dir != 0.0:
 		velocity.x = 250.0 * from_dir
 
 	if health <= 0:
-		_die()
+		# Pass 'false' because this is NOT boredom (Respawn allowed)
+		_die(false)
 	else:
-		anim.play("fall")  # small hit reaction
+		anim.play("fall") 
 
 
-func _die() -> void:
+# --- DEATH & RESPAWN SYSTEM ---
+func _die(is_boredom_death: bool) -> void:
 	is_dead = true
 	velocity = Vector2.ZERO
 	_set_attack_enabled(false)
-	body_shape.disabled = true
+	
+	# Use set_deferred to safely disable physics during a collision
+	body_shape.set_deferred("disabled", true)
 
 	health_bar.set_health(0)
 	anim.play("death")
+	
+	# IF DIED OF BOREDOM: Game Over (Stop here)
+	if is_boredom_death:
+		return
 
+	# IF DIED OF DAMAGE: Wait for animation, then respawn
+	await anim.animation_finished
+	_respawn()
+
+func _respawn() -> void:
+	# 1. Teleport first
+	global_position = respawn_position
+	
+	# 2. Reset Health and State
+	health = max_health
+	health_bar.set_health(health)
+	
+	# --- THE FIX: WAIT FOR PHYSICS TO CATCH UP ---
+	# We wait 1 or 2 physics frames to ensure the engine knows we moved.
+	await get_tree().physics_frame
+	await get_tree().physics_frame
+	
+	# 3. NOW we become alive and enable collisions
+	is_dead = false
+	body_shape.set_deferred("disabled", false)
+	
+	# 4. Reset Animation
+	anim.play("idle")
+
+
+# New function called by the Checkpoint flag
+func update_respawn_point(new_position: Vector2) -> void:
+	respawn_position = new_position
+	print("Checkpoint updated!")
 
 func _on_attack_area_p_body_exited(_body: Node2D) -> void:
 	pass
