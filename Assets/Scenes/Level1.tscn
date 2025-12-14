@@ -1646,8 +1646,5 @@ position = Vector2(1017, 488)
 [node name="FlyingEye2" parent="." instance=ExtResource("16_j0jbc")]
 position = Vector2(2409, 507)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1017, 488)
-
 [connection signal="body_entered" from="TileMapGround/Lake/InteractArea" to="TileMapGround/Lake" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="TileMapGround/Lake/InteractArea" to="TileMapGround/Lake" method="_on_interact_area_body_exited"]
