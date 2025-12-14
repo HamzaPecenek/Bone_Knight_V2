@@ -242,7 +242,7 @@ config_version=5
 [application]
 
 config/name="BoneKnight V2"
-run/main_scene="uid://bbah0pab6qjgx"
+run/main_scene="uid://lslltlj55xhq"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -5489,7 +5489,7 @@ var bob_t: float = 0.0
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_area: Area2D = $AttackArea
-@onready var health_bar: HealthBarEnemy = $HealthBarEnemy
+@onready var health_bar = $HealthBarEnemy
 
 @onready var left_point_x: float = $LeftPoint.global_position.x
 @onready var right_point_x: float = $RightPoint.global_position.x
@@ -6133,7 +6133,7 @@ var attack_cooldown: float = 0.0      # tekrar saldırı yapabilmek için geri s
 var attack_time_left: float = 0.0     # şu anki saldırının bitmesine kalan süre
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-@onready var health_bar: HealthBarEnemy = $HealthBarEnemy
+@onready var health_bar = $HealthBarEnemy
 
 @onready var left_point_x: float  = $LeftPoint.global_position.x
 @onready var right_point_x: float = $RightPoint.global_position.x
@@ -6416,7 +6416,7 @@ var health = 400:
 func _ready() -> void:
 	set_physics_process(false)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	direction = player.position - position
 	if direction.x < 0:
 		sprite.flip_h  = true
@@ -6427,7 +6427,7 @@ func _physics_process(delta: float) -> void:
 	velocity = direction.normalized() * 40
 	move_and_collide(velocity * delta)
 	
-func take_damage(amount: int, from_dir: float = 0.0) -> void:
+func take_damage(amount: int, _from_dir: float = 0.0) -> void:
 	health = max(health - max(amount - DEF, 0), 0)
 
 
