@@ -330,7 +330,6 @@ height = 38.0
 size = Vector2(33, 44)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-position = Vector2(-19, 0)
 collision_layer = 3
 collision_mask = 2013
 script = ExtResource("1_c3tg1")

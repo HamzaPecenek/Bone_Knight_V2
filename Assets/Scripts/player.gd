@@ -14,11 +14,19 @@ var health: int
 var is_attacking: bool = false
 var is_dead: bool = false
 
+# --- NEW ATTACK VARIABLES ---
+@export var light_damage: int = 20
+@export var heavy_damage: int = 40
+@export var light_speed_scale: float = 1.5  # 50% faster
+@export var heavy_speed_scale: float = 0.7  # 30% slower
+var current_attack_damage: int = 20
+var base_attack_duration: float = 0.3 # Matches your scene's Timer wait_time
+
 # --- BOREDOM SETTINGS ---
 @export var boredom_threshold: float = 15.0 # Time in seconds
 var idle_timer: float = 0.0
 
-# --- RESPAWN SETTINGS (NEW) ---
+# --- RESPAWN SETTINGS ---
 @onready var respawn_position: Vector2 = global_position
 
 # --- NODE REFERENCES ---
@@ -80,8 +88,11 @@ func _physics_process(delta: float) -> void:
 
 
 	# --- ATTACK ---
-	if Input.is_action_just_pressed("attack") and not is_attacking and not is_dead:
-		_start_attack()
+	if not is_attacking and not is_dead:
+		if Input.is_action_just_pressed("attack"): # Left Click
+			_start_attack(true)
+		elif Input.is_action_just_pressed("attack_heavy"): # Right Click
+			_start_attack(false)
 
 	move_and_slide()
 	_update_animation()
@@ -94,7 +105,7 @@ func _handle_boredom(delta: float) -> void:
 		is_active = true
 	if Input.is_action_pressed("jump"):
 		is_active = true
-	if Input.is_action_pressed("attack"):
+	if Input.is_action_pressed("attack") or Input.is_action_pressed("attack_heavy"):
 		is_active = true
 		
 	if is_active:
@@ -140,12 +151,22 @@ func _update_animation() -> void:
 # -----------------
 # ATTACK SYSTEM
 # -----------------
-func _start_attack() -> void:
+func _start_attack(is_light: bool) -> void:
 	idle_timer = 0.0 
-	
 	is_attacking = true
+	
+	if is_light:
+		current_attack_damage = light_damage
+		anim.speed_scale = light_speed_scale
+		attack_timer.wait_time = base_attack_duration / light_speed_scale
+	else:
+		current_attack_damage = heavy_damage
+		anim.speed_scale = heavy_speed_scale
+		attack_timer.wait_time = base_attack_duration / heavy_speed_scale
+
 	_set_attack_enabled(true)
 	attack_timer.start()
+	anim.play("attack")
 
 
 func _set_attack_enabled(enabled: bool) -> void:
@@ -157,6 +178,7 @@ func _set_attack_enabled(enabled: bool) -> void:
 func _on_attack_timer_timeout() -> void:
 	is_attacking = false
 	_set_attack_enabled(false)
+	anim.speed_scale = 1.0 # Reset speed so walking/idle is normal
 
 
 func _on_attack_area_p_body_entered(body: Node) -> void:
@@ -168,7 +190,7 @@ func _on_attack_area_p_body_entered(body: Node) -> void:
 
 	if body.has_method("take_damage"):
 		var dir: float = sign(body.global_position.x - global_position.x)
-		body.take_damage(20, dir)
+		body.take_damage(current_attack_damage, dir)
 
 
 # -----------------
@@ -201,6 +223,7 @@ func _die(is_boredom_death: bool) -> void:
 	is_dead = true
 	velocity = Vector2.ZERO
 	_set_attack_enabled(false)
+	anim.speed_scale = 1.0 # Ensure death animation isn't slow-motion
 	
 	# Use set_deferred to safely disable physics during a collision
 	body_shape.set_deferred("disabled", true)
@@ -224,8 +247,7 @@ func _respawn() -> void:
 	health = max_health
 	health_bar.set_health(health)
 	
-	# --- THE FIX: WAIT FOR PHYSICS TO CATCH UP ---
-	# We wait 1 or 2 physics frames to ensure the engine knows we moved.
+	# --- WAIT FOR PHYSICS TO CATCH UP ---
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	
@@ -245,9 +267,7 @@ func update_respawn_point(new_position: Vector2) -> void:
 func _on_attack_area_p_body_exited(_body: Node2D) -> void:
 	pass
 
-
-# NEW (Clean - No Warnings)
-# We added '_' to the start of every parameter name
+# Clean signals
 func _on_interact_area_area_entered(_area):
 	pass 
 
