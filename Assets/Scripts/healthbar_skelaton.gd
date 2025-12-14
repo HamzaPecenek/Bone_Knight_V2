@@ -1,5 +1,5 @@
 extends ProgressBar
-class_name HealthBarEnemy
+class_name HealthBarSkeleton
 
 @export var max_health: int = 100
 
