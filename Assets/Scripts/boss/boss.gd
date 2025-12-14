@@ -21,7 +21,7 @@ var health = 400:
 func _ready() -> void:
 	set_physics_process(false)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	direction = player.position - position
 	if direction.x < 0:
 		sprite.flip_h  = true
@@ -32,5 +32,5 @@ func _physics_process(delta: float) -> void:
 	velocity = direction.normalized() * 40
 	move_and_collide(velocity * delta)
 	
-func take_damage(amount: int, from_dir: float = 0.0) -> void:
+func take_damage(amount: int, _from_dir: float = 0.0) -> void:
 	health = max(health - max(amount - DEF, 0), 0)

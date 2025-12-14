@@ -20,7 +20,7 @@ var attack_cooldown: float = 0.0      # tekrar saldırı yapabilmek için geri s
 var attack_time_left: float = 0.0     # şu anki saldırının bitmesine kalan süre
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-@onready var health_bar: HealthBarEnemy = $HealthBarEnemy
+@onready var health_bar = $HealthBarEnemy
 
 @onready var left_point_x: float  = $LeftPoint.global_position.x
 @onready var right_point_x: float = $RightPoint.global_position.x

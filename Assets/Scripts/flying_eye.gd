@@ -27,7 +27,7 @@ var bob_t: float = 0.0
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_area: Area2D = $AttackArea
-@onready var health_bar: HealthBarEnemy = $HealthBarEnemy
+@onready var health_bar = $HealthBarEnemy
 
 @onready var left_point_x: float = $LeftPoint.global_position.x
 @onready var right_point_x: float = $RightPoint.global_position.x
