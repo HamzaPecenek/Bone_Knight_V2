@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://lslltlj55xhq"]
+[gd_scene load_steps=27 format=4 uid="uid://lslltlj55xhq"]
 
 [ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Level1Map/Background1.png" id="1_dwyiq"]
 [ext_resource type="Script" uid="uid://xhhmd8o41nbi" path="res://Assets/Scenes/level_1.gd" id="1_fu3i4"]
@@ -1490,6 +1490,9 @@ outline_size = 15
 outline_color = Color(0.01845388, 0.018453883, 0.018453883, 1)
 shadow_size = 5
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_j0jbc"]
+radius = 41.14608
+
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_fu3i4")
 
@@ -1645,6 +1648,13 @@ position = Vector2(1017, 488)
 
 [node name="FlyingEye2" parent="." instance=ExtResource("16_j0jbc")]
 position = Vector2(2409, 507)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1017, 488)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-827, 40)
+shape = SubResource("CircleShape2D_j0jbc")
 
 [connection signal="body_entered" from="TileMapGround/Lake/InteractArea" to="TileMapGround/Lake" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="TileMapGround/Lake/InteractArea" to="TileMapGround/Lake" method="_on_interact_area_body_exited"]

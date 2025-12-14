@@ -15,7 +15,7 @@ var is_attacking: bool = false
 var is_dead: bool = false
 
 # --- BOREDOM SETTINGS ---
-@export var boredom_threshold: float = 20.0 # Time in seconds
+@export var boredom_threshold: float = 15.0 # Time in seconds
 var idle_timer: float = 0.0
 
 # --- RESPAWN SETTINGS (NEW) ---
