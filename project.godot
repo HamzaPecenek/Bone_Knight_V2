@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BoneKnight V2"
-run/main_scene="uid://lslltlj55xhq"
+run/main_scene="uid://bbah0pab6qjgx"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
