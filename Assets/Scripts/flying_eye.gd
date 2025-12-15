@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name FlyingEye
+class_name DemonBatt
 
 @export var speed: float = 80.0
 @export var max_health: int = 100
