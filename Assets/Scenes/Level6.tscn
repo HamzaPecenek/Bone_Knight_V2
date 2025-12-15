@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://bbah0pab6qjgx"]
+[gd_scene load_steps=22 format=4 uid="uid://bbah0pab6qjgx"]
 
 [ext_resource type="Texture2D" uid="uid://bu7gls1n2adfv" path="res://Assets/Map/forgotten_forest_example_tileset.png" id="1_lo2nw"]
 [ext_resource type="Texture2D" uid="uid://co6icud8rrk7o" path="res://Assets/Map/bg - frost and moon/BackGround_007.png" id="1_ovx28"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c8tav0403amh0" path="res://Assets/Map/trees.png" id="8_6rrur"]
 [ext_resource type="PackedScene" uid="uid://dcroo07f78lxy" path="res://Assets/Scenes/skelaton.tscn" id="15_ovx28"]
 [ext_resource type="PackedScene" uid="uid://chm7lx5gmkoj8" path="res://Assets/Scenes/flying_eye.tscn" id="16_jsuap"]
+[ext_resource type="PackedScene" uid="uid://dma23ldh2m4cf" path="res://Assets/ui/Inventory.tscn" id="17_n5im7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7fu1o"]
 texture = ExtResource("8_6rrur")
@@ -3300,3 +3301,12 @@ position = Vector2(2727, 286)
 
 [node name="FlyingEye4" parent="." instance=ExtResource("16_jsuap")]
 position = Vector2(2299, 309)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource("17_n5im7")]
+visible = false
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0

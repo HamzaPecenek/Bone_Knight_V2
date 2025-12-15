@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://lslltlj55xhq"]
+[gd_scene load_steps=21 format=4 uid="uid://lslltlj55xhq"]
 
 [ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Background1.png" id="1_dwyiq"]
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_rpjkb"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d262uno635wih" path="res://Assets/Scenes/checkpoint.tscn" id="10_wqmxn"]
 [ext_resource type="PackedScene" uid="uid://2v6pxgl70oom" path="res://Assets/Scenes/death_boundary.tscn" id="11_qm2ms"]
 [ext_resource type="Script" uid="uid://7uqoyhbby4ga" path="res://Assets/Scenes/ui.gd" id="13_apo3s"]
+[ext_resource type="PackedScene" uid="uid://dma23ldh2m4cf" path="res://Assets/ui/Inventory.tscn" id="15_fu3i4"]
 [ext_resource type="PackedScene" uid="uid://chm7lx5gmkoj8" path="res://Assets/Scenes/flying_eye.tscn" id="16_j0jbc"]
 [ext_resource type="PackedScene" uid="uid://bfj7d5rqql2v0" path="res://Assets/Level5/Doors/exit_door.tscn" id="17_om6i1"]
 
@@ -1597,3 +1598,12 @@ position = Vector2(2409, 507)
 
 [node name="ExitDoor" parent="." instance=ExtResource("17_om6i1")]
 position = Vector2(3465, 516)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource("15_fu3i4")]
+visible = false
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0

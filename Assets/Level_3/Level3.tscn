@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://pm58lhcwabnr"]
+[gd_scene load_steps=36 format=4 uid="uid://pm58lhcwabnr"]
 
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_jlv3j"]
 [ext_resource type="Texture2D" uid="uid://k7cxusmf2gmb" path="res://Assets/Level_3/Dungeon-Platformer-Pixel-Art-Tileset3.webp" id="4_2388u"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://815b2ofqneth" path="res://Assets/Level_3/SET1_Mainlev_build.png" id="11_jmknf"]
 [ext_resource type="Texture2D" uid="uid://cnv4gdouia0pl" path="res://Assets/Level_3/Vector_horizontal_seamless_illustration_of_forest_with_mystical.jpg" id="19_5hjvk"]
 [ext_resource type="PackedScene" uid="uid://chm7lx5gmkoj8" path="res://Assets/Scenes/flying_eye.tscn" id="19_ictw0"]
+[ext_resource type="PackedScene" uid="uid://dma23ldh2m4cf" path="res://Assets/ui/Inventory.tscn" id="20_ictw0"]
+[ext_resource type="PackedScene" uid="uid://bfj7d5rqql2v0" path="res://Assets/Level5/Doors/exit_door.tscn" id="21_jmknf"]
+[ext_resource type="Script" uid="uid://j5ycu5mefkhf" path="res://Assets/Level5/Doors/exit_door3-4.gd" id="22_s3rkh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bilv"]
 texture = ExtResource("4_jsc5y")
@@ -14187,3 +14190,17 @@ position = Vector2(3508, 491)
 
 [node name="FlyingEye3" parent="." instance=ExtResource("19_ictw0")]
 position = Vector2(4511, 492)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource("20_ictw0")]
+visible = false
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="ExitDoor" parent="." instance=ExtResource("21_jmknf")]
+position = Vector2(5528, 479)
+script = ExtResource("22_s3rkh")
+target_scene = "res://Assets/Scenes/level_4.tscn"

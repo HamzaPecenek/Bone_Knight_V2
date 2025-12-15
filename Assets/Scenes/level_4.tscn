@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dd6nqv14uhgni"]
+[gd_scene load_steps=26 format=4 uid="uid://dd6nqv14uhgni"]
 
 [ext_resource type="Texture2D" uid="uid://4e6a12vvmmuh" path="res://Assets/Map/Level4Map/mushroomforest.png" id="1_rj3yh"]
 [ext_resource type="Texture2D" uid="uid://db630ivm51wtq" path="res://Assets/Map/Level4Map/castle_tileset.png" id="2_6etcl"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://dcroo07f78lxy" path="res://Assets/Scenes/skelaton.tscn" id="10_n350r"]
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="11_wm3cy"]
 [ext_resource type="PackedScene" uid="uid://d262uno635wih" path="res://Assets/Scenes/checkpoint.tscn" id="13_psbrp"]
+[ext_resource type="PackedScene" uid="uid://dma23ldh2m4cf" path="res://Assets/ui/Inventory.tscn" id="14_ej3ih"]
+[ext_resource type="PackedScene" uid="uid://bfj7d5rqql2v0" path="res://Assets/Level5/Doors/exit_door.tscn" id="15_dudrf"]
+[ext_resource type="Script" uid="uid://dkws872wx5rst" path="res://Assets/Level5/Doors/exit_door4-5.gd" id="16_sgnlk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ck48c"]
 texture = ExtResource("6_tyr5u")
@@ -9984,3 +9987,17 @@ position = Vector2(1923, 485)
 
 [node name="Checkpoint2" parent="." instance=ExtResource("13_psbrp")]
 position = Vector2(3992, 423)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource("14_ej3ih")]
+visible = false
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="ExitDoor" parent="." instance=ExtResource("15_dudrf")]
+position = Vector2(4922, 362)
+script = ExtResource("16_sgnlk")
+target_scene = "res://Assets/Level5/level_5.tscn"
