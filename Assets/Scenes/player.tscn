@@ -332,7 +332,7 @@ size = Vector2(33, 44)
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(-19, 0)
 collision_layer = 3
-collision_mask = 2013
+collision_mask = 34781
 script = ExtResource("1_c3tg1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -360,7 +360,7 @@ one_shot = true
 [node name="Camera2D" type="Camera2D" parent="." groups=["Player"]]
 limit_left = 0
 limit_top = 0
-limit_right = 10000
+limit_right = 8243
 limit_bottom = 648
 
 [node name="HealthBarPlayer" parent="." instance=ExtResource("8_lerqx")]

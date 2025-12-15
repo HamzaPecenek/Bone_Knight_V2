@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://pm58lhcwabnr"]
+[gd_scene load_steps=33 format=4 uid="uid://pm58lhcwabnr"]
 
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_jlv3j"]
 [ext_resource type="Texture2D" uid="uid://k7cxusmf2gmb" path="res://Assets/Level_3/Dungeon-Platformer-Pixel-Art-Tileset3.webp" id="4_2388u"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://2v6pxgl70oom" path="res://Assets/Scenes/death_boundary.tscn" id="11_gxnlt"]
 [ext_resource type="Texture2D" uid="uid://815b2ofqneth" path="res://Assets/Level_3/SET1_Mainlev_build.png" id="11_jmknf"]
 [ext_resource type="Texture2D" uid="uid://cnv4gdouia0pl" path="res://Assets/Level_3/Vector_horizontal_seamless_illustration_of_forest_with_mystical.jpg" id="19_5hjvk"]
+[ext_resource type="PackedScene" uid="uid://chm7lx5gmkoj8" path="res://Assets/Scenes/flying_eye.tscn" id="19_ictw0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bilv"]
 texture = ExtResource("4_jsc5y")
@@ -14108,13 +14109,10 @@ position = Vector2(2592, 398)
 position = Vector2(3255, 544)
 
 [node name="Mushroom5" parent="." instance=ExtResource("7_acko4")]
-position = Vector2(3640, 510)
+position = Vector2(3721, 512)
 
 [node name="Mushroom6" parent="." instance=ExtResource("7_acko4")]
 position = Vector2(4001, 513)
-
-[node name="Mushroom7" parent="." instance=ExtResource("7_acko4")]
-position = Vector2(4496, 511)
 
 [node name="Mushroom8" parent="." instance=ExtResource("7_acko4")]
 position = Vector2(4803, 528)
@@ -14137,19 +14135,53 @@ position = Vector2(4661, 552)
 [node name="Checkpoint4" parent="." instance=ExtResource("10_bw14u")]
 position = Vector2(3911, 489)
 
-[node name="Checkpoint5" parent="." instance=ExtResource("10_bw14u")]
-position = Vector2(5553, 459)
-
 [node name="Background1" type="Sprite2D" parent="."]
 z_index = -20
-position = Vector2(1588, 668)
-scale = Vector2(0.6416, 0.62693334)
+position = Vector2(513, 422)
+scale = Vector2(0.205, 0.2)
 texture = ExtResource("19_5hjvk")
-metadata/_edit_lock_ = true
 
 [node name="Background2" type="Sprite2D" parent="."]
 z_index = -20
-position = Vector2(4795, 668)
-scale = Vector2(0.6416, 0.62693334)
+position = Vector2(1538, 422)
+scale = Vector2(0.205, 0.2)
 texture = ExtResource("19_5hjvk")
-metadata/_edit_lock_ = true
+
+[node name="Background3" type="Sprite2D" parent="."]
+z_index = -20
+position = Vector2(2563, 422)
+scale = Vector2(0.205, 0.2)
+texture = ExtResource("19_5hjvk")
+
+[node name="Background4" type="Sprite2D" parent="."]
+z_index = -20
+position = Vector2(3588, 422)
+scale = Vector2(0.205, 0.2)
+texture = ExtResource("19_5hjvk")
+
+[node name="Background5" type="Sprite2D" parent="."]
+z_index = -20
+position = Vector2(4613, 422)
+scale = Vector2(0.205, 0.2)
+texture = ExtResource("19_5hjvk")
+
+[node name="Background6" type="Sprite2D" parent="."]
+z_index = -20
+position = Vector2(5638, 422)
+scale = Vector2(0.205, 0.2)
+texture = ExtResource("19_5hjvk")
+
+[node name="Background7" type="Sprite2D" parent="."]
+z_index = -20
+position = Vector2(6663, 422)
+scale = Vector2(0.205, 0.2)
+texture = ExtResource("19_5hjvk")
+
+[node name="FlyingEye" parent="." instance=ExtResource("19_ictw0")]
+position = Vector2(301, 525)
+
+[node name="FlyingEye2" parent="." instance=ExtResource("19_ictw0")]
+position = Vector2(3508, 491)
+
+[node name="FlyingEye3" parent="." instance=ExtResource("19_ictw0")]
+position = Vector2(4511, 492)
