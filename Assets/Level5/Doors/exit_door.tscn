@@ -1,0 +1,148 @@
+[gd_scene load_steps=16 format=3 uid="uid://bfj7d5rqql2v0"]
+
+[ext_resource type="Script" uid="uid://duth5177uie8" path="res://Assets/Level5/Doors/exit_door.gd" id="1_ti4c3"]
+[ext_resource type="Texture2D" uid="uid://c0n7f4bna0js1" path="res://Assets/Level5/Doors/Doors.png" id="2_ti4c3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pix1l"]
+atlas = ExtResource("2_ti4c3")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pb3f"]
+atlas = ExtResource("2_ti4c3")
+region = Rect2(38, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sp8u"]
+atlas = ExtResource("2_ti4c3")
+region = Rect2(76, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0600"]
+atlas = ExtResource("2_ti4c3")
+region = Rect2(114, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gdi6"]
+atlas = ExtResource("2_ti4c3")
+region = Rect2(152, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymvq8"]
+atlas = ExtResource("2_ti4c3")
+region = Rect2(190, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c8hl"]
+atlas = ExtResource("2_ti4c3")
+region = Rect2(228, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krx0f"]
+atlas = ExtResource("2_ti4c3")
+region = Rect2(266, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_256hl"]
+atlas = ExtResource("2_ti4c3")
+region = Rect2(304, 0, 38, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bs0qc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pix1l")
+}],
+"loop": false,
+"name": &"closed",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pix1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pb3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sp8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0600")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gdi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymvq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c8hl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krx0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_256hl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pix1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pb3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sp8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0600")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gdi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymvq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c8hl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krx0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_256hl")
+}],
+"loop": false,
+"name": &"open",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16cbf"]
+size = Vector2(55.25, 71.75)
+
+[sub_resource type="Gradient" id="Gradient_x65ch"]
+offsets = PackedFloat32Array(0, 0.0027247956, 0.47956404, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.0025666205, 0.0025888449, 0.27453578, 1, 1, 1, 1, 1, 0.003921569, 0.003921569, 0.27450982, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n1ipl"]
+gradient = SubResource("Gradient_x65ch")
+
+[node name="ExitDoor" type="Area2D"]
+script = ExtResource("1_ti4c3")
+
+[node name="DoorSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(7.25, -12.25)
+scale = Vector2(1.7236842, 1.8815788)
+sprite_frames = SubResource("SpriteFrames_bs0qc")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.375, -12.125)
+shape = SubResource("RectangleShape2D_16cbf")
+
+[node name="DoorLight" type="PointLight2D" parent="."]
+position = Vector2(7.0000153, -12)
+scale = Vector2(0.28973508, 0.37251657)
+color = Color(0.56078434, 0.827451, 1, 1)
+energy = 0.5
+shadow_enabled = true
+shadow_color = Color(0.0002861313, 0.021553757, 0.2125366, 1)
+texture = SubResource("GradientTexture2D_n1ipl")
+texture_scale = 3.02

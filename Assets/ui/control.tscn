@@ -1,0 +1,199 @@
+[gd_scene load_steps=17 format=3 uid="uid://bh3mlvdg1cat0"]
+
+[ext_resource type="Theme" uid="uid://1uu627jhok4r" path="res://Assets/ui/boneknight_ui.tres" id="1_2mc8b"]
+[ext_resource type="Script" uid="uid://dn3odusr7hd" path="res://Assets/ui/main_menu.gd" id="2_sm8s4"]
+[ext_resource type="Texture2D" uid="uid://ejoe4j86wacd" path="res://Assets/ui/Assets/Play (1)-Photoroom.png" id="3_dx307"]
+[ext_resource type="Texture2D" uid="uid://l85ydhuhaeyc" path="res://Assets/ui/Assets/ui_big_pieces.png" id="4_1nruc"]
+[ext_resource type="Texture2D" uid="uid://dnpktb38vghyd" path="res://Assets/ui/Background/1/bg-moon.png" id="5_24828"]
+[ext_resource type="AudioStream" uid="uid://cleg37yu1b4co" path="res://Assets/ui/Assets/Second%20Coming%20-%20no%20percussion.mp3" id="5_obno4"]
+[ext_resource type="Texture2D" uid="uid://bn47n67bnwgd5" path="res://Assets/ui/Background/1/bg-mountains.png" id="6_tihpt"]
+[ext_resource type="Texture2D" uid="uid://cxj8jjy2mrtuq" path="res://Assets/ui/Background/1/bg-graveyard.png" id="7_ekyqi"]
+[ext_resource type="PackedScene" uid="uid://ctxlg2jo65kl" path="res://Scripts/Teleport/fade_layer.tscn" id="9_tihpt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee4bf"]
+bg_color = Color(0.12156863, 0.007843138, 0, 0.3137255)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iy58a"]
+atlas = ExtResource("3_dx307")
+region = Rect2(166.77158, 197.51193, 522.2213, 159.79642)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a6wx"]
+atlas = SubResource("AtlasTexture_iy58a")
+region = Rect2(2.03302, 1.8589325, 522.22125, 158.14905)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbped"]
+atlas = ExtResource("4_1nruc")
+region = Rect2(634.95264, 24.779598, 120.546814, 24.689701)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj5cn"]
+atlas = SubResource("AtlasTexture_kbped")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtu10"]
+atlas = ExtResource("4_1nruc")
+region = Rect2(634.6132, 142.39108, 72.88202, 24.789017)
+margin = Rect2(0, -2, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee4bf"]
+atlas = ExtResource("4_1nruc")
+region = Rect2(634.66644, 84.96877, 120.72528, 24.47956)
+margin = Rect2(0, -2, 0, 0)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2mc8b")
+script = ExtResource("2_sm8s4")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ee4bf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -263.0
+offset_right = 135.0
+offset_bottom = 263.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_6a6wx")
+expand_mode = 4
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -101.0
+offset_top = -19.0
+offset_right = 113.5
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_2mc8b")
+theme_override_colors/font_color = Color(0.9490196, 0.9137255, 0.80784315, 1)
+theme_override_colors/font_outline_color = Color(0.36078432, 0.18431373, 0.18431373, 1)
+theme_override_constants/outline_size = 18
+theme_override_font_sizes/font_size = 48
+text = "Bone Knight"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9490196, 0.9137255, 0.80784315, 1)
+theme_override_font_sizes/font_size = 33
+text = "Play
+"
+icon = SubResource("AtlasTexture_fj5cn")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SettingsButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9490196, 0.9137255, 0.80784315, 1)
+theme_override_font_sizes/font_size = 33
+text = "Settings"
+icon = SubResource("AtlasTexture_fj5cn")
+icon_alignment = 1
+expand_icon = true
+
+[node name="QuitButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9490196, 0.9137255, 0.80784315, 1)
+theme_override_font_sizes/font_size = 33
+text = "Exit
+"
+icon = SubResource("AtlasTexture_fj5cn")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Parallax2D" type="Parallax2D" parent="Panel"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Parallax2D"]
+z_index = -1500
+position = Vector2(580, 271.06247)
+scale = Vector2(2.9973958, 3.2762277)
+texture = ExtResource("5_24828")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Panel"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Parallax2D2"]
+z_index = -1500
+position = Vector2(584, 357)
+scale = Vector2(3.0052083, 2.515625)
+texture = ExtResource("6_tihpt")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Panel"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/Parallax2D3"]
+z_index = -1500
+position = Vector2(574.05005, 359)
+scale = Vector2(3.0049486, 2.515625)
+texture = ExtResource("7_ekyqi")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -147.0
+offset_bottom = 44.0
+grow_horizontal = 0
+
+[node name="MusicButton" type="CheckButton" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+button_pressed = true
+keep_pressed_outside = true
+text = "Music"
+icon = SubResource("AtlasTexture_qtu10")
+alignment = 1
+icon_alignment = 1
+
+[node name="HowToPlayButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 17
+text = "HowToPlay"
+icon = SubResource("AtlasTexture_ee4bf")
+icon_alignment = 1
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_obno4")
+autoplay = true
+
+[node name="FadeLayer" parent="." instance=ExtResource("9_tihpt")]
+
+[connection signal="pressed" from="Panel/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="toggled" from="HBoxContainer/MusicButton" to="." method="_on_music_button_toggled"]
+[connection signal="pressed" from="HBoxContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]

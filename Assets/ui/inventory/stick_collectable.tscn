@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dncewo70o8ulk"]
+
+[ext_resource type="Script" uid="uid://clsvlhmymswhd" path="res://Assets/ui/stick_collectable.gd" id="1_8jhv5"]
+[ext_resource type="Resource" uid="uid://cgqy78ytfdya3" path="res://Assets/ui/inventory/items/collectable_coin.tres" id="2_4hdks"]
+[ext_resource type="Texture2D" uid="uid://22ug4wjv0inb" path="res://Assets/ui/Assets/ChatGPT Image 27 Kas 2025 21_56_04.png" id="2_vfvo7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4hdks"]
+radius = 10.198039
+
+[node name="stick_collectable" type="StaticBody2D"]
+script = ExtResource("1_8jhv5")
+item = ExtResource("2_4hdks")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.02807617, 0.028320313)
+texture = ExtResource("2_vfvo7")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_4hdks")
+debug_color = Color(0.8188828, 0.34787148, 0.5542348, 0.44313726)
+
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]

@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_jlv3j"]
 [ext_resource type="Texture2D" uid="uid://k7cxusmf2gmb" path="res://Assets/Level_3/Dungeon-Platformer-Pixel-Art-Tileset3.webp" id="4_2388u"]
-[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/TileSet1.png" id="4_jsc5y"]
+[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/Level1Map/TileSet1.png" id="4_jsc5y"]
 [ext_resource type="Texture2D" uid="uid://yeo7sjs3k1pc" path="res://Assets/Level_3/castle_tileset.png" id="5_02y5a"]
-[ext_resource type="Texture2D" uid="uid://cynjg3vkree65" path="res://Assets/Map/TileSet2.png" id="5_37jq5"]
+[ext_resource type="Texture2D" uid="uid://cynjg3vkree65" path="res://Assets/Map/Level1Map/TileSet2.png" id="5_37jq5"]
 [ext_resource type="Texture2D" uid="uid://c6rhkhlf1jm8p" path="res://Assets/Level_3/grassland_tileset.png" id="6_2388u"]
-[ext_resource type="Texture2D" uid="uid://ecqv06lvgu45" path="res://Assets/Map/oak_woods_tileset.png" id="6_opges"]
+[ext_resource type="Texture2D" uid="uid://ecqv06lvgu45" path="res://Assets/Map/Level1Map/oak_woods_tileset.png" id="6_opges"]
 [ext_resource type="Texture2D" uid="uid://bqpddhm0a2nyr" path="res://Assets/Level_3/lava.png" id="7_6g308"]
 [ext_resource type="PackedScene" uid="uid://bvfncc10i2tkw" path="res://Assets/Scenes/mushroom.tscn" id="7_acko4"]
 [ext_resource type="Texture2D" uid="uid://bad0xr7m0u65i" path="res://Assets/Level_3/props2.png" id="8_5hjvk"]
@@ -14135,47 +14135,22 @@ position = Vector2(4661, 552)
 [node name="Checkpoint4" parent="." instance=ExtResource("10_bw14u")]
 position = Vector2(3911, 489)
 
+[node name="Checkpoint5" parent="." instance=ExtResource("10_bw14u")]
+position = Vector2(5553, 459)
+
 [node name="Background1" type="Sprite2D" parent="."]
 z_index = -20
-position = Vector2(513, 422)
-scale = Vector2(0.205, 0.2)
+position = Vector2(1588, 668)
+scale = Vector2(0.6416, 0.62693334)
 texture = ExtResource("19_5hjvk")
+metadata/_edit_lock_ = true
 
 [node name="Background2" type="Sprite2D" parent="."]
 z_index = -20
-position = Vector2(1538, 422)
-scale = Vector2(0.205, 0.2)
+position = Vector2(4795, 668)
+scale = Vector2(0.6416, 0.62693334)
 texture = ExtResource("19_5hjvk")
-
-[node name="Background3" type="Sprite2D" parent="."]
-z_index = -20
-position = Vector2(2563, 422)
-scale = Vector2(0.205, 0.2)
-texture = ExtResource("19_5hjvk")
-
-[node name="Background4" type="Sprite2D" parent="."]
-z_index = -20
-position = Vector2(3588, 422)
-scale = Vector2(0.205, 0.2)
-texture = ExtResource("19_5hjvk")
-
-[node name="Background5" type="Sprite2D" parent="."]
-z_index = -20
-position = Vector2(4613, 422)
-scale = Vector2(0.205, 0.2)
-texture = ExtResource("19_5hjvk")
-
-[node name="Background6" type="Sprite2D" parent="."]
-z_index = -20
-position = Vector2(5638, 422)
-scale = Vector2(0.205, 0.2)
-texture = ExtResource("19_5hjvk")
-
-[node name="Background7" type="Sprite2D" parent="."]
-z_index = -20
-position = Vector2(6663, 422)
-scale = Vector2(0.205, 0.2)
-texture = ExtResource("19_5hjvk")
+metadata/_edit_lock_ = true
 
 [node name="FlyingEye" parent="." instance=ExtResource("19_ictw0")]
 position = Vector2(301, 525)
