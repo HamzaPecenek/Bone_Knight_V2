@@ -5820,6 +5820,16 @@ position = Vector2(1726, 518)
 [node name="Player" parent="." instance=ExtResource("12_yccvn")]
 position = Vector2(65, 630)
 
+[node name="Camera2D" parent="Player" index="4"]
+position = Vector2(306, -18)
+limit_left = 3
+limit_top = -1
+limit_right = 100000
+limit_bottom = 100000
+
+[node name="BoredomLabel" parent="Player/CanvasLayer" index="0"]
+anchors_preset = 8
+
 [node name="DusenYol" parent="." instance=ExtResource("15_iguj2")]
 position = Vector2(1211, 1746)
 
@@ -6054,3 +6064,5 @@ position = Vector2(327, 623)
 [connection signal="body_exited" from="Ladder2" to="stick_collectable" method="_on_ladder_body_exited"]
 [connection signal="body_entered" from="Ladder3" to="stick_collectable" method="_on_ladder_body_entered"]
 [connection signal="body_exited" from="Ladder3" to="stick_collectable" method="_on_ladder_body_exited"]
+
+[editable path="Player"]
