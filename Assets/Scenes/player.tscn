@@ -324,7 +324,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkm62"]
-radius = 13.0
+radius = 9.0
 height = 38.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c3tg1"]
@@ -342,7 +342,7 @@ animation = &"idle"
 offset = Vector2(-19.745, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, -19)
+position = Vector2(0, -19)
 shape = SubResource("CapsuleShape2D_mkm62")
 
 [node name="AttackAreaP" type="Area2D" parent="."]
