@@ -3,40 +3,24 @@ class_name Skeleton
 
 const GRAVITY: float = 900.0
 
-@export var grave_node: NodePath
 @export var speed: float = 80.0
-@export var max_health: int = 60
+@export var max_health: int = 100
 
-# ✅ Player yaklaşınca uyanma mesafesi
-@export var wake_range: float = 160.0
-
-# ✅ Uyanınca mezardan çıkma animasyonu
-@export var spawn_animation: String = "idle"
-
-# ✅ X sınırı
-@export var min_x: float = 1651
-@export var max_x: float = 1816
-@export var edge_padding: float = 2.0
-
-@export var attack_interval: float = 1.0
-@export var attack_duration: float = 0.4
-@export var attack_damage: int = 5
+@export var attack_interval: float = 1.0   # iki vuruş arası bekleme süresi
+@export var attack_duration: float = 0.4   # bir saldırı animasyonunun sürdüğü varsayılan süre
 
 var health: int
 var direction: int = 1
-
-var is_awake: bool = false
-var is_spawning: bool = false
 
 var is_attacking: bool = false
 var player_in_attack_area: bool = false
 var player_target: Node = null
 
-var attack_cooldown: float = 0.0
-var attack_time_left: float = 0.0
+var attack_cooldown: float = 0.0      # tekrar saldırı yapabilmek için geri sayım
+var attack_time_left: float = 0.0     # şu anki saldırının bitmesine kalan süre
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-@onready var health_bar = $HealthBarEnemy
+@onready var health_bar: HealthBarEnemy = $HealthBarEnemy
 
 @onready var left_point_x: float  = $LeftPoint.global_position.x
 @onready var right_point_x: float = $RightPoint.global_position.x
@@ -49,115 +33,65 @@ func _ready() -> void:
 	add_to_group("Enemy")
 
 	health = max_health
-	if health_bar and health_bar.has_method("apply_max_health"):
-		health_bar.apply_max_health(max_health)
-	else:
-		health_bar.max_value = max_health
+	health_bar.max_health = max_health
 	health_bar.set_health(health)
 
 	_update_flip()
-
-	# ✅ Başta uyku modu: saldırı alanlarını kapat
-	attack_area_1.monitoring = false
-	attack_area_2.monitoring = false
-
-	# ✅ Başta hiçbir anim akmasın (istersen burada ilk frame'i ayarlayabilirsin)
-	anim.stop()
-	anim.frame = 0
+	anim.play("walk")
 
 
 func _physics_process(delta: float) -> void:
-	# ✅ Uyanmadıysa sadece player yakın mı kontrol et
-	if not is_awake:
-		velocity = Vector2.ZERO
-		move_and_slide()
-
-		var p: Node = get_tree().get_first_node_in_group("Player")
-		if p != null:
-			var dist: float = abs(p.global_position.x - global_position.x)
-			if dist <= wake_range:
-				player_target = p
-				_wake_up()
-		return
-
-	# ✅ Uyanma animasyonu sırasında hareket/atak yok, gravity yok
-	if is_spawning:
-		velocity = Vector2.ZERO
-		move_and_slide()
-		return
-
-	# ✅ Normal hayata geçince gravity aktif
 	velocity.y += GRAVITY * delta
 
-	# Cooldown
+	# Sayaçları güncelle
 	if attack_cooldown > 0.0:
 		attack_cooldown -= delta
 		if attack_cooldown < 0.0:
 			attack_cooldown = 0.0
 
-	# Attack süresi
 	if attack_time_left > 0.0:
 		attack_time_left -= delta
 		if attack_time_left <= 0.0:
 			attack_time_left = 0.0
 			is_attacking = false
+			# Saldırı bittiyse ve ölmediyse yürüme animasyonuna dön
 			if health > 0:
 				anim.play("walk")
 
-	# öldüyse
 	if health <= 0:
 		velocity.x = 0.0
 		move_and_slide()
 		return
 
 	if is_attacking:
+		# saldırı sırasında hareket yok
 		velocity.x = 0.0
 	else:
+		# saldırı aktif değilken, menzilde player varsa ve cooldown bittiyse saldır
 		if player_in_attack_area and player_target != null and attack_cooldown == 0.0:
 			_do_attack()
 			velocity.x = 0.0
 		else:
+			# normal devriye
 			velocity.x = direction * speed
 
-			# X sınırı
-			if direction == -1 and global_position.x <= min_x + edge_padding:
+			if direction == -1 and position.x <= left_point_x:
 				direction = 1
 				_update_flip()
-			elif direction == 1 and global_position.x >= max_x - edge_padding:
+			elif direction == 1 and position.x >= right_point_x:
 				direction = -1
 				_update_flip()
 
 	move_and_slide()
-
-	global_position.x = clamp(global_position.x, min_x, max_x)
-
-	if is_on_wall():
-		direction = -1 if direction == 1 else 1
-		_update_flip()
-
-
-func _wake_up() -> void:
-	is_awake = true
-	is_spawning = true
-
-	# uyanınca saldırı alanları açılacak ama spawn bitince efektif olsun
-	attack_area_1.monitoring = true
-	attack_area_2.monitoring = true
-
-	# idle (mezardan çıkış) 1 kere oynasın
-	if anim.sprite_frames and anim.sprite_frames.has_animation(spawn_animation):
-		anim.sprite_frames.set_animation_loop(spawn_animation, false)
-		anim.play(spawn_animation)
-	else:
-		# idle yoksa direkt yürüsün
-		is_spawning = false
-		anim.play("walk")
 
 
 func _update_flip() -> void:
 	anim.flip_h = (direction == -1)
 
 
+# ------------------------
+# DAMAGE / ÖLME
+# ------------------------
 func take_damage(amount: int, _from_dir: float = 0.0) -> void:
 	if health <= 0:
 		return
@@ -182,14 +116,18 @@ func _die() -> void:
 	anim.play("death")
 
 
+# ------------------------
+# SALDIRI + DAMAGE
+# ------------------------
 func _do_attack() -> void:
 	if player_target == null:
 		return
 
 	is_attacking = true
-	attack_time_left = attack_duration
-	attack_cooldown = attack_interval
+	attack_time_left = attack_duration      # şu anki saldırının süresi
+	attack_cooldown = attack_interval      # bir dahaki saldırıya kadar bekleme
 
+	# yöne çevir
 	var dir: float = sign(player_target.global_position.x - global_position.x)
 	if dir != 0.0:
 		direction = int(dir)
@@ -197,14 +135,16 @@ func _do_attack() -> void:
 
 	anim.play("attack")
 
+	# DAMAGE BURADA, her attack çağrısında sadece 1 kere
 	if player_target != null and player_target.is_inside_tree() and player_target.has_method("take_damage"):
-		player_target.take_damage(attack_damage, dir)
+		player_target.take_damage(5, dir)
 
 
+# ------------------------
+# ATTACK AREA 1 (SOL)
+# ------------------------
 func _on_attack_area_1_body_entered(body: Node) -> void:
 	if health <= 0:
-		return
-	if not is_awake or is_spawning:
 		return
 	if not body.is_in_group("Player"):
 		return
@@ -220,14 +160,17 @@ func _on_attack_area_1_body_exited(body: Node) -> void:
 		return
 
 	player_in_attack_area = false
+
+	# Saldırı bitmişse target'ı bırak
 	if not is_attacking:
 		player_target = null
 
 
+# ------------------------
+# ATTACK AREA 2 (SAĞ)
+# ------------------------
 func _on_attack_area_2_body_entered(body: Node) -> void:
 	if health <= 0:
-		return
-	if not is_awake or is_spawning:
 		return
 	if not body.is_in_group("Player"):
 		return
@@ -243,25 +186,19 @@ func _on_attack_area_2_body_exited(body: Node) -> void:
 		return
 
 	player_in_attack_area = false
+
 	if not is_attacking:
 		player_target = null
 
 
+# ------------------------
+# ANİMASYON BİTİNCE
+# (Artık attack için state'e güvenmiyoruz)
+# ------------------------
 func _on_animated_sprite_2d_animation_finished() -> void:
 	match anim.animation:
-		"idle":
-			# ✅ mezardan çıkış bitti -> yürüyüşe geç
-			is_spawning = false
+		"take_hit":
 			if health > 0:
 				anim.play("walk")
-
-		"take_hit":
-			if health > 0 and not is_spawning:
-				anim.play("walk")
-
 		"death":
-			if grave_node != NodePath("") and has_node(grave_node):
-				var grave = get_node(grave_node)
-				if grave and grave.has_method("close_grave"):
-					grave.close_grave()
 			queue_free()
