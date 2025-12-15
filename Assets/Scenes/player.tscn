@@ -324,29 +324,29 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkm62"]
+radius = 9.0
 height = 38.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c3tg1"]
 size = Vector2(33, 44)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-position = Vector2(-19, 0)
 collision_layer = 3
-collision_mask = 34781
+collision_mask = 2013
 script = ExtResource("1_c3tg1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(25, -40)
 sprite_frames = SubResource("SpriteFrames_ukllu")
-animation = &"idle"
+animation = &"attack"
 offset = Vector2(-19.745, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.11, -19)
+position = Vector2(0, -19)
 shape = SubResource("CapsuleShape2D_mkm62")
 
 [node name="AttackAreaP" type="Area2D" parent="."]
-collision_layer = 128
+collision_layer = 132
 collision_mask = 1796
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackAreaP"]
@@ -360,7 +360,7 @@ one_shot = true
 [node name="Camera2D" type="Camera2D" parent="." groups=["Player"]]
 limit_left = 0
 limit_top = 0
-limit_right = 8243
+limit_right = 10000
 limit_bottom = 648
 
 [node name="HealthBarPlayer" parent="." instance=ExtResource("8_lerqx")]
@@ -373,7 +373,7 @@ offset_bottom = -46.0
 
 [node name="BoredomLabel" type="Label" parent="CanvasLayer"]
 visible = false
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -384,8 +384,7 @@ offset_right = 432.0
 offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.91402, 0.31434318, 0.15305951, 1)
+theme_override_colors/font_color = Color(0.9137255, 0.3137255, 0.15294118, 1)
 theme_override_fonts/font = ExtResource("9_jp3cw")
 theme_override_font_sizes/font_size = 128
 text = "You died of boredom"

@@ -14066,6 +14066,8 @@ position = Vector2(1815, 286)
 
 [node name="Skelaton" parent="." instance=ExtResource("8_51kt6")]
 position = Vector2(1969, 288)
+min_x = -100000.0
+max_x = 100000.0
 
 [node name="Trap" parent="." instance=ExtResource("9_yclrm")]
 position = Vector2(401, 569)
