@@ -34,18 +34,26 @@ func kill() -> void:
 		return
 
 	is_dead = true
-	death_area.monitoring = false          # tekrar tetiklenmesin
-	main_collision.disabled = true         # player içinden geçsin
-	anim.play("death")                     # death animasyonu (loop OFF olmalı)
+	# "Defer" these changes until the end of the physics frame
+	death_area.set_deferred("monitoring", false)
+	main_collision.set_deferred("disabled", true)
+	
+	anim.play("death")
 
 
 # ------------------------------------------------
 #  Player mantarın tepesine bastığında
 # ------------------------------------------------
 func _on_death_area_1_body_entered(body: Node) -> void:
-	# Player grubundaysa ve mantar henüz ölmediyse
-	if not is_dead and body.is_in_group("Player"):
-		kill()
+	if is_dead:
+		return
+		
+	if body.is_in_group("Player"):
+		# FIX: Only kill if the player is falling (y velocity > 0)
+		if body.velocity.y > 0:
+			kill()
+			# Optional: Make the player bounce off!
+			body.velocity.y = -300
 
 
 # ------------------------------------------------

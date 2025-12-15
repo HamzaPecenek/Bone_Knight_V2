@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://iqsaf2mlpnlj"]
+
+[ext_resource type="Script" uid="uid://cnimmi34yx4qb" path="res://health_collectable.gd" id="1_ub4hx"]
+[ext_resource type="Texture2D" uid="uid://btu5i1nba11hy" path="res://Assets/ui/inventory/Health_Collect/hearts.png" id="2_grqk8"]
+[ext_resource type="Script" uid="uid://vdshgmal2f1d" path="res://Assets/Scenes/heart_animated_sprite_2d.gd" id="3_grqk8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grqk8"]
+atlas = ExtResource("2_grqk8")
+region = Rect2(96, 2, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nsem"]
+atlas = ExtResource("2_grqk8")
+region = Rect2(115, 2, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no5r4"]
+atlas = ExtResource("2_grqk8")
+region = Rect2(134, 2, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab4gj"]
+atlas = ExtResource("2_grqk8")
+region = Rect2(153, 2, 19, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvgqo"]
+atlas = ExtResource("2_grqk8")
+region = Rect2(175, 0, 19, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6sx01"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grqk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0nsem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no5r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab4gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvgqo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0nsem"]
+radius = 10.198039
+
+[node name="health_collectable" type="Area2D"]
+position = Vector2(4, 1)
+script = ExtResource("1_ub4hx")
+
+[node name="Heart_AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6sx01")
+script = ExtResource("3_grqk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1)
+shape = SubResource("CircleShape2D_0nsem")
+debug_color = Color(0.8188828, 0.34787148, 0.5542348, 0.44313726)

@@ -1,12 +1,12 @@
-[gd_scene load_steps=32 format=4 uid="uid://pm58lhcwabnr"]
+[gd_scene load_steps=33 format=4 uid="uid://pm58lhcwabnr"]
 
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_jlv3j"]
 [ext_resource type="Texture2D" uid="uid://k7cxusmf2gmb" path="res://Assets/Level_3/Dungeon-Platformer-Pixel-Art-Tileset3.webp" id="4_2388u"]
-[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/TileSet1.png" id="4_jsc5y"]
+[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/Level1Map/TileSet1.png" id="4_jsc5y"]
 [ext_resource type="Texture2D" uid="uid://yeo7sjs3k1pc" path="res://Assets/Level_3/castle_tileset.png" id="5_02y5a"]
-[ext_resource type="Texture2D" uid="uid://cynjg3vkree65" path="res://Assets/Map/TileSet2.png" id="5_37jq5"]
+[ext_resource type="Texture2D" uid="uid://cynjg3vkree65" path="res://Assets/Map/Level1Map/TileSet2.png" id="5_37jq5"]
 [ext_resource type="Texture2D" uid="uid://c6rhkhlf1jm8p" path="res://Assets/Level_3/grassland_tileset.png" id="6_2388u"]
-[ext_resource type="Texture2D" uid="uid://ecqv06lvgu45" path="res://Assets/Map/oak_woods_tileset.png" id="6_opges"]
+[ext_resource type="Texture2D" uid="uid://ecqv06lvgu45" path="res://Assets/Map/Level1Map/oak_woods_tileset.png" id="6_opges"]
 [ext_resource type="Texture2D" uid="uid://bqpddhm0a2nyr" path="res://Assets/Level_3/lava.png" id="7_6g308"]
 [ext_resource type="PackedScene" uid="uid://bvfncc10i2tkw" path="res://Assets/Scenes/mushroom.tscn" id="7_acko4"]
 [ext_resource type="Texture2D" uid="uid://bad0xr7m0u65i" path="res://Assets/Level_3/props2.png" id="8_5hjvk"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://2v6pxgl70oom" path="res://Assets/Scenes/death_boundary.tscn" id="11_gxnlt"]
 [ext_resource type="Texture2D" uid="uid://815b2ofqneth" path="res://Assets/Level_3/SET1_Mainlev_build.png" id="11_jmknf"]
 [ext_resource type="Texture2D" uid="uid://cnv4gdouia0pl" path="res://Assets/Level_3/Vector_horizontal_seamless_illustration_of_forest_with_mystical.jpg" id="19_5hjvk"]
+[ext_resource type="PackedScene" uid="uid://chm7lx5gmkoj8" path="res://Assets/Scenes/flying_eye.tscn" id="19_ictw0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bilv"]
 texture = ExtResource("4_jsc5y")
@@ -14108,13 +14109,10 @@ position = Vector2(2592, 398)
 position = Vector2(3255, 544)
 
 [node name="Mushroom5" parent="." instance=ExtResource("7_acko4")]
-position = Vector2(3640, 510)
+position = Vector2(3721, 512)
 
 [node name="Mushroom6" parent="." instance=ExtResource("7_acko4")]
 position = Vector2(4001, 513)
-
-[node name="Mushroom7" parent="." instance=ExtResource("7_acko4")]
-position = Vector2(4496, 511)
 
 [node name="Mushroom8" parent="." instance=ExtResource("7_acko4")]
 position = Vector2(4803, 528)
@@ -14153,3 +14151,12 @@ position = Vector2(4795, 668)
 scale = Vector2(0.6416, 0.62693334)
 texture = ExtResource("19_5hjvk")
 metadata/_edit_lock_ = true
+
+[node name="FlyingEye" parent="." instance=ExtResource("19_ictw0")]
+position = Vector2(301, 525)
+
+[node name="FlyingEye2" parent="." instance=ExtResource("19_ictw0")]
+position = Vector2(3508, 491)
+
+[node name="FlyingEye3" parent="." instance=ExtResource("19_ictw0")]
+position = Vector2(4511, 492)
