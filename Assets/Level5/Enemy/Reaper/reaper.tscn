@@ -1,0 +1,104 @@
+[gd_scene load_steps=13 format=3 uid="uid://byw3ivclowase"]
+
+[ext_resource type="Script" uid="uid://g7o3nopdkgfm" path="res://reaper.gd" id="1_vtkiq"]
+[ext_resource type="Texture2D" uid="uid://bsny4atfulpxa" path="res://Assets/Level5/Enemy/Reaper/HostileIdleReaper-Sheet.png" id="2_t1vxt"]
+[ext_resource type="PackedScene" uid="uid://ce2yp2wx5gcpt" path="res://Assets/Scenes/healthbar_enemy.tscn" id="3_14cbt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnwf1"]
+size = Vector2(20, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3tq7"]
+atlas = ExtResource("2_t1vxt")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l1to"]
+atlas = ExtResource("2_t1vxt")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2m2p"]
+atlas = ExtResource("2_t1vxt")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4d77"]
+atlas = ExtResource("2_t1vxt")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hw7bu"]
+atlas = ExtResource("2_t1vxt")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yxd4m"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3tq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6l1to")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2m2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4d77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hw7bu")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bir0t"]
+size = Vector2(9.75, 15.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mt4px"]
+size = Vector2(8.75, 15)
+
+[node name="Reaper" type="CharacterBody2D"]
+script = ExtResource("1_vtkiq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -3)
+shape = SubResource("RectangleShape2D_lnwf1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.0000005, -2.9999995)
+scale = Vector2(0.45833334, 0.46875)
+sprite_frames = SubResource("SpriteFrames_yxd4m")
+animation = &"Idle"
+
+[node name="RightPoint" type="Marker2D" parent="."]
+position = Vector2(255, 2)
+
+[node name="LeftPoint" type="Marker2D" parent="."]
+position = Vector2(255, 2)
+
+[node name="AttackArea1" type="Area2D" parent="."]
+position = Vector2(255, 2)
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea1"]
+position = Vector2(-263, -4)
+shape = SubResource("RectangleShape2D_bir0t")
+
+[node name="AttackArea2" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2"]
+position = Vector2(13, -2.5)
+shape = SubResource("RectangleShape2D_mt4px")
+
+[node name="HealthBarEnemy" parent="." instance=ExtResource("3_14cbt")]
+offset_left = -8.0
+offset_top = -22.0
+offset_right = 12.0
+offset_bottom = -18.0
