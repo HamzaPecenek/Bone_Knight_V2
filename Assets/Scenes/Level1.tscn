@@ -1,13 +1,13 @@
-[gd_scene load_steps=27 format=4 uid="uid://lslltlj55xhq"]
+[gd_scene load_steps=26 format=4 uid="uid://lslltlj55xhq"]
 
-[ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Level1Map/Background1.png" id="1_dwyiq"]
+[ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Background1.png" id="1_dwyiq"]
 [ext_resource type="Script" uid="uid://xhhmd8o41nbi" path="res://Assets/Scenes/level_1.gd" id="1_fu3i4"]
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_rpjkb"]
-[ext_resource type="Texture2D" uid="uid://df31i2fcolcg3" path="res://Assets/Map/Level1Map/Background2.png" id="2_dn5ey"]
-[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/Level1Map/TileSet1.png" id="3_lmyl5"]
-[ext_resource type="Texture2D" uid="uid://cynjg3vkree65" path="res://Assets/Map/Level1Map/TileSet2.png" id="4_mlbie"]
+[ext_resource type="Texture2D" uid="uid://df31i2fcolcg3" path="res://Assets/Map/Background2.png" id="2_dn5ey"]
+[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/TileSet1.png" id="3_lmyl5"]
+[ext_resource type="Texture2D" uid="uid://cynjg3vkree65" path="res://Assets/Map/TileSet2.png" id="4_mlbie"]
 [ext_resource type="PackedScene" uid="uid://bvfncc10i2tkw" path="res://Assets/Scenes/mushroom.tscn" id="5_mngwl"]
-[ext_resource type="Texture2D" uid="uid://ecqv06lvgu45" path="res://Assets/Map/Level1Map/oak_woods_tileset.png" id="5_rhuow"]
+[ext_resource type="Texture2D" uid="uid://ecqv06lvgu45" path="res://Assets/Map/oak_woods_tileset.png" id="5_rhuow"]
 [ext_resource type="PackedScene" uid="uid://dcroo07f78lxy" path="res://Assets/Scenes/skelaton.tscn" id="6_rhuow"]
 [ext_resource type="Script" uid="uid://ck41vs2fv4wpj" path="res://Assets/Scenes/lake.gd" id="7_x50wt"]
 [ext_resource type="PackedScene" uid="uid://cuaydp5e5ainu" path="res://Assets/Scenes/trap.tscn" id="9_c410o"]
@@ -16,7 +16,6 @@
 [ext_resource type="Script" uid="uid://7uqoyhbby4ga" path="res://Assets/Scenes/ui.gd" id="13_apo3s"]
 [ext_resource type="FontFile" uid="uid://7vn3qxh2pe6n" path="res://Assets/Fonts/m6x11 Daniel LInssen.ttf" id="14_dqdc5"]
 [ext_resource type="PackedScene" uid="uid://chm7lx5gmkoj8" path="res://Assets/Scenes/flying_eye.tscn" id="16_j0jbc"]
-[ext_resource type="PackedScene" uid="uid://bfj7d5rqql2v0" path="res://Assets/Level5/Doors/exit_door.tscn" id="17_om6i1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bilv"]
 texture = ExtResource("3_lmyl5")
@@ -1598,7 +1597,7 @@ shape = SubResource("RectangleShape2D_qm2ms")
 position = Vector2(2366, 251)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
-position = Vector2(1240, 89)
+position = Vector2(1152, 91)
 shape = SubResource("RectangleShape2D_qm2ms")
 
 [node name="Skelaton2" parent="." instance=ExtResource("6_rhuow")]
@@ -1646,9 +1645,6 @@ position = Vector2(1017, 488)
 
 [node name="FlyingEye2" parent="." instance=ExtResource("16_j0jbc")]
 position = Vector2(2409, 507)
-
-[node name="ExitDoor" parent="." instance=ExtResource("17_om6i1")]
-position = Vector2(3465, 516)
 
 [connection signal="body_entered" from="TileMapGround/Lake/InteractArea" to="TileMapGround/Lake" method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="TileMapGround/Lake/InteractArea" to="TileMapGround/Lake" method="_on_interact_area_body_exited"]
