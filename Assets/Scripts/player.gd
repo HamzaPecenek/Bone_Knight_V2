@@ -155,11 +155,11 @@ func _handle_boredom(delta: float) -> void:
 	if Input.get_axis("walk_left", "walk_right") != 0:
 		active = true
 	if Input.is_action_pressed("jump"):
-		is_active = true
+		active = true
 	if Input.is_action_pressed("attack") or Input.is_action_pressed("attack_heavy"):
-		is_active = true
+		active = true
 		
-	if is_active:
+	if active:
 		idle_timer = 0.0
 	else:
 		idle_timer += delta
@@ -290,6 +290,8 @@ func _respawn() -> void:
 	anim.play("idle")
 
 func heal(amount: int) -> void:
+	health = min(max_health, health + amount)
+	health_bar.set_health(health)
 	if is_dead:
 		return
 	if amount <= 0:
@@ -316,8 +318,4 @@ func _on_interact_area_area_shape_entered(_area_rid, _area, _area_shape_index, _
 func _on_interact_area_area_shape_exited(_area_rid, _area, _area_shape_index, _local_shape_index):
 	pass
 
-# --- ALARA'S HEALING LOGIC (Wrapped in a function) ---
-func heal(amount: int):
-	health = min(max_health, health + amount)
-	if health_bar:
-		health_bar.set_health(health)
+ 

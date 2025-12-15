@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://yeo7sjs3k1pc" path="res://Assets/Level_3/castle_tileset.png" id="8_tb8i3"]
 [ext_resource type="Texture2D" uid="uid://dutq4ini4ygj8" path="res://Assets/Level5/TileSets/forgotten_forest_example_tileset.png" id="9_ecupr"]
 [ext_resource type="Texture2D" uid="uid://67f6okndroc4" path="res://Assets/Level5/Traps/Fire/Red Effect Bullet Impact Explosion 32x32.png" id="10_ag3hu"]
-[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/Level1Map/TileSet1.png" id="11_qtq6o"]
+[ext_resource type="Texture2D" uid="uid://c3bt6gv2ncdlf" path="res://Assets/Map/TileSet1.png" id="11_qtq6o"]
 [ext_resource type="PackedScene" uid="uid://bfj7d5rqql2v0" path="res://Assets/Level5/Doors/exit_door.tscn" id="12_e2k8t"]
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="12_yccvn"]
 [ext_resource type="PackedScene" uid="uid://cxwofis8edj3x" path="res://Assets/Level5/Falling_Platform/FallingPlatform.tscn" id="13_2ywkb"]
