@@ -31,3 +31,5 @@ func _on_body_entered(body: Node) -> void:
 	# ⏳ düştükten sonra yok ol
 	await get_tree().create_timer(disappear_delay).timeout
 	queue_free()
+	
+	

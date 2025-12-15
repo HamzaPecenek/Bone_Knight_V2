@@ -217,6 +217,8 @@ size = Vector2(23, 42)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_xml2j")
+min_x = -1000.0
+max_x = 6000.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, 2)

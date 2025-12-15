@@ -31,3 +31,5 @@ position = Vector2(-8, 0)
 position = Vector2(24, 20.6875)
 shape = SubResource("RectangleShape2D_7g87r")
 debug_color = Color(0.66337794, 0.49691343, 0.3621382, 0.41960785)
+
+[connection signal="body_entered" from="." to="CollisionShape2D" method="_on_falling_platform_body_entered"]
