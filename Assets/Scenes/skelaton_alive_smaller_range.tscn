@@ -1,0 +1,190 @@
+[gd_scene load_steps=21 format=3 uid="uid://bm7po3784xbdk"]
+
+[ext_resource type="Script" uid="uid://bk5dfuujsae2o" path="res://Assets/Scripts/skelaton.gd" id="1_j36h4"]
+[ext_resource type="Texture2D" uid="uid://74o215uikh5s" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton_walk/skeleton-clothed-1.png" id="2_3p48c"]
+[ext_resource type="Texture2D" uid="uid://dt1dxtxsfsny6" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton_walk/skeleton-clothed-2.png" id="3_kd3p8"]
+[ext_resource type="Texture2D" uid="uid://b6jpfd1js6v8s" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton_walk/skeleton-clothed-3.png" id="4_v3twt"]
+[ext_resource type="Texture2D" uid="uid://b18t11rx3nns6" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton_walk/skeleton-clothed-4.png" id="5_ocuix"]
+[ext_resource type="Texture2D" uid="uid://ceyi37eij5mvh" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton_walk/skeleton-clothed-5.png" id="6_ncdq7"]
+[ext_resource type="Texture2D" uid="uid://cb0ug26jr7o56" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton_walk/skeleton-clothed-6.png" id="7_c6leg"]
+[ext_resource type="Texture2D" uid="uid://dxojxvr53ptrq" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton_walk/skeleton-clothed-7.png" id="8_y18ir"]
+[ext_resource type="Texture2D" uid="uid://b3nguthav0qyd" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton_walk/skeleton-clothed-8.png" id="9_2gbw6"]
+[ext_resource type="Texture2D" uid="uid://0w4icypf4p8g" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton-rise-clothed-6.png" id="10_4ri41"]
+[ext_resource type="Texture2D" uid="uid://d4gnpy7mfreiw" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton-rise-clothed-5.png" id="11_x176m"]
+[ext_resource type="Texture2D" uid="uid://b7b3l1qmkm7ik" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton-rise-clothed-4.png" id="12_taaoy"]
+[ext_resource type="Texture2D" uid="uid://bl8505qij4ybo" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton-rise-clothed-3.png" id="13_tdbiy"]
+[ext_resource type="Texture2D" uid="uid://dkkgovwo48nfu" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton-rise-clothed-2.png" id="14_rp8vp"]
+[ext_resource type="Texture2D" uid="uid://ccnobw550ia6x" path="res://Assets/Level5/Enemy/sekeleton_alive/skeleton-rise-clothed-1.png" id="15_sd46w"]
+[ext_resource type="PackedScene" uid="uid://ce2yp2wx5gcpt" path="res://Assets/Scenes/healthbar_enemy.tscn" id="16_h5f71"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqwkd"]
+size = Vector2(32, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s66id"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3p48c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kd3p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v3twt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ocuix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ncdq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c6leg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y18ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2gbw6")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_4ri41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x176m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_taaoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tdbiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rp8vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sd46w")
+}],
+"loop": false,
+"name": &"death",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_sd46w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rp8vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tdbiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_taaoy")
+}, {
+"duration": 0.61,
+"texture": ExtResource("11_x176m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4ri41")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ocuix")
+}],
+"loop": true,
+"name": &"take_hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3p48c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kd3p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v3twt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ocuix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ncdq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c6leg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y18ir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2gbw6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1ogq"]
+size = Vector2(23, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qe4i"]
+size = Vector2(23, 42)
+
+[node name="Skelaton" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_j36h4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 2)
+shape = SubResource("RectangleShape2D_kqwkd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_s66id")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="RightPoint" type="Marker2D" parent="."]
+position = Vector2(70, 0)
+
+[node name="LeftPoint" type="Marker2D" parent="."]
+
+[node name="AttackArea1" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea1"]
+position = Vector2(-24.5, 2)
+shape = SubResource("RectangleShape2D_r1ogq")
+
+[node name="AttackArea2" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2"]
+position = Vector2(36, 1)
+shape = SubResource("RectangleShape2D_3qe4i")
+
+[node name="HealthBarEnemy" parent="." instance=ExtResource("16_h5f71")]
+offset_left = -25.0
+offset_top = -39.0
+offset_right = 39.0
+offset_bottom = -31.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="AttackArea1" to="." method="_on_attack_area_1_body_entered"]
+[connection signal="body_exited" from="AttackArea1" to="." method="_on_attack_area_1_body_exited"]
+[connection signal="body_entered" from="AttackArea2" to="." method="_on_attack_area_2_body_entered"]
+[connection signal="body_exited" from="AttackArea2" to="." method="_on_attack_area_2_body_exited"]

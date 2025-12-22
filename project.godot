@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Ilsu"
-run/main_scene="uid://lslltlj55xhq"
+config/name="BK-coin update"
+run/main_scene="uid://bbah0pab6qjgx"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
