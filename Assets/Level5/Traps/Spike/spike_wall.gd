@@ -16,7 +16,7 @@ func _ready() -> void:
 	# Başlangıç: kapalı
 	is_open = false
 	hitbox.disabled = true
-	anim.play("closed")
+	anim.play("Closed")
 
 	# Debug: signal bağlı mı görmek için
 	print("SpikeTrap ready. auto_cycle=", auto_cycle)
@@ -32,7 +32,7 @@ func open_trap() -> void:
 
 	# ✅ Loop olsa bile sorun yok
 	hitbox.disabled = false
-	anim.play("open")
+	anim.play("Open")
 
 
 func close_trap() -> void:
@@ -41,7 +41,7 @@ func close_trap() -> void:
 	is_open = false
 
 	hitbox.disabled = true
-	anim.play("closed")
+	anim.play("Closed")
 
 
 func _cycle() -> void:

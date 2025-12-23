@@ -33,7 +33,7 @@ func _connect_signals():
 
 func _on_laser_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		body.take_damage(15)   # laser damage
+		body.take_damage(20)   # laser damage
 
 func transition():
 	if can_transition:

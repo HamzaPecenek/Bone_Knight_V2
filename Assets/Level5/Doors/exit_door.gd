@@ -23,8 +23,13 @@ func _on_body_entered(body: Node) -> void:
 	if not body.is_in_group("Player"):
 		return
 
-	used = true
+#### BLOCK DOOR IF THERE ARE COINS REMAINING
+	if coins_remaining():
+		return
 
+
+	used = true
+	
 	# Bir daha tetiklenmesin
 	monitoring = false
 	if is_instance_valid(trigger_shape):
@@ -42,3 +47,16 @@ func _on_body_entered(body: Node) -> void:
 	# Teleport FX'nin kapıda çıkması için from_pos gönderelim
 	var from_pos := (body as Node2D).global_position
 	LevelManager.change_level(target_scene, "SpawnPoint", from_pos)
+	
+#### COINS DETECTOR
+func coins_remaining() -> bool:
+	var level_root := get_tree().current_scene
+	return _has_coin_recursive(level_root)
+
+func _has_coin_recursive(node: Node) -> bool:
+	if node.scene_file_path.ends_with("stick_collectable.tscn"):
+		return true
+	for child in node.get_children():
+		if _has_coin_recursive(child):
+			return true
+	return false

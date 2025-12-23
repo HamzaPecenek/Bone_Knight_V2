@@ -136,7 +136,7 @@ script = ExtResource("1_yorfl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ctyra")
-animation = &"Open"
+animation = &"Closed"
 autoplay = "Open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
