@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://pm58lhcwabnr"]
+[gd_scene load_steps=37 format=4 uid="uid://pm58lhcwabnr"]
 
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_jlv3j"]
 [ext_resource type="Texture2D" uid="uid://k7cxusmf2gmb" path="res://Assets/Level_3/Dungeon-Platformer-Pixel-Art-Tileset3.webp" id="4_2388u"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://chm7lx5gmkoj8" path="res://Assets/Scenes/flying_eye.tscn" id="19_ictw0"]
 [ext_resource type="PackedScene" uid="uid://dncewo70o8ulk" path="res://Assets/ui/inventory/stick_collectable.tscn" id="20_ictw0"]
 [ext_resource type="PackedScene" uid="uid://bfj7d5rqql2v0" path="res://Assets/Level5/Doors/exit_door.tscn" id="21_he0r0"]
+[ext_resource type="PackedScene" uid="uid://iqsaf2mlpnlj" path="res://Assets/Scenes/health_collectable.tscn" id="22_jmknf"]
+[ext_resource type="PackedScene" uid="uid://dma23ldh2m4cf" path="res://Assets/ui/Inventory.tscn" id="23_s3rkh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bilv"]
 texture = ExtResource("4_jsc5y")
@@ -14214,3 +14216,17 @@ position = Vector2(1198, 387)
 [node name="ExitDoor" parent="." instance=ExtResource("21_he0r0")]
 position = Vector2(5528, 480)
 target_scene = "uid://dd6nqv14uhgni"
+
+[node name="health_collectable" parent="." instance=ExtResource("22_jmknf")]
+position = Vector2(1395, 341)
+
+[node name="health_collectable2" parent="." instance=ExtResource("22_jmknf")]
+position = Vector2(3189, 549)
+
+[node name="health_collectable3" parent="." instance=ExtResource("22_jmknf")]
+position = Vector2(4971, 518)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory" parent="CanvasLayer" instance=ExtResource("23_s3rkh")]
+visible = false

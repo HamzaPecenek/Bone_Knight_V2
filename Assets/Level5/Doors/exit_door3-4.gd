@@ -1,6 +1,6 @@
 extends Area2D
 
-@export_file("*.tscn") var target_scene: String = "res://Assets/Scenes/level_4.tscn"
+@export_file("*.tscn") var target_scene: String = "res://Assets/Level_3/Level3.tscn"
 
 
 @onready var door_sprite: AnimatedSprite2D = $DoorSprite

@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://biu5xkx8st6ky"]
+[gd_scene load_steps=47 format=4 uid="uid://biu5xkx8st6ky"]
 
 [ext_resource type="Texture2D" uid="uid://b7r0qgfsngx86" path="res://Assets/Level5/Background Sets/Background1/BackGround_007.png" id="1_ipcrw"]
 [ext_resource type="Texture2D" uid="uid://bx1lvvb8rjwds" path="res://Assets/Level5/Background Sets/Dungeon/0.png" id="1_vt4tp"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://d4lpvxkfheynd" path="res://Assets/Level5/Traps/Spike/spike_wall.tscn" id="32_1fu1e"]
 [ext_resource type="PackedScene" uid="uid://hwfxxpeiw4dt" path="res://moving_platform.tscn" id="33_8hpt0"]
 [ext_resource type="PackedScene" uid="uid://c51kds8fjb6oa" path="res://angel.tscn" id="34_gcrfg"]
+[ext_resource type="PackedScene" uid="uid://d262uno635wih" path="res://Assets/Scenes/checkpoint.tscn" id="35_r7g5j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yil34"]
 size = Vector2(11.703125, 48.5)
@@ -5995,6 +5996,11 @@ grave = NodePath("../GraveSpecial")
 [node name="DemonBoss" parent="." instance=ExtResource("31_nev3v")]
 position = Vector2(202.00002, 1458)
 scale = Vector2(3.2027776, 2.3999999)
+speed = 100.0
+max_health = 500
+min_x = 30.0
+max_x = 300.0
+attack_damage = 30
 
 [node name="Demon_Bat" parent="." instance=ExtResource("31_1fu1e")]
 position = Vector2(2105, 1764)
@@ -6058,6 +6064,15 @@ position = Vector2(944, 143)
 
 [node name="Angel3" parent="." instance=ExtResource("34_gcrfg")]
 position = Vector2(327, 623)
+
+[node name="Checkpoint" parent="." instance=ExtResource("35_r7g5j")]
+position = Vector2(498, 486)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("35_r7g5j")]
+position = Vector2(2082, 484)
+
+[node name="Checkpoint3" parent="." instance=ExtResource("35_r7g5j")]
+position = Vector2(1707, 1716)
 
 [connection signal="body_entered" from="Ladder" to="stick_collectable" method="_on_ladder_body_entered"]
 [connection signal="body_exited" from="Ladder" to="stick_collectable" method="_on_ladder_body_exited"]
