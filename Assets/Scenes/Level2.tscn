@@ -1794,6 +1794,6 @@ offset_right = 0.0
 offset_bottom = 0.0
 
 [node name="ExitDoor" parent="." instance=ExtResource("16_wjpah")]
-position = Vector2(4513, 420)
+position = Vector2(4515, 426)
 script = ExtResource("17_yiweq")
 target_scene = "res://Assets/Level_3/Level3.tscn"
