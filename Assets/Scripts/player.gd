@@ -17,13 +17,17 @@ var is_dead: bool = false
 # --- NEW ATTACK VARIABLES ---
 @export var light_damage: int = 20
 @export var heavy_damage: int = 40
-@export var light_speed_scale: float = 1.5  # 50% faster
-@export var heavy_speed_scale: float = 0.7  # 30% slower
+@export var light_speed_scale: float = 1.5
+@export var heavy_speed_scale: float = 0.7
 var current_attack_damage: int = 20
-var base_attack_duration: float = 0.3 # Matches your scene's Timer wait_time
+var base_attack_duration: float = 0.3
+var heavy_attack_duration: float = 0.6
+
+# --- CHANGE 1: New variable to remember which animation to play ---
+var current_attack_anim: String = "attack" 
 
 # --- BOREDOM SETTINGS ---
-@export var boredom_threshold: float = 15.0 # Time in seconds
+@export var boredom_threshold: float = 15.0
 var idle_timer: float = 0.0
 
 # --- RESPAWN SETTINGS ---
@@ -74,7 +78,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = ladder_speed
 
 		move_and_slide()
-		anim.play("idle") # climb anim yoksa idle
+		anim.play("idle")
 		return
 	# ------------------------
 
@@ -124,14 +128,12 @@ func collect(item: InvItem) -> bool:
 
 	var inv = inv_ui.inv
 
-	# Aynı item varsa +1
 	for s in inv.slots:
 		if s.item == item:
 			s.amount += 1
 			inv_ui.update_slots()
 			return true
 
-	# Yoksa boş slota koy
 	for s in inv.slots:
 		if s.item == null:
 			s.item = item
@@ -183,7 +185,8 @@ func _update_animation() -> void:
 		return
 
 	if is_attacking:
-		anim.play("attack")
+		# --- CHANGE 2: Play the specific attack animation variable ---
+		anim.play(current_attack_anim) 
 		return
 
 	if not is_on_floor():
@@ -201,17 +204,23 @@ func _start_attack(is_light: bool) -> void:
 	is_attacking = true
 	
 	if is_light:
+		# --- CHANGE 3a: Set animation name for Light Attack ---
+		current_attack_anim = "attack" 
 		current_attack_damage = light_damage
 		anim.speed_scale = light_speed_scale
 		attack_timer.wait_time = base_attack_duration / light_speed_scale
 	else:
+		# --- CHANGE 3b: Set animation name for Heavy Attack ---
+		current_attack_anim = "heavy attack"
 		current_attack_damage = heavy_damage
 		anim.speed_scale = heavy_speed_scale
-		attack_timer.wait_time = base_attack_duration / heavy_speed_scale
+		attack_timer.wait_time = heavy_attack_duration / heavy_speed_scale
 
 	_set_attack_enabled(true)
 	attack_timer.start()
-	anim.play("attack")
+	
+	# Play the animation immediately
+	anim.play(current_attack_anim)
 
 func _set_attack_enabled(enabled: bool) -> void:
 	attack_area.set_deferred("monitoring", enabled)
@@ -222,9 +231,7 @@ func _on_attack_timer_timeout() -> void:
 	_set_attack_enabled(false)
 	anim.speed_scale = 1.0 # Reset speed so walking/idle is normal
 
-# ✅ ESKİ ÇALIŞAN VURUŞ MANTIĞI (düzeltilmiş)
 func _on_attack_area_p_body_entered(body: Node2D) -> void:
-	# sadece saldırı sırasında vursun
 	if not is_attacking:
 		return
 	if body == self:
@@ -250,7 +257,6 @@ func take_damage(amount: int, from_dir: float = 0.0) -> void:
 
 	health_bar.set_health(health)
 
-	# ✅ eski knockback geri geldi
 	if from_dir != 0.0:
 		velocity.x = 250.0 * from_dir
 
@@ -263,9 +269,8 @@ func _die(is_boredom: bool) -> void:
 	is_dead = true
 	velocity = Vector2.ZERO
 	_set_attack_enabled(false)
-	anim.speed_scale = 1.0 # Ensure death animation isn't slow-motion
+	anim.speed_scale = 1.0 
 	
-	# Use set_deferred to safely disable physics during a collision
 	body_shape.set_deferred("disabled", true)
 	anim.play("death")
 
@@ -281,7 +286,6 @@ func _respawn() -> void:
 	health = max_health
 	health_bar.set_health(health)
 	
-	# --- WAIT FOR PHYSICS TO CATCH UP ---
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 
@@ -297,7 +301,6 @@ func heal(amount: int) -> void:
 	if amount <= 0:
 		return
 
-# New function called by the Checkpoint flag
 func update_respawn_point(new_position: Vector2) -> void:
 	respawn_position = new_position
 	print("Checkpoint updated!")
@@ -305,7 +308,6 @@ func update_respawn_point(new_position: Vector2) -> void:
 func _on_attack_area_p_body_exited(_body: Node2D) -> void:
 	pass
 
-# Clean signals
 func _on_interact_area_area_entered(_area):
 	pass 
 
@@ -317,5 +319,3 @@ func _on_interact_area_area_shape_entered(_area_rid, _area, _area_shape_index, _
 
 func _on_interact_area_area_shape_exited(_area_rid, _area, _area_shape_index, _local_shape_index):
 	pass
-
- 

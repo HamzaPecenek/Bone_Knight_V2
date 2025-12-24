@@ -1,9 +1,10 @@
-[gd_scene load_steps=53 format=3 uid="uid://e2xryulnha1c"]
+[gd_scene load_steps=60 format=3 uid="uid://e2xryulnha1c"]
 
 [ext_resource type="Script" uid="uid://dss3ovtlegw2e" path="res://Assets/Scripts/player.gd" id="1_c3tg1"]
 [ext_resource type="Texture2D" uid="uid://b018qdbtt0gjw" path="res://Assets/Sprites/Knight/_Attack.png" id="2_lerqx"]
 [ext_resource type="Texture2D" uid="uid://bqdl7mqulq2mg" path="res://Assets/Sprites/Knight/_Death.png" id="3_jp3cw"]
 [ext_resource type="Texture2D" uid="uid://cwqaujc08bnfg" path="res://Assets/Sprites/Knight/_Fall.png" id="4_ecf78"]
+[ext_resource type="Texture2D" uid="uid://vqwk8p0jwrrk" path="res://Assets/Sprites/Knight/_Attack2NoMovement.png" id="5_rsrmw"]
 [ext_resource type="Texture2D" uid="uid://cejx44mmxglg2" path="res://Assets/Sprites/Knight/_Idle.png" id="5_vy5gb"]
 [ext_resource type="Texture2D" uid="uid://ca8y8vgl0tfte" path="res://Assets/Sprites/Knight/_Jump.png" id="6_rsrmw"]
 [ext_resource type="Texture2D" uid="uid://dg7nv5e2a6uod" path="res://Assets/Sprites/Knight/_Run.png" id="7_o8kuu"]
@@ -77,6 +78,30 @@ region = Rect2(120, 0, 120, 80)
 [sub_resource type="AtlasTexture" id="AtlasTexture_35grl"]
 atlas = ExtResource("4_ecf78")
 region = Rect2(240, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8kuu"]
+atlas = ExtResource("5_rsrmw")
+region = Rect2(0, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukllu"]
+atlas = ExtResource("5_rsrmw")
+region = Rect2(120, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkm62"]
+atlas = ExtResource("5_rsrmw")
+region = Rect2(240, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52fvq"]
+atlas = ExtResource("5_rsrmw")
+region = Rect2(360, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nymsj"]
+atlas = ExtResource("5_rsrmw")
+region = Rect2(480, 0, 120, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yay7c"]
+atlas = ExtResource("5_rsrmw")
+region = Rect2(600, 0, 120, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c8jh0"]
 atlas = ExtResource("5_vy5gb")
@@ -239,6 +264,29 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 0.81,
+"texture": SubResource("AtlasTexture_o8kuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukllu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkm62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52fvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nymsj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yay7c")
+}],
+"loop": true,
+"name": &"heavy attack",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c8jh0")
 }, {
@@ -338,7 +386,7 @@ script = ExtResource("1_c3tg1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(25, -40)
 sprite_frames = SubResource("SpriteFrames_ukllu")
-animation = &"attack"
+animation = &"heavy attack"
 offset = Vector2(-19.745, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -373,7 +421,7 @@ offset_bottom = -46.0
 
 [node name="BoredomLabel" type="Label" parent="CanvasLayer"]
 visible = false
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

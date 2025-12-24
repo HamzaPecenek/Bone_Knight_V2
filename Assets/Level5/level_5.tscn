@@ -5828,9 +5828,6 @@ limit_top = -1
 limit_right = 100000
 limit_bottom = 100000
 
-[node name="BoredomLabel" parent="Player/CanvasLayer" index="0"]
-anchors_preset = 8
-
 [node name="DusenYol" parent="." instance=ExtResource("15_iguj2")]
 position = Vector2(1211, 1746)
 
@@ -5996,10 +5993,10 @@ grave = NodePath("../GraveSpecial")
 [node name="DemonBoss" parent="." instance=ExtResource("31_nev3v")]
 position = Vector2(202.00002, 1458)
 scale = Vector2(3.2027776, 2.3999999)
-speed = 100.0
-max_health = 500
-min_x = 30.0
-max_x = 300.0
+speed = 20.0
+max_health = 200
+min_x = 200.0
+max_x = 400.0
 attack_damage = 30
 
 [node name="Demon_Bat" parent="." instance=ExtResource("31_1fu1e")]
@@ -6025,6 +6022,7 @@ position = Vector2(514, 1543)
 
 [node name="ExitDoor" parent="." instance=ExtResource("12_e2k8t")]
 position = Vector2(51, 1497)
+monitorable = false
 target_scene = "uid://bbah0pab6qjgx"
 
 [node name="MovingPlatform" parent="." instance=ExtResource("33_8hpt0")]
