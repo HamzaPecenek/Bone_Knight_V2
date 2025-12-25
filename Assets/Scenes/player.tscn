@@ -373,7 +373,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mkm62"]
 radius = 9.0
-height = 38.0
+height = 32.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c3tg1"]
 size = Vector2(33, 44)

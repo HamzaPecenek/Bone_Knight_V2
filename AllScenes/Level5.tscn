@@ -5991,10 +5991,10 @@ position = Vector2(1513, 1748)
 grave = NodePath("../GraveSpecial")
 
 [node name="DemonBoss" parent="." instance=ExtResource("31_nev3v")]
-position = Vector2(202.00002, 1458)
+position = Vector2(274, 1460)
 scale = Vector2(3.2027776, 2.3999999)
 speed = 20.0
-max_health = 200
+max_health = 100
 min_x = 200.0
 max_x = 400.0
 attack_damage = 30
