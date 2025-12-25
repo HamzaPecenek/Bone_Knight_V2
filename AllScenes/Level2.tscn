@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://p7ou5nlsxpi3"]
+[gd_scene load_steps=22 format=4 uid="uid://p7ou5nlsxpi3"]
 
 [ext_resource type="PackedScene" uid="uid://e2xryulnha1c" path="res://Assets/Scenes/player.tscn" id="1_5nyjj"]
 [ext_resource type="Texture2D" uid="uid://lm0ds5134ffg" path="res://Assets/Map/Background1.png" id="2_wjpah"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://d262uno635wih" path="res://Assets/Scenes/checkpoint.tscn" id="10_6ty0e"]
 [ext_resource type="PackedScene" uid="uid://2v6pxgl70oom" path="res://Assets/Scenes/death_boundary.tscn" id="11_vutq0"]
 [ext_resource type="PackedScene" uid="uid://dncewo70o8ulk" path="res://Assets/ui/inventory/stick_collectable.tscn" id="12_laef0"]
-[ext_resource type="Script" uid="uid://7uqoyhbby4ga" path="res://Assets/Scenes/ui.gd" id="13_byx0t"]
 [ext_resource type="PackedScene" uid="uid://chm7lx5gmkoj8" path="res://Assets/Scenes/flying_eye.tscn" id="14_uj40x"]
 [ext_resource type="PackedScene" uid="uid://dma23ldh2m4cf" path="res://Assets/ui/Inventory.tscn" id="16_gt3f7"]
 [ext_resource type="PackedScene" uid="uid://bfj7d5rqql2v0" path="res://Assets/Level5/Doors/exit_door.tscn" id="16_wjpah"]
@@ -1645,7 +1644,7 @@ position = Vector2(636, 474)
 position = Vector2(2261, 490)
 
 [node name="DeathBoundary" parent="." instance=ExtResource("11_vutq0")]
-position = Vector2(-871, 688)
+position = Vector2(-867, 676)
 
 [node name="LeftWall" type="StaticBody2D" parent="."]
 position = Vector2(-239, 251)
@@ -1750,7 +1749,6 @@ position = Vector2(3548, 581)
 
 [node name="UI" type="CanvasLayer" parent="."]
 layer = 10
-script = ExtResource("13_byx0t")
 
 [node name="TutorialLabel" type="Label" parent="UI"]
 anchors_preset = 15
@@ -1796,4 +1794,4 @@ offset_bottom = 0.0
 [node name="ExitDoor" parent="." instance=ExtResource("16_wjpah")]
 position = Vector2(4513, 420)
 script = ExtResource("17_yiweq")
-target_scene = "res://Assets/Level_3/Level3.tscn"
+target_scene = "res://AllScenes/Level3.tscn"

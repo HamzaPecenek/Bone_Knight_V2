@@ -1,7 +1,7 @@
 extends Area2D
 
-@export_file("*.tscn") var target_scene: String = "res://Assets/Scenes/Level2.tscn"
-
+# ✅ Portal kapısından girince önce Transition sahnesine gitsin
+@export_file("*.tscn") var target_scene: String = "res://AllScenes/1-2Transition.tscn"
 
 @onready var door_sprite: AnimatedSprite2D = $DoorSprite
 @onready var trigger_shape: CollisionShape2D = $TriggerShape
@@ -17,19 +17,19 @@ func _ready() -> void:
 	if is_instance_valid(door_light):
 		door_light.energy = 0.6  # loş ışık
 
+
 func _on_body_entered(body: Node) -> void:
 	if used:
 		return
 	if not body.is_in_group("Player"):
 		return
 
-#### BLOCK DOOR IF THERE ARE COINS REMAINING
+	#### BLOCK DOOR IF THERE ARE COINS REMAINING
 	if coins_remaining():
 		return
 
-
 	used = true
-	
+
 	# Bir daha tetiklenmesin
 	monitoring = false
 	if is_instance_valid(trigger_shape):
@@ -46,8 +46,12 @@ func _on_body_entered(body: Node) -> void:
 
 	# Teleport FX'nin kapıda çıkması için from_pos gönderelim
 	var from_pos := (body as Node2D).global_position
+
+	# ✅ LevelManager ile Transition sahnesine geç
+	# ⚠️ Transition sahnesine "SpawnPoint" adında bir Marker2D ekle (patlamasın diye)
 	LevelManager.change_level(target_scene, "SpawnPoint", from_pos)
-	
+
+
 #### COINS DETECTOR
 func coins_remaining() -> bool:
 	var level_root := get_tree().current_scene

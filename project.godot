@@ -23,6 +23,9 @@ LevelManager="*res://Scripts/Teleport/LevelManager.gd"
 
 Enemy=""
 Player=""
+CoinPopupUI=""
+TrapPopupUI=""
+FlagPopupUI=""
 
 [input]
 

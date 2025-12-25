@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://djmfd2kcg0emf"]
+
+[ext_resource type="Script" uid="uid://dc5bnds5nnuf3" path="res://intro_screen.gd" id="1_gfxht"]
+[ext_resource type="FontFile" uid="uid://cly50jlrl7q1h" path="res://Assets/Fonts/m5x7 Daniel Linssen.ttf" id="2_6gglw"]
+[ext_resource type="AudioStream" uid="uid://cleg37yu1b4co" path="res://Assets/ui/Assets/Second%20Coming%20-%20no%20percussion.mp3" id="3_6gglw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gfxht"]
+font = ExtResource("2_6gglw")
+font_size = 50
+outline_size = 10
+outline_color = Color(0.8, 0.8, 0.5764706, 1)
+shadow_size = 2
+
+[node name="IntroScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gfxht")
+
+[node name="Black" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -40.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -19.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_gfxht")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6gglw")
