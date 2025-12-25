@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://di1xy5mxl5wgg"]
+
+[ext_resource type="Script" uid="uid://b4siknbls3ktp" path="res://Teleport/area_2d.gd" id="1_ba8gm"]
+[ext_resource type="Texture2D" uid="uid://0exr1bsy0cvx" path="res://Levels/Level5/TileSets/Dungeon Tile Set.png" id="1_v6xrn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6xrn"]
+atlas = ExtResource("1_v6xrn")
+region = Rect2(208.18158, 162.0967, 15.8072815, 30.84346)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0phs7"]
+size = Vector2(89.75, 116)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(45.25, 58.5)
+scale = Vector2(5.9666667, 3.9)
+texture = SubResource("AtlasTexture_v6xrn")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_ba8gm")
+target_scene = "res://level_5.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(45.125, 58)
+shape = SubResource("RectangleShape2D_0phs7")

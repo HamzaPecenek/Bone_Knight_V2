@@ -1,0 +1,149 @@
+[gd_scene load_steps=7 format=3 uid="uid://dma23ldh2m4cf"]
+
+[ext_resource type="Script" uid="uid://c2jlpje0es8f2" path="res://ui/inventory/inv_UI.gd" id="1_3xuxb"]
+[ext_resource type="Texture2D" uid="uid://d4fuleut2tv0t" path="res://ui/Assets/ınventory_backc-Photoroom.png" id="1_jqulp"]
+[ext_resource type="Resource" uid="uid://bnug1ybnwykxg" path="res://ui/inventory/playerinv.tres" id="2_buvn7"]
+[ext_resource type="Theme" uid="uid://1uu627jhok4r" path="res://ui/boneknight_ui.tres" id="2_jqulp"]
+[ext_resource type="PackedScene" uid="uid://w7tkp7g2w6t" path="res://ui/inv_ui_slot.tscn" id="3_3xuxb"]
+[ext_resource type="Texture2D" uid="uid://c88ajhh0wahdd" path="res://ui/Assets/converted_image (1).png" id="3_0261c"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+script = ExtResource("1_3xuxb")
+inv = ExtResource("2_buvn7")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0020001
+anchor_bottom = 1.0
+offset_right = -0.30407715
+offset_bottom = 108.0
+focus_mode = 2
+color = Color(0.094279006, 0.094279006, 0.094279006, 1)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Center"]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 2
+texture = ExtResource("1_jqulp")
+
+[node name="Button" type="Button" parent="Center/NinePatchRect"]
+custom_minimum_size = Vector2(2, 2)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 2.0
+offset_left = -38.0
+offset_top = 7.5
+offset_right = -14.0
+offset_bottom = -301.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+icon = ExtResource("3_0261c")
+flat = true
+
+[node name="GridContainer" type="GridContainer" parent="Center/NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.58
+anchor_right = 0.5
+anchor_bottom = 0.8
+offset_left = -88.0
+offset_top = -52.0
+offset_right = 88.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="inv_UI_slot1" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot2" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot3" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot4" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot5" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot6" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot7" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot8" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot9" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot10" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot11" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="inv_UI_slot12" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot13" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot14" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="inv_UI_slot15" parent="Center/NinePatchRect/GridContainer" instance=ExtResource("3_3xuxb")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Center/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -80.0
+offset_right = 35.5
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_jqulp")
+theme_override_colors/font_color = Color(0.9490196, 0.9137255, 0.80784315, 1)
+theme_override_colors/font_outline_color = Color(0.36078432, 0.18431373, 0.18431373, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 13
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1

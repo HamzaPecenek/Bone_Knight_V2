@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwqo11or3hu0o"]
+
+[ext_resource type="Script" uid="uid://f0i1bqm7xijy" path="res://PrivateScripts/boss/bullet.gd" id="1_ry04a"]
+[ext_resource type="Texture2D" uid="uid://c01guk4a52l2q" path="res://Assets/Sprites/boss/arm_projectile_glowing.png" id="2_7gn42"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlll3"]
+atlas = ExtResource("2_7gn42")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08duh"]
+atlas = ExtResource("2_7gn42")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khbe8"]
+atlas = ExtResource("2_7gn42")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu6kg"]
+atlas = ExtResource("2_7gn42")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxgdn"]
+atlas = ExtResource("2_7gn42")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nx8r2"]
+atlas = ExtResource("2_7gn42")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgrdd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlll3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08duh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khbe8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fu6kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxgdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nx8r2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vucew"]
+size = Vector2(33, 11)
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_ry04a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tgrdd")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(27.5, -12.5)
+shape = SubResource("RectangleShape2D_vucew")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

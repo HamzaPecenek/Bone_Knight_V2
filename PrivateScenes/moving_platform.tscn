@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://hwfxxpeiw4dt"]
+
+[ext_resource type="Script" uid="uid://cgmtycpjgeln8" path="res://PrivateScripts/moving_platform.gd" id="1_q06lf"]
+[ext_resource type="Texture2D" uid="uid://0exr1bsy0cvx" path="res://Levels/Level5/TileSets/Dungeon Tile Set.png" id="2_hrpga"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8lbu"]
+atlas = ExtResource("2_hrpga")
+region = Rect2(15.151566, 141.8953, 48.43187, 9.942505)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaxfr"]
+size = Vector2(47, 9)
+
+[node name="MovingPlatform" type="AnimatableBody2D"]
+script = ExtResource("1_q06lf")
+offset_b = Vector2(150, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_f8lbu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 4.5)
+shape = SubResource("RectangleShape2D_oaxfr")
+one_way_collision = true

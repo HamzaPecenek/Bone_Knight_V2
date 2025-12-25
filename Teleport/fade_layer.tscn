@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctxlg2jo65kl"]
+
+[ext_resource type="Script" uid="uid://c8ti6l4h5bo64" path="res://Teleport/fade_layer.gd" id="1_jy74b"]
+
+[node name="FadeLayer" type="CanvasLayer"]
+script = ExtResource("1_jy74b")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 37.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
