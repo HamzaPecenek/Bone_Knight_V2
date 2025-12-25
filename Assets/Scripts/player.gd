@@ -21,6 +21,10 @@ var is_dead: bool = false
 @export var heavy_speed_scale: float = 0.7
 var current_attack_damage: int = 20
 var base_attack_duration: float = 0.3
+var heavy_attack_duration: float = 0.6
+
+# --- CHANGE 1: New variable to remember which animation to play ---
+var current_attack_anim: String = "attack" 
 
 # --- BOREDOM SETTINGS ---
 @export var boredom_threshold: float = 15.0
@@ -249,7 +253,8 @@ func _update_animation() -> void:
 		return
 
 	if is_attacking:
-		anim.play("attack")
+		# --- CHANGE 2: Play the specific attack animation variable ---
+		anim.play(current_attack_anim) 
 		return
 
 	if not is_on_floor():
@@ -267,17 +272,23 @@ func _start_attack(is_light: bool) -> void:
 	is_attacking = true
 
 	if is_light:
+		# --- CHANGE 3a: Set animation name for Light Attack ---
+		current_attack_anim = "attack" 
 		current_attack_damage = light_damage
 		anim.speed_scale = light_speed_scale
 		attack_timer.wait_time = base_attack_duration / light_speed_scale
 	else:
+		# --- CHANGE 3b: Set animation name for Heavy Attack ---
+		current_attack_anim = "heavy attack"
 		current_attack_damage = heavy_damage
 		anim.speed_scale = heavy_speed_scale
-		attack_timer.wait_time = base_attack_duration / heavy_speed_scale
+		attack_timer.wait_time = heavy_attack_duration / heavy_speed_scale
 
 	_set_attack_enabled(true)
 	attack_timer.start()
-	anim.play("attack")
+	
+	# Play the animation immediately
+	anim.play(current_attack_anim)
 
 func _set_attack_enabled(enabled: bool) -> void:
 	attack_area.set_deferred("monitoring", enabled)
@@ -342,7 +353,6 @@ func _respawn() -> void:
 
 	health = max_health
 	health_bar.set_health(health)
-
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 
