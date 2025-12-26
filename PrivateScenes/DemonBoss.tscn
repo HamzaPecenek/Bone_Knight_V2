@@ -63,8 +63,8 @@
 [ext_resource type="Texture2D" uid="uid://c5ocjyvhujnu0" path="res://Levels/Level5/Enemy/DemonBoss/walk/demon_walk_11.png" id="60_dpvv2"]
 [ext_resource type="Texture2D" uid="uid://bpowmmr6j42kk" path="res://Levels/Level5/Enemy/DemonBoss/walk/demon_walk_12.png" id="61_hcbyt"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqwkd"]
-size = Vector2(32, 50)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ilcfe"]
+radius = 7.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s66id"]
 animations = [{
@@ -116,7 +116,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 60.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -210,7 +210,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 7.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -246,9 +246,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("49_pb18i")
 }],
-"loop": true,
+"loop": false,
 "name": &"take_hit",
-"speed": 12.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -289,29 +289,33 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 4.0
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1ogq"]
-size = Vector2(23, 45)
+size = Vector2(18.25, 26.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qe4i"]
-size = Vector2(23, 42)
+size = Vector2(18.25, 26)
 
 [node name="DemonBoss" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_g7g8n")
+max_health = 200
+attack_interval = 0.6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, 2)
-shape = SubResource("RectangleShape2D_kqwkd")
+position = Vector2(5, 14.000001)
+scale = Vector2(0.9200009, 0.8799994)
+shape = SubResource("CapsuleShape2D_ilcfe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(7, -5)
-scale = Vector2(0.36805555, 0.4125)
+scale = Vector2(-0.368, 0.412)
 sprite_frames = SubResource("SpriteFrames_s66id")
 animation = &"attack"
+frame = 9
 
 [node name="RightPoint" type="Marker2D" parent="."]
 position = Vector2(250, 0)
@@ -319,19 +323,24 @@ position = Vector2(250, 0)
 [node name="LeftPoint" type="Marker2D" parent="."]
 
 [node name="AttackArea1" type="Area2D" parent="."]
+position = Vector2(8, 2)
+scale = Vector2(1, 0.8800003)
 collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea1"]
-position = Vector2(-24.5, 2)
+position = Vector2(-31, 18.181812)
+scale = Vector2(1.4, 0.68181765)
 shape = SubResource("RectangleShape2D_r1ogq")
 
 [node name="AttackArea2" type="Area2D" parent="."]
+position = Vector2(-8, 5)
+scale = Vector2(1.4, 0.6335997)
 collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2"]
-position = Vector2(36, 1)
+position = Vector2(30.714285, 22.09597)
 shape = SubResource("RectangleShape2D_3qe4i")
 
 [node name="HealthBarEnemy" parent="." instance=ExtResource("7_3idea")]
@@ -339,6 +348,7 @@ offset_left = -25.0
 offset_top = -39.0
 offset_right = 39.0
 offset_bottom = -31.0
+max_health = 200
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="AttackArea1" to="." method="_on_attack_area_1_body_entered"]
