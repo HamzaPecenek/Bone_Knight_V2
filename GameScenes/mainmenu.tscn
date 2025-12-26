@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bh3mlvdg1cat0"]
+[gd_scene load_steps=16 format=3 uid="uid://bh3mlvdg1cat0"]
 
 [ext_resource type="Theme" uid="uid://1uu627jhok4r" path="res://ui/boneknight_ui.tres" id="1_idnls"]
 [ext_resource type="Script" uid="uid://dn3odusr7hd" path="res://ui/main_menu.gd" id="2_cvqx6"]
@@ -31,11 +31,6 @@ atlas = SubResource("AtlasTexture_kbped")
 [sub_resource type="AtlasTexture" id="AtlasTexture_qtu10"]
 atlas = ExtResource("4_orgnp")
 region = Rect2(634.6132, 142.39108, 72.88202, 24.789017)
-margin = Rect2(0, -2, 0, 0)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ee4bf"]
-atlas = ExtResource("4_orgnp")
-region = Rect2(634.66644, 84.96877, 120.72528, 24.47956)
 margin = Rect2(0, -2, 0, 0)
 
 [node name="Menu" type="Control"]
@@ -179,13 +174,6 @@ icon = SubResource("AtlasTexture_qtu10")
 alignment = 1
 icon_alignment = 1
 
-[node name="HowToPlayButton" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 17
-text = "HowToPlay"
-icon = SubResource("AtlasTexture_ee4bf")
-icon_alignment = 1
-
 [node name="MusicPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_4uix4")
 autoplay = true
@@ -196,4 +184,3 @@ autoplay = true
 [connection signal="pressed" from="Panel/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="toggled" from="HBoxContainer/MusicButton" to="." method="_on_music_button_toggled"]
-[connection signal="pressed" from="HBoxContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
