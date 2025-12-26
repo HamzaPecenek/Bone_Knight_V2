@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Hamza"
-run/main_scene="uid://bh3mlvdg1cat0"
+run/main_scene="uid://lslltlj55xhq"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

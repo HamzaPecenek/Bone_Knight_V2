@@ -21,7 +21,7 @@
 [ext_resource type="FontFile" uid="uid://b8yi403t38v0q" path="res://Assets/Fonts/MedievalSharp-Regular.ttf" id="19_qxaix"]
 [ext_resource type="Script" uid="uid://da1le6cvnwqsp" path="res://GameScripts/coin_popup_ui.gd" id="20_uooxy"]
 [ext_resource type="FontFile" uid="uid://cly50jlrl7q1h" path="res://Assets/Fonts/m5x7 Daniel Linssen.ttf" id="21_d7bqy"]
-[ext_resource type="Script" uid="uid://ju1vemh7jmjf" path="res://GameScripts/trap_popup_ui.gd" id="21_yluq7"]
+[ext_resource type="Script" uid="uid://brd4uo80hf45j" path="res://GameScripts/trap_popup_ui.gd" id="21_yluq7"]
 [ext_resource type="Script" uid="uid://cpc1mdmvm4206" path="res://GameScripts/heart_popup_ui.gd" id="23_a5lji"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bilv"]
@@ -34,15 +34,15 @@ texture = ExtResource("5_yluq7")
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:0/0 = 0
 12:0/0 = 0
-12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.5395756, 1.978447, 8, -0.5395756, 8, 8, -8, 8)
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -0.5395756, 8, 8, -8, 8)
 13:0/0 = 0
-13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.4388695, -5.3957615, 8, -8, 8, 8, -8, 8, -8, 0.17985916)
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, 0.17985916)
 14:0/0 = 0
 14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:0/0 = 0
-15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 3.2374573, -4.13675, 8, -0.35971642, 8, 8, -8, 8)
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -0.35971642, 8, 8, -8, 8)
 16:0/0 = 0
-16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.35971642, 0.8992939, 2.6978817, 8, 6.4749146, 8, 8, -8, 8)
+16:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.35971642, 8, 8, -8, 8)
 1:1/0 = 0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
@@ -60,7 +60,7 @@ texture = ExtResource("5_yluq7")
 9:1/0 = 0
 9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:1/0 = 0
-11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.3381634, -1.4388695, 8, -8, 8, 8, -8, 8)
+11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8)
 12:1/0 = 0
 12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:1/0 = 0
@@ -72,7 +72,7 @@ texture = ExtResource("5_yluq7")
 16:1/0 = 0
 16:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:1/0 = 0
-17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 2.5180225, -1.978445, 8, 8, -8, 8)
+17:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, 8, -8, 8)
 20:1/0 = 0
 20:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 21:1/0 = 0
